@@ -1,0 +1,38 @@
+SSIS package "D:\School_Study\BI\DATH\DoAnThucHanh\Source_Stage_csv.dtsx" starting.
+Information: 0x4004300A at Cases_Report_csv, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x4004300A at Compiled_COVID-19_Case_Details_Canada_csv, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x4004300A at ongoing_outbreaks_phu_csv, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x4004300A at vaccines_by_age_phu_csv, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x4004300A at Cases_Report_csv, SSIS.Pipeline: Validation phase is beginning.
+Warning: 0x80049304 at Cases_Report_csv, SSIS.Pipeline: Warning: Could not open global shared memory to communicate with performance DLL; data flow performance counters are not available.  To resolve, run this package as an administrator, or on the system's console.
+Information: 0x40043006 at Cases_Report_csv, SSIS.Pipeline: Prepare for Execute phase is beginning.
+Information: 0x40043007 at Cases_Report_csv, SSIS.Pipeline: Pre-Execute phase is beginning.
+Information: 0x402090DC at Cases_Report_csv, Flat File Source [2]: The processing of file "D:\School_Study\BI\DATH\Datasource\Cases Report.csv" has started.
+Information: 0x4004300C at Cases_Report_csv, SSIS.Pipeline: Execute phase is beginning.
+Information: 0x402090DE at Cases_Report_csv, Flat File Source [2]: The total number of data rows processed for file "D:\School_Study\BI\DATH\Datasource\Cases Report.csv" is 28501.
+Information: 0x402090DF at Cases_Report_csv, OLE DB Destination [75]: The final commit for the data insertion in "OLE DB Destination" has started.
+Information: 0x402090E0 at Cases_Report_csv, OLE DB Destination [75]: The final commit for the data insertion  in "OLE DB Destination" has ended.
+Information: 0x40043008 at Cases_Report_csv, SSIS.Pipeline: Post Execute phase is beginning.
+Information: 0x402090DD at Cases_Report_csv, Flat File Source [2]: The processing of file "D:\School_Study\BI\DATH\Datasource\Cases Report.csv" has ended.
+Information: 0x4004300B at Cases_Report_csv, SSIS.Pipeline: "OLE DB Destination" wrote 28500 rows.
+Information: 0x40043009 at Cases_Report_csv, SSIS.Pipeline: Cleanup phase is beginning.
+Information: 0x4004300A at Compiled_COVID-19_Case_Details_Canada_csv, SSIS.Pipeline: Validation phase is beginning.
+Information: 0x40043006 at Compiled_COVID-19_Case_Details_Canada_csv, SSIS.Pipeline: Prepare for Execute phase is beginning.
+Information: 0x40043007 at Compiled_COVID-19_Case_Details_Canada_csv, SSIS.Pipeline: Pre-Execute phase is beginning.
+Information: 0x402090DC at Compiled_COVID-19_Case_Details_Canada_csv, Flat File Source [12]: The processing of file "D:\School_Study\BI\DATH\Datasource\Compiled_COVID-19_Case_Details_(Canada).csv" has started.
+Information: 0x4004300C at Compiled_COVID-19_Case_Details_Canada_csv, SSIS.Pipeline: Execute phase is beginning.
+Information: 0x4004800C at Compiled_COVID-19_Case_Details_Canada_csv, SSIS.Pipeline: The buffer manager detected that the system was low on virtual memory, but was unable to swap out any buffers. 0 buffers were considered and 0 were locked. Either not enough memory is available to the pipeline because not enough is installed, other processes are using it, or too many buffers are locked.
+Information: 0x4004800F at Compiled_COVID-19_Case_Details_Canada_csv: Buffer manager allocated 927 megabyte(s) in 1 physical buffer(s).
+Information: 0x40048010 at Compiled_COVID-19_Case_Details_Canada_csv: Component "Flat File Source" (12) owns 927 megabyte(s) physical buffer.
+Information: 0x402090DE at Compiled_COVID-19_Case_Details_Canada_csv, Flat File Source [12]: The total number of data rows processed for file "D:\School_Study\BI\DATH\Datasource\Compiled_COVID-19_Case_Details_(Canada).csv" is 1048576.
+Error: 0xC02020C5 at Compiled_COVID-19_Case_Details_Canada_csv, Data Conversion [2]: Data conversion failed while converting column "date_reported" (23) to column "Copy of date_reported" (6).  The conversion returned status value 2 and status text "The value could not be converted because of a potential loss of data.".
+Error: 0xC0209029 at Compiled_COVID-19_Case_Details_Canada_csv, Data Conversion [2]: SSIS Error Code DTS_E_INDUCEDTRANSFORMFAILUREONERROR.  The "Data Conversion.Outputs[Data Conversion Output].Columns[Copy of date_reported]" failed because error code 0xC020907F occurred, and the error row disposition on "Data Conversion.Outputs[Data Conversion Output].Columns[Copy of date_reported]" specifies failure on error. An error occurred on the specified object of the specified component.  There may be error messages posted before this with more information about the failure.
+Error: 0xC0047022 at Compiled_COVID-19_Case_Details_Canada_csv, SSIS.Pipeline: SSIS Error Code DTS_E_PROCESSINPUTFAILED.  The ProcessInput method on component "Data Conversion" (2) failed with error code 0xC0209029 while processing input "Data Conversion Input" (3). The identified component returned an error from the ProcessInput method. The error is specific to the component, but the error is fatal and will cause the Data Flow task to stop running.  There may be error messages posted before this with more information about the failure.
+Information: 0x40043008 at Compiled_COVID-19_Case_Details_Canada_csv, SSIS.Pipeline: Post Execute phase is beginning.
+Information: 0x402090DD at Compiled_COVID-19_Case_Details_Canada_csv, Flat File Source [12]: The processing of file "D:\School_Study\BI\DATH\Datasource\Compiled_COVID-19_Case_Details_(Canada).csv" has ended.
+Information: 0x4004300B at Compiled_COVID-19_Case_Details_Canada_csv, SSIS.Pipeline: "OLE DB Destination" wrote 0 rows.
+Information: 0x40043009 at Compiled_COVID-19_Case_Details_Canada_csv, SSIS.Pipeline: Cleanup phase is beginning.
+Task failed: Compiled_COVID-19_Case_Details_Canada_csv
+Warning: 0x80019002 at Source_Stage: SSIS Warning Code DTS_W_MAXIMUMERRORCOUNTREACHED.  The Execution method succeeded, but the number of errors raised (3) reached the maximum allowed (1); resulting in failure. This occurs when the number of errors reaches the number specified in MaximumErrorCount. Change the MaximumErrorCount or fix the errors.
+SSIS package "D:\School_Study\BI\DATH\DoAnThucHanh\Source_Stage_csv.dtsx" finished: Failure.
+The program '[16240] DtsDebugHost.exe: DTS' has exited with code 0 (0x0).

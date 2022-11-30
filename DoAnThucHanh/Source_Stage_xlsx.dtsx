@@ -1,0 +1,2081 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/23/2022 4:48:14 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-HV4IJC5O"
+  DTS:CreatorName="LAPTOP-HV4IJC5O\thaon"
+  DTS:DTSID="{D9C0BD7F-C2EB-43B4-86A8-97E4370805B8}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.948.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="10"
+  DTS:VersionGUID="{B558AEBC-B6F4-4863-A473-ED648DF78133}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-HV4IJC5O\SQLEXPRESS.DATH_STAGE]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{BD8C6850-6175-4B95-B05E-C5BE48B0BEFF}"
+      DTS:ObjectName="LAPTOP-HV4IJC5O\SQLEXPRESS.DATH_STAGE">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=LAPTOP-HV4IJC5O\SQLEXPRESS;Initial Catalog=DATH_STAGE;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-Package1-{BD8C6850-6175-4B95-B05E-C5BE48B0BEFF}LAPTOP-HV4IJC5O\SQLEXPRESS.DATH_STAGE;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{3DD96826-6885-47AA-99B4-D236F63E7BE7}"
+      DTS:ObjectName="LocalHost">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Public_Health_Units_GROUP_xlsx]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{EBBD7A98-2511-47A4-925D-0E074CBA5F39}"
+      DTS:ObjectName="Public_Health_Units_GROUP_xlsx">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\School_Study\BI\DATH\Datasource\Public Health Units GROUP.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Public_health_unit_xlsx]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{9E30F997-CCD6-4598-AB0A-76D5B828913E}"
+      DTS:ObjectName="Public_health_unit_xlsx">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\School_Study\BI\DATH\Datasource\Public health unit.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[vaccines_by_age_phu_xlsx]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{8A10CAE5-431C-4C18-9511-3FA5DFF124FF}"
+      DTS:ObjectName="vaccines_by_age_phu_xlsx">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\School_Study\BI\DATH\Datasource\vaccines_by_age_phu.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Public_Health_Units_GROUP_xlsx"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{F4F42561-4C0E-4A5E-8ACD-001048B048F3}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Public_Health_Units_GROUP_xlsx"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[PHU_Group]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PHU_Group"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_Group]" />
+                    <inputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[PHU_City]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PHU_City"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_City]" />
+                    <inputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[PHU_region]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PHU_region"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_region]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_Group]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_Group]"
+                      name="Copy of PHU_Group"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_Group]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_City]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_City]"
+                      name="Copy of PHU_City"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_City]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_region]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_region]"
+                      name="Copy of PHU_region"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_region]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Trang tính1$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Public_Health_Units_GROUP_xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[Public_Health_Units_GROUP_xlsx]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_Group]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[PHU_Group]"
+                      length="255"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_Group]"
+                      name="PHU_Group"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[PHU_City]"
+                      length="255"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_City]"
+                      name="PHU_City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_region]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[PHU_region]"
+                      length="255"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_region]"
+                      name="PHU_region"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[PHU_Group]"
+                      dataType="wstr"
+                      length="255"
+                      name="PHU_Group" />
+                    <externalMetadataColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[PHU_City]"
+                      dataType="wstr"
+                      length="255"
+                      name="PHU_City" />
+                    <externalMetadataColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[PHU_region]"
+                      dataType="wstr"
+                      length="255"
+                      name="PHU_region" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[PHU_Group]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[PHU_Group]"
+                      name="PHU_Group" />
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[PHU_City]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[PHU_City]"
+                      name="PHU_City" />
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[PHU_region]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[PHU_region]"
+                      name="PHU_region" />
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Public_Health_Units_GROUP_xlsx]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-HV4IJC5O\SQLEXPRESS.DATH_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-HV4IJC5O\SQLEXPRESS.DATH_STAGE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PHU_Group]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of PHU_Group"
+                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Group]"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_Group]" />
+                    <inputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PHU_City]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of PHU_City"
+                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_City]"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_City]" />
+                    <inputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PHU_region]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of PHU_region"
+                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_region]"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_region]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Group]"
+                      codePage="1252"
+                      dataType="text"
+                      name="PHU_Group" />
+                    <externalMetadataColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_City]"
+                      codePage="1252"
+                      dataType="text"
+                      name="PHU_City" />
+                    <externalMetadataColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_region]"
+                      codePage="1252"
+                      dataType="text"
+                      name="PHU_region" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Public_Health_Units_GROUP_xlsx.Paths[Data Conversion Output]"
+              endId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Public_Health_Units_GROUP_xlsx.Paths[Excel Source Output]"
+              endId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Public_health_unit_xlsx"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{b4c687af-8f32-4522-8eef-3ed71358d155}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Public_health_unit_xlsx"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          autoAdjustBufferSize="true"
+          defaultBufferMaxRows="1500000"
+          version="1">
+          <components>
+            <component
+              refId="Package\Public_health_unit_xlsx\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Reporting_PHU]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Reporting_PHU"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU]" />
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Reporting_PHU_Address]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Reporting_PHU_Address"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Address]" />
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Reporting_PHU_City]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Reporting_PHU_City"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_City]" />
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Reporting_PHU_Postal_Code]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Reporting_PHU_Postal_Code"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Postal_Code]" />
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Reporting_PHU_Website]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Reporting_PHU_Website"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Website]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU]"
+                      name="Copy of Reporting_PHU"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Address]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Address]"
+                      name="Copy of Reporting_PHU_Address"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Address]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_City]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_City]"
+                      name="Copy of Reporting_PHU_City"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_City]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Postal_Code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Postal_Code]"
+                      name="Copy of Reporting_PHU_Postal_Code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Postal_Code]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Website]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Website]"
+                      name="Copy of Reporting_PHU_Website"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Website]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Public_health_unit_xlsx\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">'Public health unit$'</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Public_health_unit_xlsx\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Public_health_unit_xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[Public_health_unit_xlsx]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_ID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[PHU_ID]"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_ID]"
+                      name="PHU_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reporting_PHU]"
+                      length="255"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU]"
+                      name="Reporting_PHU"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Address]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reporting_PHU_Address]"
+                      length="255"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Address]"
+                      name="Reporting_PHU_Address"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_City]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reporting_PHU_City]"
+                      length="255"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_City]"
+                      name="Reporting_PHU_City"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Postal_Code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reporting_PHU_Postal_Code]"
+                      length="255"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Postal_Code]"
+                      name="Reporting_PHU_Postal_Code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Website]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reporting_PHU_Website]"
+                      length="255"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Website]"
+                      name="Reporting_PHU_Website"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Latitude]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reporting_PHU_Latitude]"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Latitude]"
+                      name="Reporting_PHU_Latitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Longitude]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reporting_PHU_Longitude]"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Longitude]"
+                      name="Reporting_PHU_Longitude"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[PHU_ID]"
+                      dataType="r8"
+                      name="PHU_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reporting_PHU]"
+                      dataType="wstr"
+                      length="255"
+                      name="Reporting_PHU" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reporting_PHU_Address]"
+                      dataType="wstr"
+                      length="255"
+                      name="Reporting_PHU_Address" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reporting_PHU_City]"
+                      dataType="wstr"
+                      length="255"
+                      name="Reporting_PHU_City" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reporting_PHU_Postal_Code]"
+                      dataType="wstr"
+                      length="255"
+                      name="Reporting_PHU_Postal_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reporting_PHU_Website]"
+                      dataType="wstr"
+                      length="255"
+                      name="Reporting_PHU_Website" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reporting_PHU_Latitude]"
+                      dataType="r8"
+                      name="Reporting_PHU_Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Reporting_PHU_Longitude]"
+                      dataType="r8"
+                      name="Reporting_PHU_Longitude" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[PHU_ID]"
+                      dataType="r8"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[PHU_ID]"
+                      name="PHU_ID" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Reporting_PHU]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Reporting_PHU]"
+                      name="Reporting_PHU" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Reporting_PHU_Address]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Reporting_PHU_Address]"
+                      name="Reporting_PHU_Address" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Reporting_PHU_City]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Reporting_PHU_City]"
+                      name="Reporting_PHU_City" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Reporting_PHU_Postal_Code]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Reporting_PHU_Postal_Code]"
+                      name="Reporting_PHU_Postal_Code" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Reporting_PHU_Website]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Reporting_PHU_Website]"
+                      name="Reporting_PHU_Website" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Reporting_PHU_Latitude]"
+                      dataType="r8"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Reporting_PHU_Latitude]"
+                      name="Reporting_PHU_Latitude" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Reporting_PHU_Longitude]"
+                      dataType="r8"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Reporting_PHU_Longitude]"
+                      name="Reporting_PHU_Longitude" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Public_health_unit_xlsx\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Public_health_unit_xlsx]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Public_health_unit_xlsx\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-HV4IJC5O\SQLEXPRESS.DATH_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-HV4IJC5O\SQLEXPRESS.DATH_STAGE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU_ID]"
+                      cachedDataType="r8"
+                      cachedName="PHU_ID"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_ID]"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_ID]" />
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Reporting_PHU_Latitude]"
+                      cachedDataType="r8"
+                      cachedName="Reporting_PHU_Latitude"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Latitude]"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Latitude]" />
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Reporting_PHU_Longitude]"
+                      cachedDataType="r8"
+                      cachedName="Reporting_PHU_Longitude"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Longitude]"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Longitude]" />
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Reporting_PHU]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Reporting_PHU"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU]"
+                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU]" />
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Reporting_PHU_Address]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Reporting_PHU_Address"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Address]"
+                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Address]" />
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Reporting_PHU_City]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Reporting_PHU_City"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_City]"
+                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_City]" />
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Reporting_PHU_Postal_Code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Reporting_PHU_Postal_Code"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Postal_Code]"
+                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Postal_Code]" />
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Reporting_PHU_Website]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Reporting_PHU_Website"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Website]"
+                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Website]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_ID]"
+                      dataType="i8"
+                      name="PHU_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Reporting_PHU" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Address]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Reporting_PHU_Address" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_City]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Reporting_PHU_City" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Postal_Code]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Reporting_PHU_Postal_Code" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Website]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Reporting_PHU_Website" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Latitude]"
+                      dataType="r8"
+                      name="Reporting_PHU_Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Longitude]"
+                      dataType="r8"
+                      name="Reporting_PHU_Longitude" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Public_health_unit_xlsx\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Public_health_unit_xlsx\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Public_health_unit_xlsx\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Public_health_unit_xlsx.Paths[Data Conversion Output]"
+              endId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Public_health_unit_xlsx.Paths[Excel Source Output]"
+              endId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\vaccines_by_age_phu_xlsx"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1C3ACBA7-FFFB-45A9-B09C-360BC989BA19}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="vaccines_by_age_phu_xlsx"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\vaccines_by_age_phu_xlsx\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Date"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Agegroup]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Agegroup"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Agegroup]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Date]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Date]"
+                      name="Copy of Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Date]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Agegroup]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="255"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Agegroup]"
+                      name="Copy of Agegroup"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Agegroup]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\vaccines_by_age_phu_xlsx\Excel Source"
+              componentClassID="Microsoft.ExcelSource"
+              contactInfo="Excel Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Excel Source"
+              name="Excel Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">vaccines_by_age_phu$</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mapping from parameters in the SQL command to variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[vaccines_by_age_phu_xlsx]"
+                  connectionManagerRefId="Package.ConnectionManagers[vaccines_by_age_phu_xlsx]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output]"
+                  name="Excel Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Date]"
+                      length="255"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU ID]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[PHU ID]"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU ID]"
+                      name="PHU ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Agegroup]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Agegroup]"
+                      length="255"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Agegroup]"
+                      name="Agegroup"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[At least one dose_cumulative]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[At least one dose_cumulative]"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[At least one dose_cumulative]"
+                      name="At least one dose_cumulative"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Second_dose_cumulative]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Second_dose_cumulative]"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Second_dose_cumulative]"
+                      name="Second_dose_cumulative"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[fully_vaccinated_cumulative]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[fully_vaccinated_cumulative]"
+                      length="255"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[fully_vaccinated_cumulative]"
+                      name="fully_vaccinated_cumulative"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[third_dose_cumulative]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[third_dose_cumulative]"
+                      length="255"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[third_dose_cumulative]"
+                      name="third_dose_cumulative"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Date]"
+                      dataType="wstr"
+                      length="255"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[PHU ID]"
+                      dataType="r8"
+                      name="PHU ID" />
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Agegroup]"
+                      dataType="wstr"
+                      length="255"
+                      name="Agegroup" />
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[At least one dose_cumulative]"
+                      dataType="r8"
+                      name="At least one dose_cumulative" />
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Second_dose_cumulative]"
+                      dataType="r8"
+                      name="Second_dose_cumulative" />
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[fully_vaccinated_cumulative]"
+                      dataType="wstr"
+                      length="255"
+                      name="fully_vaccinated_cumulative" />
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[third_dose_cumulative]"
+                      dataType="wstr"
+                      length="255"
+                      name="third_dose_cumulative" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output]"
+                  isErrorOut="true"
+                  name="Excel Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Date]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[PHU ID]"
+                      dataType="r8"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[PHU ID]"
+                      name="PHU ID" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Agegroup]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Agegroup]"
+                      name="Agegroup" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[At least one dose_cumulative]"
+                      dataType="r8"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[At least one dose_cumulative]"
+                      name="At least one dose_cumulative" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Second_dose_cumulative]"
+                      dataType="r8"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Second_dose_cumulative]"
+                      name="Second_dose_cumulative" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[fully_vaccinated_cumulative]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[fully_vaccinated_cumulative]"
+                      name="fully_vaccinated_cumulative" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[third_dose_cumulative]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[third_dose_cumulative]"
+                      name="third_dose_cumulative" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[vaccines_by_age_phu_xlsx]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LAPTOP-HV4IJC5O\SQLEXPRESS.DATH_STAGE]"
+                  connectionManagerRefId="Package.ConnectionManagers[LAPTOP-HV4IJC5O\SQLEXPRESS.DATH_STAGE]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Second_dose_cumulative]"
+                      cachedDataType="r8"
+                      cachedName="Second_dose_cumulative"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Second_dose_cumulative]"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Second_dose_cumulative]" />
+                    <inputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[fully_vaccinated_cumulative]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="fully_vaccinated_cumulative"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[fully_vaccinated_cumulative]"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[fully_vaccinated_cumulative]" />
+                    <inputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[third_dose_cumulative]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="third_dose_cumulative"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[third_dose_cumulative]"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[third_dose_cumulative]" />
+                    <inputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU ID]"
+                      cachedDataType="r8"
+                      cachedName="PHU ID"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_ID]"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU ID]" />
+                    <inputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[At least one dose_cumulative]"
+                      cachedDataType="r8"
+                      cachedName="At least one dose_cumulative"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[At_least_one_dose_cumulative]"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[At least one dose_cumulative]" />
+                    <inputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Date]"
+                      cachedDataType="date"
+                      cachedName="Copy of Date"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Date]" />
+                    <inputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Agegroup]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="Copy of Agegroup"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agegroup]"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Agegroup]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_ID]"
+                      dataType="i8"
+                      name="PHU_ID" />
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agegroup]"
+                      codePage="1252"
+                      dataType="text"
+                      name="Agegroup" />
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[At_least_one_dose_cumulative]"
+                      dataType="i8"
+                      name="At_least_one_dose_cumulative" />
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Second_dose_cumulative]"
+                      dataType="i8"
+                      name="Second_dose_cumulative" />
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[fully_vaccinated_cumulative]"
+                      dataType="i8"
+                      name="fully_vaccinated_cumulative" />
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[third_dose_cumulative]"
+                      dataType="i8"
+                      name="third_dose_cumulative" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\vaccines_by_age_phu_xlsx.Paths[Data Conversion Output]"
+              endId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\vaccines_by_age_phu_xlsx.Paths[Excel Source Output]"
+              endId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Inputs[Data Conversion Input]"
+              name="Excel Source Output"
+              startId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{FAAD33F8-A10B-4D7E-BF4D-9695C1745396}"
+      DTS:From="Package\Public_health_unit_xlsx"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Public_Health_Units_GROUP_xlsx" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{EC6A48E0-9A77-48DC-9214-CED07BB90A93}"
+      DTS:From="Package\Public_Health_Units_GROUP_xlsx"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\vaccines_by_age_phu_xlsx" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="188,41.6"
+          Id="Package\Public_health_unit_xlsx"
+          TopLeft="60.8333333002196,60" />
+        <NodeLayout
+          Size="240,41.6"
+          Id="Package\Public_Health_Units_GROUP_xlsx"
+          TopLeft="40.8333317107627,151.666667872005" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="157.833332505491,101.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50.0666678720051"
+              Start="0,0"
+              End="0,42.5666678720051">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5666678720051" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="205.6,41.6"
+          Id="Package\vaccines_by_age_phu_xlsx"
+          TopLeft="57.4999977151555,258.266668719186" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="160.566664712959,193.266667872005">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,65.0000008471806"
+              Start="0,0"
+              End="0,57.5000008471806">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.5000008471806" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Public_health_unit_xlsx">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\Public_health_unit_xlsx\OLE DB Destination"
+          TopLeft="424,310" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\Public_health_unit_xlsx\Data Conversion"
+          TopLeft="429,202" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Public_health_unit_xlsx\Excel Source"
+          TopLeft="440,97" />
+        <EdgeLayout
+          Id="Package\Public_health_unit_xlsx.Paths[Data Conversion Output]"
+          TopLeft="507.9,243.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,66.4"
+              Start="0,0"
+              End="0,58.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Public_health_unit_xlsx.Paths[Excel Source Output]"
+          TopLeft="507.9,138.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,63.4"
+              Start="0,0"
+              End="0,55.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Public_health_unit_xlsx\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Public_health_unit_xlsx\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Public_Health_Units_GROUP_xlsx">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Public_Health_Units_GROUP_xlsx\Excel Source"
+          TopLeft="618,80" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\Public_Health_Units_GROUP_xlsx\Data Conversion"
+          TopLeft="612,197" />
+        <EdgeLayout
+          Id="Package\Public_Health_Units_GROUP_xlsx.Paths[Excel Source Output]"
+          TopLeft="689,121.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,75.4000000000001"
+              Start="0,0"
+              End="0,67.9000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.9000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination"
+          TopLeft="599,323" />
+        <EdgeLayout
+          Id="Package\Public_Health_Units_GROUP_xlsx.Paths[Data Conversion Output]"
+          TopLeft="687.3,238.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,84.4"
+              Start="0,0"
+              End="0,76.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Public_Health_Units_GROUP_xlsx\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\vaccines_by_age_phu_xlsx">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\vaccines_by_age_phu_xlsx\Excel Source"
+          TopLeft="634,74" />
+        <NodeLayout
+          Size="156,41.6"
+          Id="Package\vaccines_by_age_phu_xlsx\Data Conversion"
+          TopLeft="626,188" />
+        <EdgeLayout
+          Id="Package\vaccines_by_age_phu_xlsx.Paths[Excel Source Output]"
+          TopLeft="704,115.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,72.4"
+              Start="0,0"
+              End="0,64.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\vaccines_by_age_phu_xlsx\OLE DB Destination"
+          TopLeft="613,311" />
+        <EdgeLayout
+          Id="Package\vaccines_by_age_phu_xlsx.Paths[Data Conversion Output]"
+          TopLeft="701.3,229.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,81.4"
+              Start="0,0"
+              End="0,73.9">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,73.9" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\vaccines_by_age_phu_xlsx\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\vaccines_by_age_phu_xlsx\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
