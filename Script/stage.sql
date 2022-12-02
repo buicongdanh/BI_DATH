@@ -114,16 +114,6 @@ GO
 -- Table: vaccines_by_age_phu_xlsx
 -- Columns: Date, PHU_ID, Agegroup, At_least_one_dose_cumulative, Second_dose_cumulative, fully_vaccinated_cumulative, third_dose_cumulative
 
--- Truncate Tables
-
-TRUNCATE TABLE Cases_Report_csv
-TRUNCATE TABLE Compiled_COVID_19_Case_Details_Canada_csv
-TRUNCATE TABLE ongoing_outbreaks_phu_csv
-TRUNCATE TABLE Public_health_unit_xlsx
-TRUNCATE TABLE Public_Health_Units_GROUP_xlsx
-TRUNCATE TABLE vaccines_by_age_phu_csv
-TRUNCATE TABLE vaccines_by_age_phu_xlsx
-
 SELECT * FROM Cases_Report
 SELECT * FROM Compiled_COVID_19_Case_Details_Canada
 SELECT * FROM ongoing_outbreaks_phu
