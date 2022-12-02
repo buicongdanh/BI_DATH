@@ -157,6 +157,7 @@ CREATE TABLE  [dbo].[FactCase] (
   [Age_ID] bigint NOT NULL,
    [Gender_ID] bigint NOT NULL,
   [Case_Status_ID] bigint NOT NULL,
+  [ToTalCase] int NULL,
   primary key (IDDate,PHU_ID,Age_ID,Gender_ID,Case_Status_ID)
  
 )
