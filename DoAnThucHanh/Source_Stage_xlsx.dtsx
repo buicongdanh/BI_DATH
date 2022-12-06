@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="19"
-  DTS:VersionGUID="{817EAC92-68D4-4430-B9C6-9A0B0CA72C6A}">
+  DTS:VersionBuild="23"
+  DTS:VersionGUID="{55ABDE16-6B17-4413-BF1B-303EFAB30D63}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -238,336 +238,6 @@
           defaultBufferMaxRows="1500000"
           version="1">
           <components>
-            <component
-              refId="Package\Case Reports_xlsx\Data Conversion"
-              componentClassID="Microsoft.DataConvert"
-              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Data Conversion"
-              name="Data Conversion"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Case Reports_xlsx\Data Conversion.Inputs[Data Conversion Input]"
-                  name="Data Conversion Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Outcome]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Outcome"
-                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Outcome]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Age]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Age"
-                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Age]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Gender]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Gender"
-                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Gender]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Reporting PHU]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Reporting PHU"
-                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting PHU]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[PHUCity]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="PHUCity"
-                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHUCity]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[CaseAcquisition info]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="CaseAcquisition info"
-                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[CaseAcquisition info]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[PHU Address]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="PHU Address"
-                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU Address]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[PHU Website]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="PHU Website"
-                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU Website]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[OutbreakRelated]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="OutbreakRelated"
-                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[OutbreakRelated]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[PHU Postal Code]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="PHU Postal Code"
-                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU Postal Code]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output]"
-                  exclusionGroup="1"
-                  name="Data Conversion Output"
-                  synchronousInputId="Package\Case Reports_xlsx\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Outcome]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Outcome]"
-                      name="Copy of Outcome"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Outcome]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Age]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Age]"
-                      name="Copy of Age"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Age]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]"
-                      name="Copy of Gender"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Gender]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting PHU]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting PHU]"
-                      name="Copy of Reporting PHU"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting PHU]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHUCity]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHUCity]"
-                      name="Copy of PHUCity"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHUCity]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CaseAcquisition info]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CaseAcquisition info]"
-                      name="Copy of CaseAcquisition info"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[CaseAcquisition info]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU Address]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU Address]"
-                      name="Copy of PHU Address"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU Address]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU Website]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU Website]"
-                      name="Copy of PHU Website"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU Website]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of OutbreakRelated]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of OutbreakRelated]"
-                      name="Copy of OutbreakRelated"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[OutbreakRelated]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU Postal Code]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU Postal Code]"
-                      name="Copy of PHU Postal Code"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU Postal Code]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Data Conversion Error Output"
-                  synchronousInputId="Package\Case Reports_xlsx\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
             <component
               refId="Package\Case Reports_xlsx\Excel Source"
               componentClassID="Microsoft.ExcelSource"
@@ -1077,11 +747,46 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Outcome]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Outcome"
+                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Outcome]"
+                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Outcome]" />
+                    <inputColumn
+                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Age]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Age"
+                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
+                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Age]" />
+                    <inputColumn
+                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Gender]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Gender"
+                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Gender]" />
+                    <inputColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SpecimenDate]"
                       cachedDataType="date"
                       cachedName="SpecimenDate"
                       externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SpecimenDate]"
                       lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[SpecimenDate]" />
+                    <inputColumn
+                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHUCity]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PHUCity"
+                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHUCity]"
+                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHUCity]" />
+                    <inputColumn
+                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[OutbreakRelated]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="OutbreakRelated"
+                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OutbreakRelated]"
+                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[OutbreakRelated]" />
                     <inputColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CaseReported Date]"
                       cachedDataType="date"
@@ -1095,11 +800,32 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TestReported_Date]"
                       lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[TestReported Date]" />
                     <inputColumn
+                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CaseAcquisition info]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="CaseAcquisition info"
+                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CaseAcquisition_info]"
+                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[CaseAcquisition info]" />
+                    <inputColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[AccurateEpisode Dt]"
                       cachedDataType="date"
                       cachedName="AccurateEpisode Dt"
                       externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AccurateEpisode_Dt]"
                       lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[AccurateEpisode Dt]" />
+                    <inputColumn
+                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU Address]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PHU Address"
+                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Address]"
+                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU Address]" />
+                    <inputColumn
+                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU Website]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PHU Website"
+                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Website]"
+                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU Website]" />
                     <inputColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU Latitude]"
                       cachedDataType="r8"
@@ -1107,11 +833,18 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Latitude]"
                       lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU Latitude]" />
                     <inputColumn
-                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Update day]"
-                      cachedDataType="date"
-                      cachedName="Update day"
-                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
-                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Update day]" />
+                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU Longitude]"
+                      cachedDataType="r8"
+                      cachedName="PHU Longitude"
+                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Longitude]"
+                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU Longitude]" />
+                    <inputColumn
+                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU Postal Code]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PHU Postal Code"
+                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Postal_Code]"
+                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU Postal Code]" />
                     <inputColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Create day]"
                       cachedDataType="date"
@@ -1119,113 +852,36 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
                       lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Create day]" />
                     <inputColumn
-                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU Longitude]"
-                      cachedDataType="r8"
-                      cachedName="PHU Longitude"
-                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Longitude]"
-                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU Longitude]" />
+                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Update day]"
+                      cachedDataType="date"
+                      cachedName="Update day"
+                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
+                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Update day]" />
                     <inputColumn
-                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Outcome]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Reporting PHU]"
+                      cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of Outcome"
-                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Outcome]"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Outcome]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Age]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of Age"
-                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Age]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Gender]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of Gender"
-                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Gender]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Reporting PHU]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of Reporting PHU"
+                      cachedName="Reporting PHU"
                       externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU]"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting PHU]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PHUCity]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of PHUCity"
-                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHUCity]"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHUCity]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of CaseAcquisition info]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of CaseAcquisition info"
-                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CaseAcquisition_info]"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of CaseAcquisition info]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PHU Address]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of PHU Address"
-                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Address]"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU Address]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PHU Website]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of PHU Website"
-                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Website]"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU Website]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of OutbreakRelated]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of OutbreakRelated"
-                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OutbreakRelated]"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of OutbreakRelated]" />
-                    <inputColumn
-                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PHU Postal Code]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of PHU Postal Code"
-                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Postal_Code]"
-                      lineageId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU Postal Code]" />
+                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting PHU]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Outcome]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Outcome" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Age" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Gender" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Reporting_PHU" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SpecimenDate]"
@@ -1237,8 +893,7 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       name="CaseReported_Date" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHUCity]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="PHUCity" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TestReported_Date]"
@@ -1246,8 +901,7 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       name="TestReported_Date" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CaseAcquisition_info]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="CaseAcquisition_info" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AccurateEpisode_Dt]"
@@ -1255,18 +909,15 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       name="AccurateEpisode_Dt" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Address]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="PHU_Address" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Website]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="PHU_Website" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OutbreakRelated]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="OutbreakRelated" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Latitude]"
@@ -1278,8 +929,7 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       name="PHU_Longitude" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Postal_Code]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="PHU_Postal_Code" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
@@ -1320,13 +970,8 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
           </components>
           <paths>
             <path
-              refId="Package\Case Reports_xlsx.Paths[Data Conversion Output]"
-              endId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Case Reports_xlsx\Data Conversion.Outputs[Data Conversion Output]" />
-            <path
               refId="Package\Case Reports_xlsx.Paths[Excel Source Output]"
-              endId="Package\Case Reports_xlsx\Data Conversion.Inputs[Data Conversion Input]"
+              endId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
               startId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output]" />
           </paths>
@@ -1347,224 +992,6 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
         <pipeline
           version="1">
           <components>
-            <component
-              refId="Package\compiled_covid_19\Data Conversion"
-              componentClassID="Microsoft.DataConvert"
-              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Data Conversion"
-              name="Data Conversion"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\compiled_covid_19\Data Conversion.Inputs[Data Conversion Input]"
-                  name="Data Conversion Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\compiled_covid_19\Data Conversion.Inputs[Data Conversion Input].Columns[health_region]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="health_region"
-                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[health_region]" />
-                    <inputColumn
-                      refId="Package\compiled_covid_19\Data Conversion.Inputs[Data Conversion Input].Columns[age_group]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="age_group"
-                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[age_group]" />
-                    <inputColumn
-                      refId="Package\compiled_covid_19\Data Conversion.Inputs[Data Conversion Input].Columns[gender]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="gender"
-                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[gender]" />
-                    <inputColumn
-                      refId="Package\compiled_covid_19\Data Conversion.Inputs[Data Conversion Input].Columns[exposure]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="exposure"
-                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[exposure]" />
-                    <inputColumn
-                      refId="Package\compiled_covid_19\Data Conversion.Inputs[Data Conversion Input].Columns[case_status]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="case_status"
-                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[case_status]" />
-                    <inputColumn
-                      refId="Package\compiled_covid_19\Data Conversion.Inputs[Data Conversion Input].Columns[province]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="province"
-                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[province]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output]"
-                  exclusionGroup="1"
-                  name="Data Conversion Output"
-                  synchronousInputId="Package\compiled_covid_19\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of health_region]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of health_region]"
-                      name="Copy of health_region"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[health_region]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of age_group]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of age_group]"
-                      name="Copy of age_group"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[age_group]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of gender]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of gender]"
-                      name="Copy of gender"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[gender]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of exposure]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of exposure]"
-                      name="Copy of exposure"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[exposure]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of case_status]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="50"
-                      lineageId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of case_status]"
-                      name="Copy of case_status"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[case_status]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of province]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of province]"
-                      name="Copy of province"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[province]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Data Conversion Error Output"
-                  synchronousInputId="Package\compiled_covid_19\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
             <component
               refId="Package\compiled_covid_19\Excel Source"
               componentClassID="Microsoft.ExcelSource"
@@ -1955,53 +1382,47 @@ WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
                       externalMetadataColumnId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date_reported]"
                       lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[date_reported]" />
                     <inputColumn
-                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of health_region]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[health_region]"
+                      cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of health_region"
+                      cachedName="health_region"
                       externalMetadataColumnId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[health_region]"
-                      lineageId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of health_region]" />
+                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[health_region]" />
                     <inputColumn
-                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of age_group]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[age_group]"
+                      cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of age_group"
+                      cachedName="age_group"
                       externalMetadataColumnId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[age_group]"
-                      lineageId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of age_group]" />
+                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[age_group]" />
                     <inputColumn
-                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of gender]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[gender]"
+                      cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of gender"
+                      cachedName="gender"
                       externalMetadataColumnId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
-                      lineageId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of gender]" />
+                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[gender]" />
                     <inputColumn
-                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of exposure]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[exposure]"
+                      cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of exposure"
+                      cachedName="exposure"
                       externalMetadataColumnId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[exposure]"
-                      lineageId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of exposure]" />
+                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[exposure]" />
                     <inputColumn
-                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of case_status]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Copy of case_status"
-                      externalMetadataColumnId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[case_status]"
-                      lineageId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of case_status]" />
-                    <inputColumn
-                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of province]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[case_status]"
+                      cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of province"
+                      cachedName="case_status"
+                      externalMetadataColumnId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[case_status]"
+                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[case_status]" />
+                    <inputColumn
+                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[province]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="province"
                       externalMetadataColumnId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[province]"
-                      lineageId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of province]" />
+                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[province]" />
                     <inputColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Create day]"
                       cachedDataType="date"
@@ -2032,33 +1453,27 @@ WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
                       scale="7" />
                     <externalMetadataColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[health_region]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="health_region" />
                     <externalMetadataColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[age_group]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="age_group" />
                     <externalMetadataColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="gender" />
                     <externalMetadataColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[exposure]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="exposure" />
                     <externalMetadataColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[case_status]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="case_status" />
                     <externalMetadataColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[province]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="province" />
                     <externalMetadataColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
@@ -2099,13 +1514,8 @@ WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
           </components>
           <paths>
             <path
-              refId="Package\compiled_covid_19.Paths[Data Conversion Output]"
-              endId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\compiled_covid_19\Data Conversion.Outputs[Data Conversion Output]" />
-            <path
               refId="Package\compiled_covid_19.Paths[Excel Source Output]"
-              endId="Package\compiled_covid_19\Data Conversion.Inputs[Data Conversion Input]"
+              endId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
               startId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output]" />
           </paths>
@@ -2150,7 +1560,7 @@ WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{6BD72070-ADEA-4CCD-A1E9-3627D9ECAAAC}"
-          SQLTask:SqlStatementSource="UPDATE Stage&#xA;SET          NgayCapNhat = GETDATE()&#xA;WHERE  (TenBang = 'vaccines_by_age_phu')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="UPDATE Stage&#xA;SET          NgayCapNhat = GETDATE()&#xA;WHERE  (TenBang = 'compiled_covid-19_case_details_(canada)')" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -2208,84 +1618,6 @@ WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
         <pipeline
           version="1">
           <components>
-            <component
-              refId="Package\on_going_outbreak_phu_xlsx\Data Conversion"
-              componentClassID="Microsoft.DataConvert"
-              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Data Conversion"
-              name="Data Conversion"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\on_going_outbreak_phu_xlsx\Data Conversion.Inputs[Data Conversion Input]"
-                  name="Data Conversion Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\on_going_outbreak_phu_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[outbreak_group]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="outbreak_group"
-                      lineageId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[outbreak_group]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\on_going_outbreak_phu_xlsx\Data Conversion.Outputs[Data Conversion Output]"
-                  exclusionGroup="1"
-                  name="Data Conversion Output"
-                  synchronousInputId="Package\on_going_outbreak_phu_xlsx\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\on_going_outbreak_phu_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of outbreak_group]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\on_going_outbreak_phu_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of outbreak_group]"
-                      name="Copy of outbreak_group"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[outbreak_group]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\on_going_outbreak_phu_xlsx\Data Conversion.Outputs[Data Conversion Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Data Conversion Error Output"
-                  synchronousInputId="Package\on_going_outbreak_phu_xlsx\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\on_going_outbreak_phu_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\on_going_outbreak_phu_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\on_going_outbreak_phu_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\on_going_outbreak_phu_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
             <component
               refId="Package\on_going_outbreak_phu_xlsx\Excel Source"
               componentClassID="Microsoft.ExcelSource"
@@ -2552,18 +1884,6 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Create day]"
-                      cachedDataType="date"
-                      cachedName="Create day"
-                      externalMetadataColumnId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
-                      lineageId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Create day]" />
-                    <inputColumn
-                      refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Update day]"
-                      cachedDataType="date"
-                      cachedName="Update day"
-                      externalMetadataColumnId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
-                      lineageId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Update day]" />
-                    <inputColumn
                       refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[date]"
                       cachedDataType="date"
                       cachedName="date"
@@ -2576,30 +1896,33 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       externalMetadataColumnId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[phu_num]"
                       lineageId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[phu_num]" />
                     <inputColumn
-                      refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of outbreak_group]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[outbreak_group]"
+                      cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of outbreak_group"
+                      cachedName="outbreak_group"
                       externalMetadataColumnId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[outbreak_group]"
-                      lineageId="Package\on_going_outbreak_phu_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of outbreak_group]" />
+                      lineageId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[outbreak_group]" />
                     <inputColumn
                       refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[number_ongoing_outbreaks]"
                       cachedDataType="r8"
                       cachedName="number_ongoing_outbreaks"
                       externalMetadataColumnId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[number_ongoing_outbreaks]"
                       lineageId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[number_ongoing_outbreaks]" />
+                    <inputColumn
+                      refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Create day]"
+                      cachedDataType="date"
+                      cachedName="Create day"
+                      externalMetadataColumnId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
+                      lineageId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Create day]" />
+                    <inputColumn
+                      refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Update day]"
+                      cachedDataType="date"
+                      cachedName="Update day"
+                      externalMetadataColumnId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
+                      lineageId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Update day]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
-                      dataType="dbDate"
-                      name="Create_day" />
-                    <externalMetadataColumn
-                      refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
-                      dataType="dbDate"
-                      name="Update_day" />
                     <externalMetadataColumn
                       refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[date]"
                       dataType="dbDate"
@@ -2610,13 +1933,20 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       name="phu_num" />
                     <externalMetadataColumn
                       refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[outbreak_group]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="outbreak_group" />
                     <externalMetadataColumn
                       refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[number_ongoing_outbreaks]"
                       dataType="i8"
                       name="number_ongoing_outbreaks" />
+                    <externalMetadataColumn
+                      refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
+                      dataType="dbDate"
+                      name="Create_day" />
+                    <externalMetadataColumn
+                      refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
+                      dataType="dbDate"
+                      name="Update_day" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2648,13 +1978,8 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
           </components>
           <paths>
             <path
-              refId="Package\on_going_outbreak_phu_xlsx.Paths[Data Conversion Output]"
-              endId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\on_going_outbreak_phu_xlsx\Data Conversion.Outputs[Data Conversion Output]" />
-            <path
               refId="Package\on_going_outbreak_phu_xlsx.Paths[Excel Source Output]"
-              endId="Package\on_going_outbreak_phu_xlsx\Data Conversion.Inputs[Data Conversion Input]"
+              endId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
               startId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output]" />
           </paths>
@@ -2757,140 +2082,6 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
         <pipeline
           version="1">
           <components>
-            <component
-              refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion"
-              componentClassID="Microsoft.DataConvert"
-              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Data Conversion"
-              name="Data Conversion"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Inputs[Data Conversion Input]"
-                  name="Data Conversion Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[PHU_Group]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="PHU_Group"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_Group]" />
-                    <inputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[PHU_City]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="PHU_City"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_City]" />
-                    <inputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[PHU_region]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="PHU_region"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_region]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output]"
-                  exclusionGroup="1"
-                  name="Data Conversion Output"
-                  synchronousInputId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_Group]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_Group]"
-                      name="Copy of PHU_Group"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_Group]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_City]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_City]"
-                      name="Copy of PHU_City"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_City]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_region]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_region]"
-                      name="Copy of PHU_region"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_region]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Data Conversion Error Output"
-                  synchronousInputId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
             <component
               refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source"
               componentClassID="Microsoft.ExcelSource"
@@ -3143,29 +2334,26 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PHU_Group]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU_Group]"
+                      cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of PHU_Group"
+                      cachedName="PHU_Group"
                       externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Group]"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_Group]" />
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_Group]" />
                     <inputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PHU_City]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU_City]"
+                      cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of PHU_City"
+                      cachedName="PHU_City"
                       externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_City]"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_City]" />
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_City]" />
                     <inputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of PHU_region]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU_region]"
+                      cachedDataType="wstr"
                       cachedLength="255"
-                      cachedName="Copy of PHU_region"
+                      cachedName="PHU_region"
                       externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_region]"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of PHU_region]" />
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_region]" />
                     <inputColumn
                       refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Create day]"
                       cachedDataType="date"
@@ -3183,18 +2371,15 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Group]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="PHU_Group" />
                     <externalMetadataColumn
                       refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_City]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="PHU_City" />
                     <externalMetadataColumn
                       refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_region]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="PHU_region" />
                     <externalMetadataColumn
                       refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
@@ -3235,13 +2420,8 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
           </components>
           <paths>
             <path
-              refId="Package\Public_Health_Units_GROUP_xlsx.Paths[Data Conversion Output]"
-              endId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Outputs[Data Conversion Output]" />
-            <path
               refId="Package\Public_Health_Units_GROUP_xlsx.Paths[Excel Source Output]"
-              endId="Package\Public_Health_Units_GROUP_xlsx\Data Conversion.Inputs[Data Conversion Input]"
+              endId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
               startId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output]" />
           </paths>
@@ -3264,196 +2444,6 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
           defaultBufferMaxRows="1500000"
           version="1">
           <components>
-            <component
-              refId="Package\Public_health_unit_xlsx\Data Conversion"
-              componentClassID="Microsoft.DataConvert"
-              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Data Conversion"
-              name="Data Conversion"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input]"
-                  name="Data Conversion Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Reporting_PHU]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Reporting_PHU"
-                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU]" />
-                    <inputColumn
-                      refId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Reporting_PHU_Address]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Reporting_PHU_Address"
-                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Address]" />
-                    <inputColumn
-                      refId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Reporting_PHU_City]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Reporting_PHU_City"
-                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_City]" />
-                    <inputColumn
-                      refId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Reporting_PHU_Postal_Code]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Reporting_PHU_Postal_Code"
-                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Postal_Code]" />
-                    <inputColumn
-                      refId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Reporting_PHU_Website]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Reporting_PHU_Website"
-                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Website]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output]"
-                  exclusionGroup="1"
-                  name="Data Conversion Output"
-                  synchronousInputId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU]"
-                      name="Copy of Reporting_PHU"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Address]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Address]"
-                      name="Copy of Reporting_PHU_Address"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Address]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_City]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_City]"
-                      name="Copy of Reporting_PHU_City"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_City]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Postal_Code]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Postal_Code]"
-                      name="Copy of Reporting_PHU_Postal_Code"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Postal_Code]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Website]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Website]"
-                      name="Copy of Reporting_PHU_Website"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Website]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Data Conversion Error Output"
-                  synchronousInputId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
             <component
               refId="Package\Public_health_unit_xlsx\Excel Source"
               componentClassID="Microsoft.ExcelSource"
@@ -3810,6 +2800,41 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_ID]"
                       lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_ID]" />
                     <inputColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Reporting_PHU]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Reporting_PHU"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU]"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU]" />
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Reporting_PHU_Address]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Reporting_PHU_Address"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Address]"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Address]" />
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Reporting_PHU_City]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Reporting_PHU_City"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_City]"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_City]" />
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Reporting_PHU_Postal_Code]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Reporting_PHU_Postal_Code"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Postal_Code]"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Postal_Code]" />
+                    <inputColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Reporting_PHU_Website]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Reporting_PHU_Website"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Website]"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Website]" />
+                    <inputColumn
                       refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Reporting_PHU_Latitude]"
                       cachedDataType="r8"
                       cachedName="Reporting_PHU_Latitude"
@@ -3822,57 +2847,17 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Longitude]"
                       lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting_PHU_Longitude]" />
                     <inputColumn
-                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Reporting_PHU]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of Reporting_PHU"
-                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU]"
-                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU]" />
-                    <inputColumn
-                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Reporting_PHU_Address]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of Reporting_PHU_Address"
-                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Address]"
-                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Address]" />
-                    <inputColumn
-                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Reporting_PHU_City]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of Reporting_PHU_City"
-                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_City]"
-                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_City]" />
-                    <inputColumn
-                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Reporting_PHU_Postal_Code]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of Reporting_PHU_Postal_Code"
-                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Postal_Code]"
-                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Postal_Code]" />
-                    <inputColumn
-                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Reporting_PHU_Website]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of Reporting_PHU_Website"
-                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Website]"
-                      lineageId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Reporting_PHU_Website]" />
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Update day]"
+                      cachedDataType="date"
+                      cachedName="Update day"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Update day]" />
                     <inputColumn
                       refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Create day]"
                       cachedDataType="date"
                       cachedName="Create day"
-                      externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
-                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Create day]" />
-                    <inputColumn
-                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Update day]"
-                      cachedDataType="date"
-                      cachedName="Update day"
                       externalMetadataColumnId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
-                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Update day]" />
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Create day]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3882,28 +2867,23 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       name="PHU_ID" />
                     <externalMetadataColumn
                       refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Reporting_PHU" />
                     <externalMetadataColumn
                       refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Address]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Reporting_PHU_Address" />
                     <externalMetadataColumn
                       refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_City]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Reporting_PHU_City" />
                     <externalMetadataColumn
                       refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Postal_Code]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Reporting_PHU_Postal_Code" />
                     <externalMetadataColumn
                       refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Website]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Reporting_PHU_Website" />
                     <externalMetadataColumn
                       refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Latitude]"
@@ -3952,13 +2932,8 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
           </components>
           <paths>
             <path
-              refId="Package\Public_health_unit_xlsx.Paths[Data Conversion Output]"
-              endId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\Public_health_unit_xlsx\Data Conversion.Outputs[Data Conversion Output]" />
-            <path
               refId="Package\Public_health_unit_xlsx.Paths[Excel Source Output]"
-              endId="Package\Public_health_unit_xlsx\Data Conversion.Inputs[Data Conversion Input]"
+              endId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
               startId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output]" />
           </paths>
@@ -4020,110 +2995,6 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
         <pipeline
           version="1">
           <components>
-            <component
-              refId="Package\vaccines_by_age_phu_xlsx\Data Conversion"
-              componentClassID="Microsoft.DataConvert"
-              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Data Conversion"
-              name="Data Conversion"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Inputs[Data Conversion Input]"
-                  name="Data Conversion Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Date]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Date"
-                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Date]" />
-                    <inputColumn
-                      refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Inputs[Data Conversion Input].Columns[Agegroup]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="Agegroup"
-                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Agegroup]" />
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output]"
-                  exclusionGroup="1"
-                  name="Data Conversion Output"
-                  synchronousInputId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Date]"
-                      dataType="date"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Date]"
-                      name="Copy of Date"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Date]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Agegroup]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      length="255"
-                      lineageId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Agegroup]"
-                      name="Copy of Agegroup"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="Specifies the input column used as the source of data for the conversion."
-                          name="SourceInputColumnLineageID">#{Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Agegroup]}</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Data Conversion Error Output"
-                  synchronousInputId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Inputs[Data Conversion Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
             <component
               refId="Package\vaccines_by_age_phu_xlsx\Excel Source"
               componentClassID="Microsoft.ExcelSource"
@@ -4445,6 +3316,20 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Agegroup]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="Agegroup"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agegroup]"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Agegroup]" />
+                    <inputColumn
                       refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Second_dose_cumulative]"
                       cachedDataType="r8"
                       cachedName="Second_dose_cumulative"
@@ -4465,32 +3350,6 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[third_dose_cumulative]"
                       lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[third_dose_cumulative]" />
                     <inputColumn
-                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU ID]"
-                      cachedDataType="r8"
-                      cachedName="PHU ID"
-                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_ID]"
-                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU ID]" />
-                    <inputColumn
-                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[At least one dose_cumulative]"
-                      cachedDataType="r8"
-                      cachedName="At least one dose_cumulative"
-                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[At_least_one_dose_cumulative]"
-                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[At least one dose_cumulative]" />
-                    <inputColumn
-                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Date]"
-                      cachedDataType="date"
-                      cachedName="Copy of Date"
-                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
-                      lineageId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Date]" />
-                    <inputColumn
-                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Agegroup]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="255"
-                      cachedName="Copy of Agegroup"
-                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agegroup]"
-                      lineageId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Agegroup]" />
-                    <inputColumn
                       refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Create day]"
                       cachedDataType="date"
                       cachedName="Create day"
@@ -4502,6 +3361,12 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       cachedName="Update day"
                       externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
                       lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Update day]" />
+                    <inputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU ID]"
+                      cachedDataType="r8"
+                      cachedName="PHU ID"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_ID]"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU ID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4515,8 +3380,7 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       name="PHU_ID" />
                     <externalMetadataColumn
                       refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Agegroup]"
-                      codePage="1252"
-                      dataType="text"
+                      dataType="nText"
                       name="Agegroup" />
                     <externalMetadataColumn
                       refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[At_least_one_dose_cumulative]"
@@ -4573,13 +3437,8 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
           </components>
           <paths>
             <path
-              refId="Package\vaccines_by_age_phu_xlsx.Paths[Data Conversion Output]"
-              endId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
-              name="Data Conversion Output"
-              startId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Outputs[Data Conversion Output]" />
-            <path
               refId="Package\vaccines_by_age_phu_xlsx.Paths[Excel Source Output]"
-              endId="Package\vaccines_by_age_phu_xlsx\Data Conversion.Inputs[Data Conversion Input]"
+              endId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Excel Source Output"
               startId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output]" />
           </paths>
@@ -5040,65 +3899,35 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
     design-time-name="Package\Case Reports_xlsx">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="138.4,41.6"
           Id="Package\Case Reports_xlsx\Excel Source"
           TopLeft="437.999999944652,52.0000003059121" />
         <NodeLayout
-          Size="170.4,41.6"
+          Size="171.2,41.6"
           Id="Package\Case Reports_xlsx\OLE DB Destination"
-          TopLeft="424.999993667007,238.999996438623" />
-        <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\Case Reports_xlsx\Data Conversion"
-          TopLeft="431.999993562698,137.99999794364" />
+          TopLeft="426.999993637204,184.999997243285" />
         <EdgeLayout
           Id="Package\Case Reports_xlsx.Paths[Excel Source Output]"
-          TopLeft="508.399996753675,93.6000003059121">
+          TopLeft="509.899996790928,93.6000003059121">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.3999976377277"
+              EndConnector="0,91.3999969373731"
               Start="0,0"
-              End="0,36.8999976377277">
+              End="0,83.8999969373731">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.8999976377277" />
+                    End="0,83.8999969373731" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Case Reports_xlsx.Paths[Data Conversion Output]"
-          TopLeft="509.899993614852,179.59999794364">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.3999984949828"
-              Start="0,0"
-              End="0,51.8999984949828">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.8999984949828" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5112,84 +3941,33 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Case Reports_xlsx\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\compiled_covid_19">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="140,41.6"
           Id="Package\compiled_covid_19\Excel Source"
           TopLeft="618.000000238418,73.0000000149012" />
         <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\compiled_covid_19\Data Conversion"
-          TopLeft="621.999990731478,173.999997407198" />
-        <NodeLayout
-          Size="170.4,41.6"
+          Size="171.2,41.6"
           Id="Package\compiled_covid_19\OLE DB Destination"
-          TopLeft="606.999990954995,279.999995827675" />
+          TopLeft="600.999991044402,229.999996572733" />
         <EdgeLayout
           Id="Package\compiled_covid_19.Paths[Excel Source Output]"
-          TopLeft="688.000000238418,114.600000014901">
+          TopLeft="687.29999564141,114.600000014901">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="11.5999904930594,59.3999973922968"
+              EndConnector="0,115.399996557832"
               Start="0,0"
-              End="11.5999904930594,51.8999973922968">
+              End="0,107.899996557832">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,25.6999986961484" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.6999986961484"
-                    Point2="0,29.6999986961484"
-                    Point3="4,29.6999986961484" />
-                  <mssgle:LineSegment
-                    End="7.59999049305941,29.6999986961484" />
-                  <mssgle:CubicBezierSegment
-                    Point1="7.59999049305941,29.6999986961484"
-                    Point2="11.5999904930594,29.6999986961484"
-                    Point3="11.5999904930594,33.6999986961484" />
-                  <mssgle:LineSegment
-                    End="11.5999904930594,51.8999973922968" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\compiled_covid_19.Paths[Data Conversion Output]"
-          TopLeft="695.899990843237,215.599997407198">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,64.3999984204769"
-              Start="0,0"
-              End="0,56.8999984204769">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,56.8999984204769" />
+                    End="0,107.899996557832" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -5214,82 +3992,39 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\compiled_covid_19\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\on_going_outbreak_phu_xlsx">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="140,41.6"
           Id="Package\on_going_outbreak_phu_xlsx\Excel Source"
           TopLeft="618,80" />
         <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\on_going_outbreak_phu_xlsx\Data Conversion"
-          TopLeft="612.999990865588,203.999996960163" />
-        <NodeLayout
           Size="171.2,41.6"
           Id="Package\on_going_outbreak_phu_xlsx\OLE DB Destination"
-          TopLeft="601.999999955297,323" />
+          TopLeft="608.999990925193,205.999996930361" />
         <EdgeLayout
           Id="Package\on_going_outbreak_phu_xlsx.Paths[Excel Source Output]"
-          TopLeft="689.299995432794,121.6">
+          TopLeft="691.299995462596,121.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,82.3999969601631"
+              EndConnector="0,84.3999969303608"
               Start="0,0"
-              End="0,74.8999969601631">
+              End="0,76.8999969303608">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,74.8999969601631" />
+                    End="0,76.8999969303608" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\on_going_outbreak_phu_xlsx.Paths[Data Conversion Output]"
-          TopLeft="689.099995410442,245.599996960163">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,77.4000030398369"
-              Start="0,0"
-              End="0,69.9000030398369">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,69.9000030398369" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5308,100 +4043,44 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\on_going_outbreak_phu_xlsx\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Public_health_unit_xlsx">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\Public_health_unit_xlsx\Data Conversion"
-          TopLeft="423.999999989356,176.00000002279" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\Public_health_unit_xlsx\OLE DB Destination"
-          TopLeft="418.999999989356,284.00000002279" />
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="138.4,41.6"
           Id="Package\Public_health_unit_xlsx\Excel Source"
-          TopLeft="434.999999989356,71.00000002279" />
+          TopLeft="434.999999989356,114.333333054789" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Public_health_unit_xlsx\OLE DB Destination"
+          TopLeft="418.333310476609,251.333331585593" />
         <EdgeLayout
           Id="Package\Public_health_unit_xlsx.Paths[Excel Source Output]"
-          TopLeft="502.899999989356,112.60000002279">
+          TopLeft="504.066655232982,155.933333054789">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,63.4"
+              EndConnector="0,95.3999985308039"
               Start="0,0"
-              End="0,55.9">
+              End="0,87.8999985308039">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,55.9" />
+                    End="0,87.8999985308039" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Public_health_unit_xlsx.Paths[Data Conversion Output]"
-          TopLeft="502.899999989356,217.60000002279">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,66.4"
-              Start="0,0"
-              End="0,58.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,58.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Public_health_unit_xlsx\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Public_health_unit_xlsx\Excel Source">
     <Properties>
@@ -5419,65 +4098,35 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
     design-time-name="Package\Public_Health_Units_GROUP_xlsx">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="140,41.6"
           Id="Package\Public_Health_Units_GROUP_xlsx\Excel Source"
-          TopLeft="618,80" />
-        <NodeLayout
-          Size="156,41.6"
-          Id="Package\Public_Health_Units_GROUP_xlsx\Data Conversion"
-          TopLeft="612,197" />
+          TopLeft="604.000000208616,80" />
         <NodeLayout
           Size="171.2,41.6"
           Id="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination"
-          TopLeft="599,323" />
+          TopLeft="592.999991163611,181.999997287989" />
         <EdgeLayout
           Id="Package\Public_Health_Units_GROUP_xlsx.Paths[Excel Source Output]"
-          TopLeft="689,121.6">
+          TopLeft="676.299995686114,121.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,75.4000000000001"
+              EndConnector="0,60.3999972879887"
               Start="0,0"
-              End="0,67.9000000000001">
+              End="0,52.8999972879887">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,67.9000000000001" />
+                    End="0,52.8999972879887" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Public_Health_Units_GROUP_xlsx.Paths[Data Conversion Output]"
-          TopLeft="687.3,238.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,84.4"
-              Start="0,0"
-              End="0,76.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,76.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -5485,6 +4134,69 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\Public_Health_Units_GROUP_xlsx\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\vaccines_by_age_phu_xlsx">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\vaccines_by_age_phu_xlsx\Excel Source"
+          TopLeft="634,74" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\vaccines_by_age_phu_xlsx\OLE DB Destination"
+          TopLeft="684.999989792705,214.99999679625" />
+        <EdgeLayout
+          Id="Package\vaccines_by_age_phu_xlsx.Paths[Excel Source Output]"
+          TopLeft="704,115.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="66.5999897927046,99.3999967962503"
+              Start="0,0"
+              End="66.5999897927046,91.8999967962503">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.6999983981252" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,45.6999983981252"
+                    Point2="0,49.6999983981252"
+                    Point3="4,49.6999983981252" />
+                  <mssgle:LineSegment
+                    End="62.5999897927046,49.6999983981252" />
+                  <mssgle:CubicBezierSegment
+                    Point1="62.5999897927046,49.6999983981252"
+                    Point2="66.5999897927046,49.6999983981252"
+                    Point3="66.5999897927046,53.6999983981252" />
+                  <mssgle:LineSegment
+                    End="66.5999897927046,91.8999967962503" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\vaccines_by_age_phu_xlsx\Excel Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -5509,74 +4221,19 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <TaskHost
-    design-time-name="Package\vaccines_by_age_phu_xlsx">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\vaccines_by_age_phu_xlsx\OLE DB Destination"
-          TopLeft="613,311" />
-        <NodeLayout
-          Size="140,41.6"
-          Id="Package\vaccines_by_age_phu_xlsx\Excel Source"
-          TopLeft="634,74" />
-        <NodeLayout
-          Size="156,41.6"
-          Id="Package\vaccines_by_age_phu_xlsx\Data Conversion"
-          TopLeft="626,188" />
-        <EdgeLayout
-          Id="Package\vaccines_by_age_phu_xlsx.Paths[Excel Source Output]"
-          TopLeft="704,115.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,72.4"
-              Start="0,0"
-              End="0,64.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,64.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\vaccines_by_age_phu_xlsx.Paths[Data Conversion Output]"
-          TopLeft="701.3,229.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,81.4"
-              Start="0,0"
-              End="0,73.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,73.9" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Public_health_unit_xlsx\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\vaccines_by_age_phu_xlsx\OLE DB Destination">
     <Properties>
@@ -5591,7 +4248,33 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\vaccines_by_age_phu_xlsx\Excel Source">
+    design-time-name="Package\Case Reports_xlsx\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\on_going_outbreak_phu_xlsx\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\compiled_covid_19\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

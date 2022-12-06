@@ -2,11 +2,11 @@ CREATE DATABASE DATH_STAGE
 GO
 USE DATH_STAGE
 GO 
-/*
+
 GO
 USE MASTER
 DROP DATABASE DATH_STAGE
-*/
+
 -- Drop Tables
 
 DROP TABLE Cases_Report
@@ -20,24 +20,24 @@ DROP TABLE vaccines_by_age_phu
 -- Columns: Outcome, Age, Gender, Reporting_PHU, SpecimenDate, CaseReported_Date, PHUCity, TestReported_Date, CaseAcquisition_info, AccurateEpisode_Dt, PHU_Address, PHU_Website, OutbreakRelated, PHU_Latitude, PHU_Longitude, PHU_Postal_Code
 
 CREATE TABLE Cases_Report (
-    Outcome varchar(MAX),
-    Age varchar(MAX),
-    Gender varchar(MAX),
-    Reporting_PHU varchar(MAX),
+    Outcome nvarchar(MAX),
+    Age nvarchar(MAX),
+    Gender nvarchar(MAX),
+    Reporting_PHU nvarchar(MAX),
     SpecimenDate date,
     CaseReported_Date date,
-    PHUCity varchar(MAX),
+    PHUCity nvarchar(MAX),
     TestReported_Date date,
-    CaseAcquisition_info varchar(MAX),
+    CaseAcquisition_info nvarchar(MAX),
     AccurateEpisode_Dt date,
-    PHU_Address varchar(MAX),
-    PHU_Website varchar(MAX),
-    OutbreakRelated varchar(MAX),
+    PHU_Address nvarchar(MAX),
+    PHU_Website nvarchar(MAX),
+    OutbreakRelated nvarchar(MAX),
     PHU_Latitude float,
     PHU_Longitude float,
-    PHU_Postal_Code varchar(MAX),
+    PHU_Postal_Code nvarchar(MAX),
 	Create_day date,
-	Update_day date
+	Update_day date,
 )
 GO
 -- Table: Compiled_COVID-19_Case_Details_Canada_csv
@@ -47,14 +47,14 @@ CREATE TABLE Compiled_COVID_19_Case_Details_Canada (
     ObjectId bigint,
     row_id bigint,
     date_reported datetimeoffset,
-    health_region varchar(MAX),
-    age_group varchar(MAX),
-    gender varchar(MAX),
-    exposure varchar(MAX),
-    case_status varchar(MAX),
-    province varchar(MAX),
+    health_region nvarchar(MAX),
+    age_group nvarchar(MAX),
+    gender nvarchar(MAX),
+    exposure nvarchar(MAX),
+    case_status nvarchar(MAX),
+    province nvarchar(MAX),
 	Create_day date,
-	Update_day date
+	Update_day date,
 )
 GO
 -- Table: ongoing_outbreaks_phu_csv
@@ -63,10 +63,10 @@ GO
 CREATE TABLE ongoing_outbreaks_phu (
     date date,
     phu_num bigint,
-    outbreak_group varchar(MAX),
+    outbreak_group nvarchar(MAX),
     number_ongoing_outbreaks bigint,
 	Create_day date,
-	Update_day date
+	Update_day date,
 )
 GO
 -- Table: Public_health_unit_xlsx
@@ -74,26 +74,26 @@ GO
 
 CREATE TABLE Public_health_unit (
     PHU_ID bigint,
-    Reporting_PHU varchar(MAX),
-    Reporting_PHU_Address varchar(MAX),
-    Reporting_PHU_City varchar(MAX),
-    Reporting_PHU_Postal_Code varchar(MAX),
-    Reporting_PHU_Website varchar(MAX),
+    Reporting_PHU nvarchar(MAX),
+    Reporting_PHU_Address nvarchar(MAX),
+    Reporting_PHU_City nvarchar(MAX),
+    Reporting_PHU_Postal_Code nvarchar(MAX),
+    Reporting_PHU_Website nvarchar(MAX),
     Reporting_PHU_Latitude float,
     Reporting_PHU_Longitude float,
 	Create_day date,
-	Update_day date
+	Update_day date,
 )
 GO
 -- Table: Public_Health_Units_GROUP_xlsx
 -- Columns: PHU_Group, PHU_City, PHU_region
 
 CREATE TABLE Public_Health_Units_GROUP (
-    PHU_Group varchar(MAX),
-    PHU_City varchar(MAX),
-    PHU_region varchar(MAX),
+    PHU_Group nvarchar(MAX),
+    PHU_City nvarchar(MAX),
+    PHU_region nvarchar(MAX),
 	Create_day date,
-	Update_day date
+	Update_day date,
 )
 GO
 -- Table: vaccines_by_age_phu_csv
@@ -102,13 +102,13 @@ GO
 CREATE TABLE vaccines_by_age_phu (
     Date date,
     PHU_ID bigint,
-    Agegroup varchar(MAX),
+    Agegroup nvarchar(MAX),
     At_least_one_dose_cumulative bigint,
     Second_dose_cumulative bigint,
     fully_vaccinated_cumulative bigint,
     third_dose_cumulative bigint,
 	Create_day date,
-	Update_day date
+	Update_day date,
 )
 GO
 -- Table: vaccines_by_age_phu_xlsx

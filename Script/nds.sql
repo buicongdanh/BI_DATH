@@ -3,6 +3,11 @@ GO
 USE DATH_NDS
 GO 
 
+
+USE MASTER
+GO
+DROP DATABASE DATH_NDS
+GO
 -- DROP TABLE --------------------------------------------------------------------------------
 
 DROP TABLE COMPILED_COVID_19_CASE_DETAILS_CANADA_NDS
@@ -21,29 +26,6 @@ DROP TABLE PHU_NDS
 DROP TABLE AGE_GROUP_NDS
 DROP TABLE GENDER_NDS
 
-DROP TABLE Source_NDS
-
--- CREATE SOURCE TABLE --------------------------------------------------------------------------------
-
-CREATE TABLE Source_NDS (
-    Source_ID int PRIMARY KEY,
-    Source_Name varchar(50) NOT NULL,
-)
-
-INSERT INTO Source_NDS (Source_ID, Source_Name) VALUES (1, 'PHU_GROUP_NDS') 
-INSERT INTO Source_NDS (Source_ID, Source_Name) VALUES (2, 'PHU_NDS') 
-INSERT INTO Source_NDS (Source_ID, Source_Name) VALUES (3, 'PHU_CITY_NDS') 
-INSERT INTO Source_NDS (Source_ID, Source_Name) VALUES (4, 'VACCINES_BY_AGE_PHU_NDS') 
-INSERT INTO Source_NDS (Source_ID, Source_Name) VALUES (5, 'OUTBREAKS_GROUP_NDS') 
-INSERT INTO Source_NDS (Source_ID, Source_Name) VALUES (6, 'ONGOING_OUTBREAKS_PHU_NDS') 
-INSERT INTO Source_NDS (Source_ID, Source_Name) VALUES (7, 'CASE_ACQUISITION_INFO_NDS') 
-INSERT INTO Source_NDS (Source_ID, Source_Name) VALUES (8, 'CASES_REPORT_NDS') 
-INSERT INTO Source_NDS (Source_ID, Source_Name) VALUES (9, 'EXPOSURE_NDS') 
-INSERT INTO Source_NDS (Source_ID, Source_Name) VALUES (10, 'CASE_STATUS_NDS') 
-INSERT INTO Source_NDS (Source_ID, Source_Name) VALUES (11, 'AGE_GROUP_NDS') 
-INSERT INTO Source_NDS (Source_ID, Source_Name) VALUES (12, 'GENDER_NDS') 
-INSERT INTO Source_NDS (Source_ID, Source_Name) VALUES (13, 'COMPILED_COVID_19_CASE_DETAILS_CANADA_NDS') 
-
 -- CREATE DATABASE TABLE --------------------------------------------------------------------------------
 
 -- Table: PHU_GROUP_NDS
@@ -51,7 +33,6 @@ INSERT INTO Source_NDS (Source_ID, Source_Name) VALUES (13, 'COMPILED_COVID_19_C
 CREATE TABLE PHU_GROUP_NDS (
     PHU_GROUP_ID bigint IDENTITY(1,1) PRIMARY KEY,
     PHU_GROUP varchar(MAX) NULL,
-    Source int,
 )
 
 -- Table: PHU_City_NDS
@@ -60,7 +41,7 @@ CREATE TABLE PHU_City_NDS (
     PHU_City_ID bigint IDENTITY(1,1) PRIMARY KEY,
     PHU_City varchar(MAX) NULL,
     PHU_Group_ID bigint,
-    Source int,
+
     -- PHU_Group_ID bigint FOREIGN KEY REFERENCES PHU_GROUP(PHU_GROUP_ID)
 )
 
@@ -75,7 +56,6 @@ CREATE TABLE PHU_NDS (
     Reporting_PHU_Website varchar(MAX) NULL,
     Reporting_PHU_Latitude float NULL,
     Reporting_PHU_Longitude float NULL,
-    Source int,
     -- PHU_City_ID bigint FOREIGN KEY REFERENCES PHU_City(PHU_City_ID)
 )
 
@@ -90,7 +70,6 @@ CREATE TABLE Vaccines_by_age_PHU_NDS (
     Second_dose_cumulative bigint,
     fully_vaccinated_cumulative bigint,
     third_dose_cumulative bigint,
-    Source int,
     -- PHU_ID bigint FOREIGN KEY REFERENCES PHU(PHU_ID),
     -- Age_Group_ID bigint FOREIGN KEY REFERENCES Age_Group(Age_Group_ID)
 )
@@ -100,7 +79,6 @@ CREATE TABLE Vaccines_by_age_PHU_NDS (
 CREATE TABLE Outbreaks_Group_NDS (
     Outbreaks_Group_ID bigint IDENTITY(1,1) PRIMARY KEY,
     Outbreaks_Group varchar(MAX) NULL,
-    Source int,
 )
 
 -- Table: Ongoing_Outbreaks_PHU_NDS
@@ -111,7 +89,6 @@ CREATE TABLE Ongoing_Outbreaks_PHU_NDS (
     PHU_ID bigint,
     Outbreaks_Group_ID bigint,
     Number_Ongoing_Outbreaks bigint,
-    Source int,
     -- PHU_ID bigint FOREIGN KEY REFERENCES PHU(PHU_ID),
     -- Outbreaks_Group_ID bigint FOREIGN KEY REFERENCES Outbreaks_Group(Outbreaks_Group_ID)
 )
@@ -121,7 +98,6 @@ CREATE TABLE Ongoing_Outbreaks_PHU_NDS (
 CREATE TABLE Case_Acquisition_Info_NDS (
     Case_Acquisition_Info_ID bigint IDENTITY(1,1) PRIMARY KEY,
     Case_Acquisition_Info varchar(MAX) NULL,
-    Source int,
 )
 
 -- Table: Cases_Report_NDS
@@ -138,7 +114,6 @@ CREATE TABLE Cases_Report_NDS (
     Case_Acquisition_Info_ID bigint,
     Accurate_Episode_Date date,
     Outbreak_Related varchar(10),
-    Source int,
     -- Age_Group_ID bigint FOREIGN KEY REFERENCES Age_Group(Age_Group_ID),
     -- Case_AcquisitionInfo_ID bigint FOREIGN KEY REFERENCES Case_Acquisition_Info(Case_Acquisition_Info_ID)
 )
@@ -147,8 +122,7 @@ CREATE TABLE Cases_Report_NDS (
 -- Column: Exposure_ID, Exposure
 CREATE TABLE Exposure_NDS (
     Exposure_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    Exposure varchar(MAX) NULL,
-    Source int,
+    Exposure varchar(MAX) NOT NULL,
 )
 
 -- Table: Case_Status_NDS
@@ -156,7 +130,6 @@ CREATE TABLE Exposure_NDS (
 CREATE TABLE Case_Status_NDS (
     Case_Status_ID bigint IDENTITY(1,1) PRIMARY KEY,
     Case_Status varchar(MAX) NULL,
-    Source int,
 )
 
 -- Table: Age_Group_NDS
@@ -164,7 +137,6 @@ CREATE TABLE Case_Status_NDS (
 CREATE TABLE Age_Group_NDS (
     Age_Group_ID bigint IDENTITY(1,1) PRIMARY KEY,
     Age_Group varchar(MAX) NULL,
-    Source int,
 )
 
 -- Table: Gender_NDS
@@ -186,7 +158,6 @@ CREATE TABLE Compiled_COVID_19_Case_Details_Canada_NDS (
     Exposure_ID bigint,
     Case_Status_ID bigint,
     Province varchar(MAX),
-    Source int,
     -- PHU_ID bigint FOREIGN KEY REFERENCES PHU(PHU_ID),
     -- Age_Group_ID bigint FOREIGN KEY REFERENCES Age_Group(Age_Group_ID),
     -- Gender_ID bigint FOREIGN KEY REFERENCES Gender(Gender_ID),
@@ -208,7 +179,6 @@ SELECT * FROM AGE_GROUP_NDS
 SELECT * FROM GENDER_NDS
 SELECT * FROM COMPILED_COVID_19_CASE_DETAILS_CANADA_NDS
 
-SELECT * FROM Source_NDS
 
 -- ADD FOREIGN KEY --------------------------------------------------------------------------------
 
