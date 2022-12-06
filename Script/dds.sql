@@ -96,34 +96,34 @@ GO
 CREATE TABLE PHU (
     PHU_ID bigint IDENTITY(1,1) PRIMARY KEY,
     Reporting_PHU varchar(MAX) NULL,
-    Reporting_PHU_Address varchar(MAX) NULL,
-    PHU_City_ID bigint,
-    Reporting_PHU_Postal_Code varchar(MAX) NULL,
-    Reporting_PHU_Website varchar(MAX) NULL,
-    Reporting_PHU_Latitude float NULL,
-    Reporting_PHU_Longitude float NULL,
+    Reporting_PHU_Address varchar(MAX) NULL,--Changing
+    PHU_City_ID bigint,--Historical
+    Reporting_PHU_Postal_Code varchar(MAX) NULL, --Changing
+    Reporting_PHU_Website varchar(MAX) NULL, --Changing
+    Reporting_PHU_Latitude float NULL,--Changing
+    Reporting_PHU_Longitude float NULL,--Changing
     Source int,
     -- PHU_City_ID bigint FOREIGN KEY REFERENCES PHU_City(PHU_City_ID)
 )
 CREATE TABLE PHU_GROUP (
     PHU_GROUP_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    PHU_GROUP varchar(MAX) NULL,
+    PHU_GROUP varchar(MAX) NULL,--Changing
     Source int,
 )
 CREATE TABLE PHU_City (
     PHU_City_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    PHU_City varchar(MAX) NULL,
-    PHU_Group_ID bigint,
+    PHU_City varchar(MAX) NULL,--Changing
+    PHU_Group_ID bigint, --Historical
     Source int,
 )
 CREATE TABLE [dbo].[Geography] (
   [IDGeography] bigint IDENTITY(1, 1) NOT NULL,
-  [PHU_ID] bigint NULL,
+  [PHU_ID] bigint NULL, --Historical
   [Reporting_PHU] varchar(MAX) NULL,
-  [PHU_City_ID] bigint NULL,
+  [PHU_City_ID] bigint NULL, --Historical
   [PHU_City] varchar(MAX) NULL,
-  [PHU_Group_ID] bigint NULL,
-  [PHU_GROUP] varchar(MAX) NULL
+  [PHU_Group_ID] bigint NULL,--Historical
+  [PHU_GROUP] varchar(MAX) NULL 
 )
 ON [PRIMARY]
 GO
@@ -155,12 +155,21 @@ CREATE TABLE  [dbo].[FactCase] (
   [IDDate] int NOT NULL,
   [PHU_ID] bigint NOT NULL,
   [Age_ID] bigint NOT NULL,
-   [Gender_ID] bigint NOT NULL,
+  [Gender_ID] bigint NOT NULL,
   [Case_Status_ID] bigint NOT NULL,
   [ToTalCase] int NULL,
   primary key (IDDate,PHU_ID,Age_ID,Gender_ID,Case_Status_ID)
- 
 )
+
+CREATE TABLE [dbo].[FactVacinated](
+  [IDDate] int NOT NULL,
+  [PHU_ID] bigint NOT NULL,
+  [Age_ID] bigint NOT NULL,
+  [TotalVacinated] int NULL,
+  primary key (IDDate,PHU_ID,Age_ID)
+)
+
+
 
 --Them khoa ngoai neu can
 ALTER TABLE PHU_City ADD FOREIGN KEY (PHU_Group_ID) REFERENCES PHU_Group(PHU_Group_ID)
@@ -226,3 +235,4 @@ begin
 	end
 end
 GO
+
