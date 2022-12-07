@@ -32,16 +32,15 @@ DROP TABLE GENDER_NDS
 -- Column: PHU_GROUP_ID, PHU_GROUP
 CREATE TABLE PHU_GROUP_NDS (
     PHU_GROUP_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    PHU_GROUP varchar(MAX) NULL,
+    PHU_GROUP nvarchar(300) NULL,
+	PHU_City_ID bigint,
 )
 
 -- Table: PHU_City_NDS
 -- Column: PHU_City_ID, PHU_City, PHU_Group_ID
 CREATE TABLE PHU_City_NDS (
     PHU_City_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    PHU_City varchar(MAX) NULL,
-    PHU_Group_ID bigint,
-
+    PHU_City nvarchar(300) NULL,
     -- PHU_Group_ID bigint FOREIGN KEY REFERENCES PHU_GROUP(PHU_GROUP_ID)
 )
 
@@ -49,11 +48,12 @@ CREATE TABLE PHU_City_NDS (
 -- Column: PHU_ID, Reporting_PHU, Reporting_PHU_Address, PHU_City_ID, Reporting_PHU_Postal_Code, Reporting_PHU_Website, Reporting_PHU_Latitude, Reporting_PHU_Longitude
 CREATE TABLE PHU_NDS (
     PHU_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    Reporting_PHU varchar(MAX) NULL,
-    Reporting_PHU_Address varchar(MAX) NULL,
+	PHU_ID_NK bigint NULL,
+    Reporting_PHU nvarchar(300) NULL,
+    Reporting_PHU_Address nvarchar(300) NULL,
     PHU_City_ID bigint,
-    Reporting_PHU_Postal_Code varchar(MAX) NULL,
-    Reporting_PHU_Website varchar(MAX) NULL,
+    Reporting_PHU_Postal_Code nvarchar(300) NULL,
+    Reporting_PHU_Website nvarchar(300) NULL,
     Reporting_PHU_Latitude float NULL,
     Reporting_PHU_Longitude float NULL,
     -- PHU_City_ID bigint FOREIGN KEY REFERENCES PHU_City(PHU_City_ID)
@@ -78,7 +78,7 @@ CREATE TABLE Vaccines_by_age_PHU_NDS (
 -- Column: Outbreaks_Group_ID, Outbreaks_Group
 CREATE TABLE Outbreaks_Group_NDS (
     Outbreaks_Group_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    Outbreaks_Group varchar(MAX) NULL,
+    Outbreaks_Group nvarchar(300) NULL,
 )
 
 -- Table: Ongoing_Outbreaks_PHU_NDS
@@ -97,14 +97,14 @@ CREATE TABLE Ongoing_Outbreaks_PHU_NDS (
 -- Column: Case_Acquisition_Info_ID, Case_Acquisition_Info
 CREATE TABLE Case_Acquisition_Info_NDS (
     Case_Acquisition_Info_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    Case_Acquisition_Info varchar(MAX) NULL,
+    Case_Acquisition_Info nvarchar(300) NULL,
 )
 
 -- Table: Cases_Report_NDS
 -- Column: Case_Report_ID, Outcome, Age_Group_ID, Gender_ID, PHU_ID, Specimen_Date, Case_Reported_Date, Test_Reported_Date, Case_Acquisition_Info_ID, Accurate_Episode_Date, Outbreak_Related
 CREATE TABLE Cases_Report_NDS (
     Case_Report_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    Outcome varchar(MAX),
+    Outcome varchar(300),
     Age_Group_ID bigint,
     Gender_ID bigint,
     PHU_ID bigint,  
@@ -113,7 +113,7 @@ CREATE TABLE Cases_Report_NDS (
     Test_Reported_Date date,
     Case_Acquisition_Info_ID bigint,
     Accurate_Episode_Date date,
-    Outbreak_Related varchar(10),
+    Outbreak_Related nvarchar(300),
     -- Age_Group_ID bigint FOREIGN KEY REFERENCES Age_Group(Age_Group_ID),
     -- Case_AcquisitionInfo_ID bigint FOREIGN KEY REFERENCES Case_Acquisition_Info(Case_Acquisition_Info_ID)
 )
@@ -122,28 +122,28 @@ CREATE TABLE Cases_Report_NDS (
 -- Column: Exposure_ID, Exposure
 CREATE TABLE Exposure_NDS (
     Exposure_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    Exposure varchar(MAX) NOT NULL,
+    Exposure nvarchar(300) NULL,
 )
 
 -- Table: Case_Status_NDS
 -- Column: Case_Status_ID, Case_Status
 CREATE TABLE Case_Status_NDS (
     Case_Status_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    Case_Status varchar(MAX) NULL,
+    Case_Status nvarchar(300) NULL,
 )
 
 -- Table: Age_Group_NDS
 -- Column: Age_Group_ID, Age_Group, Source
 CREATE TABLE Age_Group_NDS (
     Age_Group_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    Age_Group varchar(MAX) NULL,
+    Age_Group nvarchar(300) NULL,
 )
 
 -- Table: Gender_NDS
 -- Column: Gender_ID, Gender, Source
 CREATE TABLE Gender_NDS (
     Gender_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    Gender varchar(MAX) NULL,
+    Gender nvarchar(300) NULL,
 )
 
 -- Table: Compiled_COVID_19_Case_Details_Canada_NDS
@@ -157,14 +157,14 @@ CREATE TABLE Compiled_COVID_19_Case_Details_Canada_NDS (
     Test_Reported_Date date,
     Exposure_ID bigint,
     Case_Status_ID bigint,
-    Province varchar(MAX),
+    Province nvarchar(300),
     -- PHU_ID bigint FOREIGN KEY REFERENCES PHU(PHU_ID),
     -- Age_Group_ID bigint FOREIGN KEY REFERENCES Age_Group(Age_Group_ID),
     -- Gender_ID bigint FOREIGN KEY REFERENCES Gender(Gender_ID),
 )
 
 -- SELECT --------------------------------------------------------------------------------
-
+SELECT * FROM PHU_CITY_NDS
 SELECT * FROM PHU_GROUP_NDS
 SELECT * FROM PHU_NDS
 SELECT * FROM PHU_CITY_NDS
