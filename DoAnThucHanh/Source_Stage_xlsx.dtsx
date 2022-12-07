@@ -11,33 +11,93 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="25"
-  DTS:VersionGUID="{7543B3D3-AE7C-44E1-87B1-D00D98C146D1}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{673B9FEC-645A-4248-B38E-65494B75BE8C}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[cases report]"
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{62FD2F74-AC2F-4F22-A621-F4D4130B3A30}"
-      DTS:ObjectName="cases report">
+      DTS:DTSID="{7240E5DD-0D5B-4911-B799-26833705B4C7}"
+      DTS:ObjectName="Excel Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ACER\Desktop\BI_DATH\CleanData\Clean_Cases Report.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ACER\Desktop\BI_DATH\CleanData\Clean_Public health unit.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[compiled covid 19]"
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 1]"
       DTS:CreationName="EXCEL"
-      DTS:DTSID="{B938B710-EAB4-49D4-AC41-890AEF4ACCDA}"
-      DTS:ObjectName="compiled covid 19">
+      DTS:DTSID="{3EECDA6E-93FC-4D35-B41B-AA8AC853D4EE}"
+      DTS:ObjectName="Excel Connection Manager 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ACER\Desktop\BI_DATH\CleanData\Clean_Compiled_COVID-19_Case_Details_(Canada).xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ACER\Desktop\BI_DATH\CleanData\Clean_Public Health Units GROUP.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 2]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{18A485A9-9388-4264-B958-9F405ED4B442}"
+      DTS:ObjectName="Excel Connection Manager 2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ACER\Desktop\BI_DATH\CleanData\Clean_vaccines_by_age_phu.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 3]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{3A326B5A-2150-4C64-8A3F-E8EB7FC72481}"
+      DTS:ObjectName="Excel Connection Manager 3">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ACER\Desktop\BI_DATH\CleanData\Clean_Cases Report.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 4]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{B4C079E3-D490-4593-951C-35249AFD5A05}"
+      DTS:ObjectName="Excel Connection Manager 4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ACER\Desktop\BI_DATH\CleanData\Clean_ongoing_outbreaks_phu.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 5]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{F9B4AE00-E09E-4F62-9B9B-6CC768C37082}"
+      DTS:ObjectName="Excel Connection Manager 5">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ACER\Desktop\BI_DATH\CleanData\Clean_Compiled_COVID-19_Case_Details_(Canada).xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Excel Connection Manager 6]"
+      DTS:CreationName="EXCEL"
+      DTS:DTSID="{09B20BDC-C37C-4A41-8DEF-706C7140AD0E}"
+      DTS:ObjectName="Excel Connection Manager 6">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="0"
+          DTS:ConnectRetryInterval="0"
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ACER\Desktop\BI_DATH\CleanData\Clean_Compiled_COVID-19_Case_Details_(Canada).xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -98,54 +158,6 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=.;Provider=MSOLEDBSQL.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[on going outbreak]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{D388F3E0-C3B5-47AF-97AC-66F71438E6B8}"
-      DTS:ObjectName="on going outbreak">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ACER\Desktop\BI_DATH\CleanData\Clean_on_going_outbreaks_phu.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[phu]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{F02FFFA7-BC2B-4F66-B2CE-3082D1E2A19E}"
-      DTS:ObjectName="phu">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ACER\Desktop\BI_DATH\CleanData\Clean_Public health unit.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[phu gr]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{432C825C-87D9-41B6-8BF9-EADDB3E84395}"
-      DTS:ObjectName="phu gr">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ACER\Desktop\BI_DATH\CleanData\Clean_Public Health Units GROUP.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[vaccines by age phu]"
-      DTS:CreationName="EXCEL"
-      DTS:DTSID="{7456F1B0-E04C-493F-859F-7660EB9216AA}"
-      DTS:ObjectName="vaccines by age phu">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="0"
-          DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ACER\Desktop\BI_DATH\CleanData\Clean_vaccines_by_age_phu.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -283,8 +295,8 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
               <connections>
                 <connection
                   refId="Package\Case Reports_xlsx\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[cases report]"
-                  connectionManagerRefId="Package.ConnectionManagers[cases report]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 3]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 3]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -465,6 +477,15 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU Postal Code]"
                       name="PHU Postal Code"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[_Status]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[_Status]"
+                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[_Status]"
+                      name="_Status"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -550,6 +571,10 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       dataType="wstr"
                       length="255"
                       name="PHU Postal Code" />
+                    <externalMetadataColumn
+                      refId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[_Status]"
+                      dataType="r8"
+                      name="_Status" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -657,6 +682,11 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       dataType="date"
                       lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Update day]"
                       name="Update day" />
+                    <outputColumn
+                      refId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[_Status]"
+                      dataType="r8"
+                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[_Status]"
+                      name="_Status" />
                     <outputColumn
                       refId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -864,24 +894,34 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       cachedName="Reporting PHU"
                       externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU]"
                       lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Reporting PHU]" />
+                    <inputColumn
+                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[_Status]"
+                      cachedDataType="r8"
+                      cachedName="_Status"
+                      externalMetadataColumnId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_Status]"
+                      lineageId="Package\Case Reports_xlsx\Excel Source.Outputs[Excel Source Output].Columns[_Status]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Outcome]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="Outcome" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="Age" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="Gender" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="Reporting_PHU" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SpecimenDate]"
@@ -893,7 +933,8 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       name="CaseReported_Date" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHUCity]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="PHUCity" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TestReported_Date]"
@@ -901,7 +942,8 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       name="TestReported_Date" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CaseAcquisition_info]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="CaseAcquisition_info" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AccurateEpisode_Dt]"
@@ -909,15 +951,18 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       name="AccurateEpisode_Dt" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Address]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="PHU_Address" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Website]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="PHU_Website" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[OutbreakRelated]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="OutbreakRelated" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Latitude]"
@@ -929,7 +974,8 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       name="PHU_Longitude" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Postal_Code]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="PHU_Postal_Code" />
                     <externalMetadataColumn
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
@@ -939,6 +985,10 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
                       dataType="dbDate"
                       name="Update_day" />
+                    <externalMetadataColumn
+                      refId="Package\Case Reports_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_Status]"
+                      dataType="i4"
+                      name="_Status" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1017,7 +1067,7 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT ObjectId, row_id, date_reported, health_region, age_group, gender, exposure, case_status, province, [Create day], [Update day]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT *
 FROM     [Sheet1$]
 WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
                   ([Update day] &gt; ?) AND ([Update day] &lt; ?)</property>
@@ -1038,8 +1088,8 @@ WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
               <connections>
                 <connection
                   refId="Package\compiled_covid_19\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[compiled covid 19]"
-                  connectionManagerRefId="Package.ConnectionManagers[compiled covid 19]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 6]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 6]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1153,6 +1203,15 @@ WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
                       lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[province]"
                       name="province"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[_Status]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].ExternalColumns[_Status]"
+                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[_Status]"
+                      name="_Status"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1206,6 +1265,10 @@ WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
                       dataType="wstr"
                       length="255"
                       name="province" />
+                    <externalMetadataColumn
+                      refId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].ExternalColumns[_Status]"
+                      dataType="r8"
+                      name="_Status" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1274,6 +1337,11 @@ WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
                       dataType="date"
                       lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Error Output].Columns[Update day]"
                       name="Update day" />
+                    <outputColumn
+                      refId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Error Output].Columns[_Status]"
+                      dataType="r8"
+                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Error Output].Columns[_Status]"
+                      name="_Status" />
                     <outputColumn
                       refId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -1364,6 +1432,18 @@ WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
+                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Create day]"
+                      cachedDataType="date"
+                      cachedName="Create day"
+                      externalMetadataColumnId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
+                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[Create day]" />
+                    <inputColumn
+                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Update day]"
+                      cachedDataType="date"
+                      cachedName="Update day"
+                      externalMetadataColumnId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
+                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[Update day]" />
+                    <inputColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ObjectId]"
                       cachedDataType="r8"
                       cachedName="ObjectId"
@@ -1424,17 +1504,11 @@ WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
                       externalMetadataColumnId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[province]"
                       lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[province]" />
                     <inputColumn
-                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Create day]"
-                      cachedDataType="date"
-                      cachedName="Create day"
-                      externalMetadataColumnId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
-                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[Create day]" />
-                    <inputColumn
-                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Update day]"
-                      cachedDataType="date"
-                      cachedName="Update day"
-                      externalMetadataColumnId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
-                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[Update day]" />
+                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[_Status]"
+                      cachedDataType="r8"
+                      cachedName="_Status"
+                      externalMetadataColumnId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_Status]"
+                      lineageId="Package\compiled_covid_19\Excel Source.Outputs[Excel Source Output].Columns[_Status]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1453,27 +1527,33 @@ WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
                       scale="7" />
                     <externalMetadataColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[health_region]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="health_region" />
                     <externalMetadataColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[age_group]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="age_group" />
                     <externalMetadataColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[gender]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="gender" />
                     <externalMetadataColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[exposure]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="exposure" />
                     <externalMetadataColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[case_status]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="case_status" />
                     <externalMetadataColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[province]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="province" />
                     <externalMetadataColumn
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
@@ -1483,6 +1563,10 @@ WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
                       refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
                       dataType="dbDate"
                       name="Update_day" />
+                    <externalMetadataColumn
+                      refId="Package\compiled_covid_19\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_Status]"
+                      dataType="i4"
+                      name="_Status" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -1663,8 +1747,8 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
               <connections>
                 <connection
                   refId="Package\on_going_outbreak_phu_xlsx\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[on going outbreak]"
-                  connectionManagerRefId="Package.ConnectionManagers[on going outbreak]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 4]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 4]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -1728,6 +1812,15 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       lineageId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[number_ongoing_outbreaks]"
                       name="number_ongoing_outbreaks"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[_Status]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[_Status]"
+                      lineageId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[_Status]"
+                      name="_Status"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1756,6 +1849,10 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       refId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[number_ongoing_outbreaks]"
                       dataType="r8"
                       name="number_ongoing_outbreaks" />
+                    <externalMetadataColumn
+                      refId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[_Status]"
+                      dataType="r8"
+                      name="_Status" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -1795,6 +1892,11 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       dataType="r8"
                       lineageId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[phu_num]"
                       name="phu_num" />
+                    <outputColumn
+                      refId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[_Status]"
+                      dataType="r8"
+                      lineageId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[_Status]"
+                      name="_Status" />
                     <outputColumn
                       refId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[outbreak_group]"
                       dataType="wstr"
@@ -1920,6 +2022,12 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       cachedName="Update day"
                       externalMetadataColumnId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
                       lineageId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Update day]" />
+                    <inputColumn
+                      refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[_Status]"
+                      cachedDataType="r8"
+                      cachedName="_Status"
+                      externalMetadataColumnId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_Status]"
+                      lineageId="Package\on_going_outbreak_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[_Status]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -1933,7 +2041,8 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       name="phu_num" />
                     <externalMetadataColumn
                       refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[outbreak_group]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="outbreak_group" />
                     <externalMetadataColumn
                       refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[number_ongoing_outbreaks]"
@@ -1947,6 +2056,10 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
                       dataType="dbDate"
                       name="Update_day" />
+                    <externalMetadataColumn
+                      refId="Package\on_going_outbreak_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_Status]"
+                      dataType="i4"
+                      name="_Status" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2107,7 +2220,10 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT *
+FROM     [Sheet1$]
+WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
+                  ([Update day] &gt; ?) AND ([Update day] &lt; ?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -2116,17 +2232,17 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
                   description="The mapping from parameters in the SQL command to variables."
-                  name="ParameterMapping"></property>
+                  name="ParameterMapping">"Parameter0:Input",{88955272-1DCF-4417-A2AC-B5CA21A2C17F};"Parameter1:Input",{C2D802D5-022A-4988-8E77-33A2F42F074C};"Parameter2:Input",{88955272-1DCF-4417-A2AC-B5CA21A2C17F};"Parameter3:Input",{C2D802D5-022A-4988-8E77-33A2F42F074C};</property>
               </properties>
               <connections>
                 <connection
                   refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[phu gr]"
-                  connectionManagerRefId="Package.ConnectionManagers[phu gr]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 1]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2135,6 +2251,33 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                   refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output]"
                   name="Excel Source Output">
                   <outputColumns>
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Create day]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Create day]"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Create day]"
+                      name="Create day"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Update day]"
+                      dataType="date"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Update day]"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Update day]"
+                      name="Update day"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[_Status]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[_Status]"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[_Status]"
+                      name="_Status"
+                      truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_Group]"
                       dataType="wstr"
@@ -2165,27 +2308,21 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_region]"
                       name="PHU_region"
                       truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Create day]"
-                      dataType="date"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Create day]"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Create day]"
-                      name="Create day"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Update day]"
-                      dataType="date"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Update day]"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Update day]"
-                      name="Update day"
-                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Create day]"
+                      dataType="date"
+                      name="Create day" />
+                    <externalMetadataColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Update day]"
+                      dataType="date"
+                      name="Update day" />
+                    <externalMetadataColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[_Status]"
+                      dataType="r8"
+                      name="_Status" />
                     <externalMetadataColumn
                       refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[PHU_Group]"
                       dataType="wstr"
@@ -2201,14 +2338,6 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       dataType="wstr"
                       length="255"
                       name="PHU_region" />
-                    <externalMetadataColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Create day]"
-                      dataType="date"
-                      name="Create day" />
-                    <externalMetadataColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Update day]"
-                      dataType="date"
-                      name="Update day" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2244,6 +2373,11 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       dataType="date"
                       lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Update day]"
                       name="Update day" />
+                    <outputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[_Status]"
+                      dataType="r8"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[_Status]"
+                      name="_Status" />
                     <outputColumn
                       refId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -2334,27 +2468,6 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU_Group]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="PHU_Group"
-                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Group]"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_Group]" />
-                    <inputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU_City]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="PHU_City"
-                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_City]"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_City]" />
-                    <inputColumn
-                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU_region]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="PHU_region"
-                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_region]"
-                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_region]" />
-                    <inputColumn
                       refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Create day]"
                       cachedDataType="date"
                       cachedName="Create day"
@@ -2366,20 +2479,50 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       cachedName="Update day"
                       externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
                       lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Update day]" />
+                    <inputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU_City]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PHU_City"
+                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_City]"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_City]" />
+                    <inputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[_Status]"
+                      cachedDataType="r8"
+                      cachedName="_Status"
+                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_Status]"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[_Status]" />
+                    <inputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU_region]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PHU_region"
+                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_region]"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_region]" />
+                    <inputColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[PHU_Group]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="PHU_Group"
+                      externalMetadataColumnId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Group]"
+                      lineageId="Package\Public_Health_Units_GROUP_xlsx\Excel Source.Outputs[Excel Source Output].Columns[PHU_Group]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_Group]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="PHU_Group" />
                     <externalMetadataColumn
                       refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_City]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="PHU_City" />
                     <externalMetadataColumn
                       refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PHU_region]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="PHU_region" />
                     <externalMetadataColumn
                       refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
@@ -2389,6 +2532,10 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
                       dataType="dbDate"
                       name="Update_day" />
+                    <externalMetadataColumn
+                      refId="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_Status]"
+                      dataType="i4"
+                      name="_Status" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2489,8 +2636,8 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
               <connections>
                 <connection
                   refId="Package\Public_health_unit_xlsx\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[phu]"
-                  connectionManagerRefId="Package.ConnectionManagers[phu]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -2594,6 +2741,15 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Update day]"
                       name="Update day"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[_Status]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[_Status]"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].Columns[_Status]"
+                      name="_Status"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2642,6 +2798,10 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Update day]"
                       dataType="date"
                       name="Update day" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[_Status]"
+                      dataType="r8"
+                      name="_Status" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2704,6 +2864,11 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       dataType="date"
                       lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Update day]"
                       name="Update day" />
+                    <outputColumn
+                      refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[_Status]"
+                      dataType="r8"
+                      lineageId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[_Status]"
+                      name="_Status" />
                     <outputColumn
                       refId="Package\Public_health_unit_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -2867,23 +3032,28 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       name="PHU_ID" />
                     <externalMetadataColumn
                       refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="Reporting_PHU" />
                     <externalMetadataColumn
                       refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Address]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="Reporting_PHU_Address" />
                     <externalMetadataColumn
                       refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_City]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="Reporting_PHU_City" />
                     <externalMetadataColumn
                       refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Postal_Code]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="Reporting_PHU_Postal_Code" />
                     <externalMetadataColumn
                       refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Website]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="300"
                       name="Reporting_PHU_Website" />
                     <externalMetadataColumn
                       refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Reporting_PHU_Latitude]"
@@ -2901,6 +3071,10 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
                       dataType="dbDate"
                       name="Update_day" />
+                    <externalMetadataColumn
+                      refId="Package\Public_health_unit_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_Status]"
+                      dataType="i4"
+                      name="_Status" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3020,7 +3194,10 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT *
+FROM     [Sheet1$]
+WHERE  ([Create day] &gt; ?) AND ([Create day] &lt; ?) OR
+                  ([Update day] &gt; ?) AND ([Update day] &lt; ?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -3029,17 +3206,17 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                   dataType="System.Int32"
                   description="Specifies the mode used to access the database."
                   name="AccessMode"
-                  typeConverter="AccessMode">0</property>
+                  typeConverter="AccessMode">2</property>
                 <property
                   dataType="System.String"
                   description="The mapping from parameters in the SQL command to variables."
-                  name="ParameterMapping"></property>
+                  name="ParameterMapping">"Parameter0:Input",{88955272-1DCF-4417-A2AC-B5CA21A2C17F};"Parameter1:Input",{C2D802D5-022A-4988-8E77-33A2F42F074C};"Parameter2:Input",{88955272-1DCF-4417-A2AC-B5CA21A2C17F};"Parameter3:Input",{C2D802D5-022A-4988-8E77-33A2F42F074C};</property>
               </properties>
               <connections>
                 <connection
                   refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[vaccines by age phu]"
-                  connectionManagerRefId="Package.ConnectionManagers[vaccines by age phu]"
+                  connectionManagerID="Package.ConnectionManagers[Excel Connection Manager 2]"
+                  connectionManagerRefId="Package.ConnectionManagers[Excel Connection Manager 2]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -3050,11 +3227,10 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                   <outputColumns>
                     <outputColumn
                       refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Date]"
-                      dataType="wstr"
+                      dataType="date"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Date]"
-                      length="255"
                       lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Date]"
                       name="Date"
                       truncationRowDisposition="FailComponent" />
@@ -3097,21 +3273,19 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[fully_vaccinated_cumulative]"
-                      dataType="wstr"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[fully_vaccinated_cumulative]"
-                      length="255"
                       lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[fully_vaccinated_cumulative]"
                       name="fully_vaccinated_cumulative"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[third_dose_cumulative]"
-                      dataType="wstr"
+                      dataType="r8"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[third_dose_cumulative]"
-                      length="255"
                       lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[third_dose_cumulative]"
                       name="third_dose_cumulative"
                       truncationRowDisposition="FailComponent" />
@@ -3132,6 +3306,15 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Update day]"
                       lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Update day]"
                       name="Update day"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[_Status]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[_Status]"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[_Status]"
+                      name="_Status"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -3173,6 +3356,10 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[Update day]"
                       dataType="date"
                       name="Update day" />
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].ExternalColumns[_Status]"
+                      dataType="r8"
+                      name="_Status" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -3226,6 +3413,11 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       dataType="date"
                       lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[Update day]"
                       name="Update day" />
+                    <outputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[_Status]"
+                      dataType="r8"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[_Status]"
+                      name="_Status" />
                     <outputColumn
                       refId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -3317,8 +3509,7 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                   <inputColumns>
                     <inputColumn
                       refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedDataType="date"
                       cachedName="Date"
                       externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
                       lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Date]" />
@@ -3337,15 +3528,13 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[Second_dose_cumulative]" />
                     <inputColumn
                       refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[fully_vaccinated_cumulative]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedDataType="r8"
                       cachedName="fully_vaccinated_cumulative"
                       externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[fully_vaccinated_cumulative]"
                       lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[fully_vaccinated_cumulative]" />
                     <inputColumn
                       refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[third_dose_cumulative]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
+                      cachedDataType="r8"
                       cachedName="third_dose_cumulative"
                       externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[third_dose_cumulative]"
                       lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[third_dose_cumulative]" />
@@ -3373,6 +3562,12 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       cachedName="At least one dose_cumulative"
                       externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[At_least_one_dose_cumulative]"
                       lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[At least one dose_cumulative]" />
+                    <inputColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[_Status]"
+                      cachedDataType="r8"
+                      cachedName="_Status"
+                      externalMetadataColumnId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_Status]"
+                      lineageId="Package\vaccines_by_age_phu_xlsx\Excel Source.Outputs[Excel Source Output].Columns[_Status]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3413,6 +3608,10 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                       refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Update_day]"
                       dataType="dbDate"
                       name="Update_day" />
+                    <externalMetadataColumn
+                      refId="Package\vaccines_by_age_phu_xlsx\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[_Status]"
+                      dataType="i4"
+                      name="_Status" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -3908,13 +4107,13 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\Case Reports_xlsx\Excel Source"
-          TopLeft="437.999999944652,52.0000003059121" />
-        <NodeLayout
           Size="171.2,41.6"
           Id="Package\Case Reports_xlsx\OLE DB Destination"
           TopLeft="426.999993637204,184.999997243285" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Case Reports_xlsx\Excel Source"
+          TopLeft="437.999999944652,52.0000003059121" />
         <EdgeLayout
           Id="Package\Case Reports_xlsx.Paths[Excel Source Output]"
           TopLeft="509.899996790928,93.6000003059121">
@@ -3945,6 +4144,19 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Case Reports_xlsx\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -3988,6 +4200,19 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
   </TaskHost>
   <PipelineComponentMetadata
     design-time-name="Package\compiled_covid_19\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\compiled_covid_19\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -4050,19 +4275,32 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\on_going_outbreak_phu_xlsx\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Public_health_unit_xlsx">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="138.4,41.6"
-          Id="Package\Public_health_unit_xlsx\Excel Source"
-          TopLeft="434.999999989356,114.333333054789" />
-        <NodeLayout
           Size="171.2,41.6"
           Id="Package\Public_health_unit_xlsx\OLE DB Destination"
           TopLeft="418.333310476609,251.333331585593" />
+        <NodeLayout
+          Size="138.4,41.6"
+          Id="Package\Public_health_unit_xlsx\Excel Source"
+          TopLeft="434.999999989356,114.333333054789" />
         <EdgeLayout
           Id="Package\Public_health_unit_xlsx.Paths[Excel Source Output]"
           TopLeft="504.066655232982,155.933333054789">
@@ -4101,19 +4339,32 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Public_health_unit_xlsx\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\Public_Health_Units_GROUP_xlsx">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="140,41.6"
-          Id="Package\Public_Health_Units_GROUP_xlsx\Excel Source"
-          TopLeft="604.000000208616,80" />
-        <NodeLayout
           Size="171.2,41.6"
           Id="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination"
           TopLeft="592.999991163611,181.999997287989" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Public_Health_Units_GROUP_xlsx\Excel Source"
+          TopLeft="604.000000208616,80" />
         <EdgeLayout
           Id="Package\Public_Health_Units_GROUP_xlsx.Paths[Excel Source Output]"
           TopLeft="676.299995686114,121.6">
@@ -4152,28 +4403,41 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\vaccines_by_age_phu_xlsx">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\vaccines_by_age_phu_xlsx\OLE DB Destination"
+          TopLeft="626.999990656972,216.999996766448" />
+        <NodeLayout
           Size="140,41.6"
           Id="Package\vaccines_by_age_phu_xlsx\Excel Source"
           TopLeft="634,74" />
-        <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\vaccines_by_age_phu_xlsx\OLE DB Destination"
-          TopLeft="646.999990358949,216.999996766448" />
         <EdgeLayout
           Id="Package\vaccines_by_age_phu_xlsx.Paths[Excel Source Output]"
           TopLeft="704,115.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="28.5999903589488,101.399996766448"
+              EndConnector="8.5999906569723,101.399996766448"
               Start="0,0"
-              End="28.5999903589488,93.8999967664481">
+              End="8.5999906569723,93.899996766448">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -4184,13 +4448,13 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
                     Point2="0,50.699998383224"
                     Point3="4,50.699998383224" />
                   <mssgle:LineSegment
-                    End="24.5999903589488,50.699998383224" />
+                    End="4.5999906569723,50.699998383224" />
                   <mssgle:CubicBezierSegment
-                    Point1="24.5999903589488,50.699998383224"
-                    Point2="28.5999903589488,50.699998383224"
-                    Point3="28.5999903589488,54.699998383224" />
+                    Point1="4.5999906569723,50.699998383224"
+                    Point2="8.5999906569723,50.699998383224"
+                    Point3="8.5999906569723,54.699998383224" />
                   <mssgle:LineSegment
-                    End="28.5999903589488,93.8999967664481" />
+                    End="8.5999906569723,93.899996766448" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -4216,72 +4480,7 @@ WHERE ([Sheet1$].[Create day] &gt; ? AND [Sheet1$].[Create day] &lt; ?) OR ([She
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Public_Health_Units_GROUP_xlsx\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Public_health_unit_xlsx\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\vaccines_by_age_phu_xlsx\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Case Reports_xlsx\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\on_going_outbreak_phu_xlsx\OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\compiled_covid_19\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
