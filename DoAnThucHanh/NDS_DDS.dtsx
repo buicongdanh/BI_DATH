@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/9/2022 8:21:13 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="FINN"
+  DTS:CreatorName="FINN\ACER"
+  DTS:DTSID="{705775FC-54AD-446E-BE50-79FBC304177C}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5035.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionGUID="{9AC36F74-0B54-486C-A2A3-D9FEF0A6332B}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables />
+</DTS:Executable>

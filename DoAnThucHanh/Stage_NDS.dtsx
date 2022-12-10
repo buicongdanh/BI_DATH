@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="57"
-  DTS:VersionGUID="{DBBA04CC-5289-4A9D-931B-105370C4E171}">
+  DTS:VersionBuild="58"
+  DTS:VersionGUID="{FAC085EE-A716-4CB2-9218-B87DCB9585F9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4648,8 +4648,8 @@ WHERE Age_Group_ID = ?</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT DISTINCT AGE AS AGE_GROUP 
-FROM [Cases_Report]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT DISTINCT Age AS AGE_GROUP
+FROM     Cases_Report</property>
                     <property
                       dataType="System.String"
                       description="The variable that contains the SQL command to be executed."
@@ -4758,8 +4758,8 @@ FROM [Cases_Report]</property>
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT DISTINCT  AGE_GROUP AS AGE_GROUP 
-FROM [Compiled_COVID_19_Case_Details_Canada]</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT DISTINCT age_group AS AGE_GROUP
+FROM     Compiled_COVID_19_Case_Details_Canada</property>
                     <property
                       dataType="System.String"
                       description="The variable that contains the SQL command to be executed."
@@ -6468,28 +6468,6 @@ FROM [Cases_Report]</property>
                       synchronousInputId="Package\Sequence Container 1\Exposure\Derived Column.Inputs[Derived Column Input]">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Sequence Container 1\Exposure\Derived Column.Outputs[Derived Column Output].Columns[CREATE_DAY]"
-                          dataType="dbTimeStamp"
-                          errorOrTruncationOperation="Computation"
-                          errorRowDisposition="FailComponent"
-                          lineageId="Package\Sequence Container 1\Exposure\Derived Column.Outputs[Derived Column Output].Columns[CREATE_DAY]"
-                          name="CREATE_DAY"
-                          truncationRowDisposition="FailComponent">
-                          <properties>
-                            <property
-                              containsID="true"
-                              dataType="System.String"
-                              description="Derived Column Expression"
-                              name="Expression">[GETDATE]()</property>
-                            <property
-                              containsID="true"
-                              dataType="System.String"
-                              description="Derived Column Friendly Expression"
-                              expressionType="Notify"
-                              name="FriendlyExpression">GETDATE()</property>
-                          </properties>
-                        </outputColumn>
-                        <outputColumn
                           refId="Package\Sequence Container 1\Exposure\Derived Column.Outputs[Derived Column Output].Columns[UPDATE_DAY]"
                           dataType="dbTimeStamp"
                           errorOrTruncationOperation="Computation"
@@ -6596,7 +6574,7 @@ where [refTable].[Exposure] = ?</property>
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                      name="ParameterMap">#{Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].Columns[EXPOSURE]};</property>
+                      name="ParameterMap">#{Package\Sequence Container 1\Exposure\88:invalid};</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -6620,11 +6598,11 @@ where [refTable].[Exposure] = ?</property>
                       name="Lookup Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Sequence Container 1\Exposure\Lookup.Inputs[Lookup Input].Columns[EXPOSURE]"
+                          refId="Package\Sequence Container 1\Exposure\Lookup.Inputs[Lookup Input].Columns[exposure]"
                           cachedDataType="wstr"
                           cachedLength="300"
-                          cachedName="EXPOSURE"
-                          lineageId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].Columns[EXPOSURE]">
+                          cachedName="exposure"
+                          lineageId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].Columns[exposure]">
                           <properties>
                             <property
                               dataType="System.String"
@@ -6869,18 +6847,18 @@ where exposure_id = ?
                       name="OLE DB Destination Input">
                       <inputColumns>
                         <inputColumn
-                          refId="Package\Sequence Container 1\Exposure\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EXPOSURE]"
+                          refId="Package\Sequence Container 1\Exposure\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[exposure]"
                           cachedDataType="wstr"
                           cachedLength="300"
-                          cachedName="EXPOSURE"
+                          cachedName="exposure"
                           externalMetadataColumnId="Package\Sequence Container 1\Exposure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Exposure]"
-                          lineageId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].Columns[EXPOSURE]" />
+                          lineageId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].Columns[exposure]" />
                         <inputColumn
-                          refId="Package\Sequence Container 1\Exposure\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CREATE_DAY]"
-                          cachedDataType="dbTimeStamp"
-                          cachedName="CREATE_DAY"
+                          refId="Package\Sequence Container 1\Exposure\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Create_day]"
+                          cachedDataType="dbDate"
+                          cachedName="Create_day"
                           externalMetadataColumnId="Package\Sequence Container 1\Exposure\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Create_day]"
-                          lineageId="Package\Sequence Container 1\Exposure\Derived Column.Outputs[Derived Column Output].Columns[CREATE_DAY]" />
+                          lineageId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].Columns[Create_day]" />
                         <inputColumn
                           refId="Package\Sequence Container 1\Exposure\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UPDATE_DAY]"
                           cachedDataType="dbTimeStamp"
@@ -6960,8 +6938,8 @@ where exposure_id = ?
                       dataType="System.String"
                       description="The SQL command to be executed."
                       name="SqlCommand"
-                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT DISTINCT EXPOSURE
-FROM Compiled_COVID_19_Case_Details_Canada</property>
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">SELECT DISTINCT exposure, Create_day
+FROM     Compiled_COVID_19_Case_Details_Canada</property>
                     <property
                       dataType="System.String"
                       description="The variable that contains the SQL command to be executed."
@@ -6998,23 +6976,36 @@ FROM Compiled_COVID_19_Case_Details_Canada</property>
                       name="OLE DB Source Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].Columns[EXPOSURE]"
+                          refId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].Columns[exposure]"
                           dataType="wstr"
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
-                          externalMetadataColumnId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EXPOSURE]"
+                          externalMetadataColumnId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[exposure]"
                           length="300"
-                          lineageId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].Columns[EXPOSURE]"
-                          name="EXPOSURE"
+                          lineageId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].Columns[exposure]"
+                          name="exposure"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].Columns[Create_day]"
+                          dataType="dbDate"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Create_day]"
+                          lineageId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].Columns[Create_day]"
+                          name="Create_day"
                           truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
                         <externalMetadataColumn
-                          refId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[EXPOSURE]"
+                          refId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[exposure]"
                           dataType="wstr"
                           length="300"
-                          name="EXPOSURE" />
+                          name="exposure" />
+                        <externalMetadataColumn
+                          refId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Create_day]"
+                          dataType="dbDate"
+                          name="Create_day" />
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -7023,11 +7014,16 @@ FROM Compiled_COVID_19_Case_Details_Canada</property>
                       name="OLE DB Source Error Output">
                       <outputColumns>
                         <outputColumn
-                          refId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EXPOSURE]"
+                          refId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[exposure]"
                           dataType="wstr"
                           length="300"
-                          lineageId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[EXPOSURE]"
-                          name="EXPOSURE" />
+                          lineageId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[exposure]"
+                          name="exposure" />
+                        <outputColumn
+                          refId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Create_day]"
+                          dataType="dbDate"
+                          lineageId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Create_day]"
+                          name="Create_day" />
                         <outputColumn
                           refId="Package\Sequence Container 1\Exposure\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
@@ -14638,14 +14634,14 @@ WHERE  (SourceID = 1)</property>
                   startId="Package\Sequence Container 2\Case report\Merge Join.Outputs[Merge Join Output]" />
                 <path
                   refId="Package\Sequence Container 2\Case report.Paths[OLE DB Source Output4]"
-                  endId="Package\Sequence Container 2\Case report\Sort 4.Inputs[Sort Input]"
+                  endId="Package\Sequence Container 2\Case report\Sort 1.Inputs[Sort Input]"
                   name="OLE DB Source Output"
-                  startId="Package\Sequence Container 2\Case report\OLE DB Source 4.Outputs[OLE DB Source Output]" />
+                  startId="Package\Sequence Container 2\Case report\OLE DB Source 1.Outputs[OLE DB Source Output]" />
                 <path
                   refId="Package\Sequence Container 2\Case report.Paths[OLE DB Source Output3]"
-                  endId="Package\Sequence Container 2\Case report\Sort 2.Inputs[Sort Input]"
+                  endId="Package\Sequence Container 2\Case report\Sort 3.Inputs[Sort Input]"
                   name="OLE DB Source Output"
-                  startId="Package\Sequence Container 2\Case report\OLE DB Source 2.Outputs[OLE DB Source Output]" />
+                  startId="Package\Sequence Container 2\Case report\OLE DB Source 3.Outputs[OLE DB Source Output]" />
                 <path
                   refId="Package\Sequence Container 2\Case report.Paths[OLE DB Source Output2]"
                   endId="Package\Sequence Container 2\Case report\Sort.Inputs[Sort Input]"
@@ -14653,14 +14649,14 @@ WHERE  (SourceID = 1)</property>
                   startId="Package\Sequence Container 2\Case report\OLE DB Source.Outputs[OLE DB Source Output]" />
                 <path
                   refId="Package\Sequence Container 2\Case report.Paths[OLE DB Source Output1]"
-                  endId="Package\Sequence Container 2\Case report\Sort 3.Inputs[Sort Input]"
+                  endId="Package\Sequence Container 2\Case report\Sort 2.Inputs[Sort Input]"
                   name="OLE DB Source Output"
-                  startId="Package\Sequence Container 2\Case report\OLE DB Source 3.Outputs[OLE DB Source Output]" />
+                  startId="Package\Sequence Container 2\Case report\OLE DB Source 2.Outputs[OLE DB Source Output]" />
                 <path
                   refId="Package\Sequence Container 2\Case report.Paths[OLE DB Source Output]"
-                  endId="Package\Sequence Container 2\Case report\Sort 1.Inputs[Sort Input]"
+                  endId="Package\Sequence Container 2\Case report\Sort 4.Inputs[Sort Input]"
                   name="OLE DB Source Output"
-                  startId="Package\Sequence Container 2\Case report\OLE DB Source 1.Outputs[OLE DB Source Output]" />
+                  startId="Package\Sequence Container 2\Case report\OLE DB Source 4.Outputs[OLE DB Source Output]" />
                 <path
                   refId="Package\Sequence Container 2\Case report.Paths[Sort Output]"
                   endId="Package\Sequence Container 2\Case report\Merge Join 2.Inputs[Merge Join Right Input]"
@@ -14893,7 +14889,7 @@ where [refTable].[Age_Group_ID] = ? and [refTable].[Gender_ID] = ? and [refTable
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                      name="ParameterMap">#{Package\Sequence Container 2\compiled covid 19\191:invalid};#{Package\Sequence Container 2\compiled covid 19\193:invalid};#{Package\Sequence Container 2\compiled covid 19\195:invalid};#{Package\Sequence Container 2\compiled covid 19\197:invalid};</property>
+                      name="ParameterMap">#{Package\Sequence Container 2\compiled covid 19\958:invalid};#{Package\Sequence Container 2\compiled covid 19\959:invalid};#{Package\Sequence Container 2\compiled covid 19\960:invalid};#{Package\Sequence Container 2\compiled covid 19\961:invalid};</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -19047,7 +19043,7 @@ WHERE  (SourceID = 2)</property>
                   name="Lookup Match Output"
                   startId="Package\Sequence Container 2\compiled covid 19\Lookup.Outputs[Lookup Match Output]" />
                 <path
-                  refId="Package\Sequence Container 2\compiled covid 19.Paths[Merge Join Output2]"
+                  refId="Package\Sequence Container 2\compiled covid 19.Paths[Merge Join Output]"
                   endId="Package\Sequence Container 2\compiled covid 19\Sort 7.Inputs[Sort Input]"
                   name="Merge Join Output"
                   startId="Package\Sequence Container 2\compiled covid 19\Merge Join 2.Outputs[Merge Join Output]" />
@@ -19057,20 +19053,30 @@ WHERE  (SourceID = 2)</property>
                   name="Merge Join Output"
                   startId="Package\Sequence Container 2\compiled covid 19\Merge Join 1.Outputs[Merge Join Output]" />
                 <path
-                  refId="Package\Sequence Container 2\compiled covid 19.Paths[Merge Join Output3]"
+                  refId="Package\Sequence Container 2\compiled covid 19.Paths[Merge Join Output2]"
                   endId="Package\Sequence Container 2\compiled covid 19\Lookup.Inputs[Lookup Input]"
                   name="Merge Join Output"
                   startId="Package\Sequence Container 2\compiled covid 19\Merge Join 3.Outputs[Merge Join Output]" />
                 <path
-                  refId="Package\Sequence Container 2\compiled covid 19.Paths[Merge Join Output]"
+                  refId="Package\Sequence Container 2\compiled covid 19.Paths[Merge Join Output3]"
                   endId="Package\Sequence Container 2\compiled covid 19\Sort 5.Inputs[Sort Input]"
                   name="Merge Join Output"
                   startId="Package\Sequence Container 2\compiled covid 19\Merge Join.Outputs[Merge Join Output]" />
                 <path
-                  refId="Package\Sequence Container 2\compiled covid 19.Paths[OLE DB Source Output2]"
-                  endId="Package\Sequence Container 2\compiled covid 19\Sort 4.Inputs[Sort Input]"
+                  refId="Package\Sequence Container 2\compiled covid 19.Paths[OLE DB Source Output4]"
+                  endId="Package\Sequence Container 2\compiled covid 19\Sort.Inputs[Sort Input]"
                   name="OLE DB Source Output"
-                  startId="Package\Sequence Container 2\compiled covid 19\OLE DB Source 5.Outputs[OLE DB Source Output]" />
+                  startId="Package\Sequence Container 2\compiled covid 19\OLE DB Source.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Sequence Container 2\compiled covid 19.Paths[OLE DB Source Output3]"
+                  endId="Package\Sequence Container 2\compiled covid 19\Sort 3.Inputs[Sort Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Sequence Container 2\compiled covid 19\OLE DB Source 3.Outputs[OLE DB Source Output]" />
+                <path
+                  refId="Package\Sequence Container 2\compiled covid 19.Paths[OLE DB Source Output2]"
+                  endId="Package\Sequence Container 2\compiled covid 19\Sort 1.Inputs[Sort Input]"
+                  name="OLE DB Source Output"
+                  startId="Package\Sequence Container 2\compiled covid 19\OLE DB Source 1.Outputs[OLE DB Source Output]" />
                 <path
                   refId="Package\Sequence Container 2\compiled covid 19.Paths[OLE DB Source Output1]"
                   endId="Package\Sequence Container 2\compiled covid 19\Sort 2.Inputs[Sort Input]"
@@ -19078,19 +19084,9 @@ WHERE  (SourceID = 2)</property>
                   startId="Package\Sequence Container 2\compiled covid 19\OLE DB Source 2.Outputs[OLE DB Source Output]" />
                 <path
                   refId="Package\Sequence Container 2\compiled covid 19.Paths[OLE DB Source Output]"
-                  endId="Package\Sequence Container 2\compiled covid 19\Sort 1.Inputs[Sort Input]"
+                  endId="Package\Sequence Container 2\compiled covid 19\Sort 4.Inputs[Sort Input]"
                   name="OLE DB Source Output"
-                  startId="Package\Sequence Container 2\compiled covid 19\OLE DB Source 1.Outputs[OLE DB Source Output]" />
-                <path
-                  refId="Package\Sequence Container 2\compiled covid 19.Paths[OLE DB Source Output3]"
-                  endId="Package\Sequence Container 2\compiled covid 19\Sort 3.Inputs[Sort Input]"
-                  name="OLE DB Source Output"
-                  startId="Package\Sequence Container 2\compiled covid 19\OLE DB Source 3.Outputs[OLE DB Source Output]" />
-                <path
-                  refId="Package\Sequence Container 2\compiled covid 19.Paths[OLE DB Source Output4]"
-                  endId="Package\Sequence Container 2\compiled covid 19\Sort.Inputs[Sort Input]"
-                  name="OLE DB Source Output"
-                  startId="Package\Sequence Container 2\compiled covid 19\OLE DB Source.Outputs[OLE DB Source Output]" />
+                  startId="Package\Sequence Container 2\compiled covid 19\OLE DB Source 5.Outputs[OLE DB Source Output]" />
                 <path
                   refId="Package\Sequence Container 2\compiled covid 19.Paths[Sort Output]"
                   endId="Package\Sequence Container 2\compiled covid 19\Merge Join.Inputs[Merge Join Left Input]"
@@ -23658,32 +23654,6 @@ where sourceid = 3</property>
           </DTS:ObjectData>
         </DTS:Executable>
       </DTS:Executables>
-      <DTS:PrecedenceConstraints>
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Sequence Container 2.PrecedenceConstraints[Constraint]"
-          DTS:CreationName=""
-          DTS:DTSID="{A417A24B-EF0C-4DE7-87D1-6C6BBBFACF83}"
-          DTS:From="Package\Sequence Container 2\compiled covid 19"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint"
-          DTS:To="Package\Sequence Container 2\vaccine_by_age_PHU" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Sequence Container 2.PrecedenceConstraints[Constraint 1]"
-          DTS:CreationName=""
-          DTS:DTSID="{F456C782-8423-4DA2-B34F-67FCC0FE924E}"
-          DTS:From="Package\Sequence Container 2\vaccine_by_age_PHU"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 1"
-          DTS:To="Package\Sequence Container 2\Case report" />
-        <DTS:PrecedenceConstraint
-          DTS:refId="Package\Sequence Container 2.PrecedenceConstraints[Constraint 2]"
-          DTS:CreationName=""
-          DTS:DTSID="{A405A309-0F6B-4610-88E0-D74D74D8D135}"
-          DTS:From="Package\Sequence Container 2\Case report"
-          DTS:LogicalAnd="True"
-          DTS:ObjectName="Constraint 2"
-          DTS:To="Package\Sequence Container 2\On_going_outbreak_PHU" />
-      </DTS:PrecedenceConstraints>
     </DTS:Executable>
     <DTS:Executable
       DTS:refId="Package\UPDATE LSET FOR ALL"
@@ -23818,7 +23788,7 @@ where sourceid = 3</property>
         <NodeLayout
           Size="131.2,41.6"
           Id="Package\Sequence Container 1\Age_Group"
-          TopLeft="193.46295269312,45.9444441631983" />
+          TopLeft="192.629619405318,45.0777775025583" />
         <NodeLayout
           Size="135.2,41.6"
           Id="Package\Sequence Container 1\Case Status"
@@ -23834,7 +23804,7 @@ where sourceid = 3</property>
         <NodeLayout
           Size="112.8,41.6"
           Id="Package\Sequence Container 1\Gender"
-          TopLeft="39.7592573874161,129.722221358396" />
+          TopLeft="39.7592573874161,140.122221286076" />
         <NodeLayout
           Size="153.6,41.6"
           Id="Package\Sequence Container 1\Outbreak_group"
@@ -23853,7 +23823,7 @@ where sourceid = 3</property>
         <NodeLayout
           Size="161.6,41.6"
           Id="Package\Sequence Container 2\compiled covid 19"
-          TopLeft="14.1777345989058,18.6000019506392" />
+          TopLeft="45.0110662475799,30.7333351995988" />
         <NodeLayout
           Size="197.6,41.6"
           Id="Package\Sequence Container 2\On_going_outbreak_PHU"
@@ -23862,84 +23832,6 @@ where sourceid = 3</property>
           Size="181.6,41.6"
           Id="Package\Sequence Container 2\vaccine_by_age_PHU"
           TopLeft="35.0666220459696,107.955553486391" />
-        <EdgeLayout
-          Id="Package\Sequence Container 2.PrecedenceConstraints[Constraint]"
-          TopLeft="94.9777345989058,60.2000019506392">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="30.8888874470638,47.7555515357518"
-              Start="0,0"
-              End="30.8888874470638,40.2555515357518">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.8777757678759" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.8777757678759"
-                    Point2="0,23.8777757678759"
-                    Point3="4,23.8777757678759" />
-                  <mssgle:LineSegment
-                    End="26.8888874470638,23.8777757678759" />
-                  <mssgle:CubicBezierSegment
-                    Point1="26.8888874470638,23.8777757678759"
-                    Point2="30.8888874470638,23.8777757678759"
-                    Point3="30.8888874470638,27.8777757678759" />
-                  <mssgle:LineSegment
-                    End="30.8888874470638,40.2555515357518" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container 2.PrecedenceConstraints[Constraint 1]"
-          TopLeft="122.925880799325,149.555553486391">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35.066666164442"
-              Start="0,0"
-              End="0,27.566666164442">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.566666164442" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Sequence Container 2.PrecedenceConstraints[Constraint 2]"
-          TopLeft="119.842547853008,226.222219650833">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,32.1925920609052"
-              Start="0,0"
-              End="0,24.6925920609052">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24.6925920609052" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
@@ -24315,6 +24207,42 @@ where sourceid = 3</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\PHU\PHU\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[PHU_NDS]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\PHU\PHU\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\PHU\PHU\OLE DB Destination">
     <Properties>
       <Property>
@@ -24337,29 +24265,6 @@ where sourceid = 3</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\PHU\PHU\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[PHU_NDS]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -24407,9 +24312,7 @@ where sourceid = 3</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -24503,9 +24406,7 @@ where sourceid = 3</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -24946,7 +24847,7 @@ where sourceid = 3</property>
         <NodeLayout
           Size="152,41.6"
           Id="Package\Sequence Container 1\Age_Group\OLE DB Source"
-          TopLeft="91.9999986290934,74.9999988824125" />
+          TopLeft="109.999998360873,68.9999989718195" />
         <NodeLayout
           Size="152.8,41.6"
           Id="Package\Sequence Container 1\Age_Group\Derived Column"
@@ -24991,30 +24892,18 @@ where sourceid = 3</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container 1\Age_Group.Paths[OLE DB Source Output]"
-          TopLeft="167.999998629093,116.599998882413">
+          TopLeft="189.399998345971,110.599998971819">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="24.7999997019765,49.3999986439948"
+              EndConnector="0,55.3999985545875"
               Start="0,0"
-              End="24.7999997019765,41.8999986439948">
+              End="0,47.8999985545875">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.6999993219974" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.6999993219974"
-                    Point2="0,24.6999993219974"
-                    Point3="4,24.6999993219974" />
-                  <mssgle:LineSegment
-                    End="20.7999997019765,24.6999993219974" />
-                  <mssgle:CubicBezierSegment
-                    Point1="20.7999997019765,24.6999993219974"
-                    Point2="24.7999997019765,24.6999993219974"
-                    Point3="24.7999997019765,28.6999993219974" />
-                  <mssgle:LineSegment
-                    End="24.7999997019765,41.8999986439948" />
+                    End="0,47.8999985545875" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -26291,7 +26180,7 @@ where sourceid = 3</property>
         <NodeLayout
           Size="152,41.6"
           Id="Package\Sequence Container 1\Outbreak_group\OLE DB Source"
-          TopLeft="190.999997153878,95.9999985694886" />
+          TopLeft="201.999996989965,99.999998509884" />
         <NodeLayout
           Size="167.2,41.6"
           Id="Package\Sequence Container 1\Outbreak_group\OLE DB Command"
@@ -26306,38 +26195,24 @@ where sourceid = 3</property>
           TopLeft="345.999994844198,389.999994188547" />
         <EdgeLayout
           Id="Package\Sequence Container 1\Outbreak_group.Paths[OLE DB Source Output]"
-          TopLeft="266.999997153878,137.599998569489">
+          TopLeft="277.699996848404,141.599998509884">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="10.3999995529651,67.3999983757735"
+              EndConnector="0,63.3999984353781"
               Start="0,0"
-              End="10.3999995529651,59.8999983757735">
+              End="0,55.8999984353781">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,29.6999991878867" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,29.6999991878867"
-                    Point2="0,33.6999991878867"
-                    Point3="4,33.6999991878867" />
-                  <mssgle:LineSegment
-                    End="6.39999955296508,33.6999991878867" />
-                  <mssgle:CubicBezierSegment
-                    Point1="6.39999955296508,33.6999991878867"
-                    Point2="10.3999995529651,33.6999991878867"
-                    Point3="10.3999995529651,37.6999991878867" />
-                  <mssgle:LineSegment
-                    End="10.3999995529651,59.8999983757735" />
+                    End="0,55.8999984353781" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -26443,9 +26318,7 @@ where sourceid = 3</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -26833,7 +26706,7 @@ where sourceid = 3</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container 2\Case report.Paths[OLE DB Source Output4]"
+          Id="Package\Sequence Container 2\Case report.Paths[OLE DB Source Output]"
           TopLeft="1246.64998262152,87.5999993145466">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26867,7 +26740,7 @@ where sourceid = 3</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container 2\Case report.Paths[OLE DB Source Output3]"
+          Id="Package\Sequence Container 2\Case report.Paths[OLE DB Source Output1]"
           TopLeft="643.049991413206,92.349999243766">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26911,7 +26784,7 @@ where sourceid = 3</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container 2\Case report.Paths[OLE DB Source Output1]"
+          Id="Package\Sequence Container 2\Case report.Paths[OLE DB Source Output3]"
           TopLeft="896.299987639486,102.09999909848">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -26933,7 +26806,7 @@ where sourceid = 3</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container 2\Case report.Paths[OLE DB Source Output]"
+          Id="Package\Sequence Container 2\Case report.Paths[OLE DB Source Output4]"
           TopLeft="409.799994888902,87.8499993108213">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27376,7 +27249,7 @@ where sourceid = 3</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container 2\compiled covid 19.Paths[OLE DB Source Output2]"
+          Id="Package\Sequence Container 2\compiled covid 19.Paths[OLE DB Source Output]"
           TopLeft="882.399988049268,113.199999195337">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27432,7 +27305,7 @@ where sourceid = 3</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container 2\compiled covid 19.Paths[OLE DB Source Output]"
+          Id="Package\Sequence Container 2\compiled covid 19.Paths[OLE DB Source Output2]"
           TopLeft="315.799996289611,101.199999374151">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27628,7 +27501,7 @@ where sourceid = 3</property>
           Id="Package\Sequence Container 2\compiled covid 19\Sort 5"
           TopLeft="264.999996051192,330.999995365739" />
         <EdgeLayout
-          Id="Package\Sequence Container 2\compiled covid 19.Paths[Merge Join Output]"
+          Id="Package\Sequence Container 2\compiled covid 19.Paths[Merge Join Output3]"
           TopLeft="255.799997153878,284.599996677041">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27804,7 +27677,7 @@ where sourceid = 3</property>
           Id="Package\Sequence Container 2\compiled covid 19\Sort 7"
           TopLeft="649.999990314245,480.999994620681" />
         <EdgeLayout
-          Id="Package\Sequence Container 2\compiled covid 19.Paths[Merge Join Output2]"
+          Id="Package\Sequence Container 2\compiled covid 19.Paths[Merge Join Output]"
           TopLeft="669.199991059303,434.599995931983">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27912,7 +27785,7 @@ where sourceid = 3</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Sequence Container 2\compiled covid 19.Paths[Merge Join Output3]"
+          Id="Package\Sequence Container 2\compiled covid 19.Paths[Merge Join Output2]"
           TopLeft="887.933321457108,449.599995708466">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -27991,32 +27864,6 @@ where sourceid = 3</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container 2\compiled covid 19\OLE DB Source 1">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container 2\compiled covid 19\OLE DB Source 5">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Sequence Container 2\compiled covid 19\OLE DB Destination">
     <Properties>
       <Property>
@@ -28031,6 +27878,19 @@ where sourceid = 3</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Sequence Container 2\compiled covid 19\OLE DB Source 2">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container 2\compiled covid 19\OLE DB Source 3">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -28066,7 +27926,33 @@ where sourceid = 3</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container 2\compiled covid 19\OLE DB Source 3">
+    design-time-name="Package\Sequence Container 2\compiled covid 19\OLE DB Source 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container 2\compiled covid 19\OLE DB Source 5">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container 2\compiled covid 19\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -28993,32 +28879,6 @@ where sourceid = 3</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Sequence Container 2\vaccine_by_age_PHU\OLE DB Source 2">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\PHU\PHU\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container 2\compiled covid 19\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>

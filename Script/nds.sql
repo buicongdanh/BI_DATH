@@ -176,7 +176,6 @@ CREATE TABLE Gender_NDS (
 	Create_day date,
 	Update_day date
 )
-drop table COMPILED_COVID_19_CASE_DETAILS_CANADA_NDS
 -- Table: Compiled_COVID_19_Case_Details_Canada_NDS
 -- Column: Compiled_ID, Date_Reported, PHU_ID, Age_Group_ID, Gender_ID, Test_Reported_Date, Exposure_ID, Case_Status_ID, Province
 CREATE TABLE Compiled_COVID_19_Case_Details_Canada_NDS (
@@ -207,6 +206,8 @@ CREATE TABLE DataSource(
 3 - vaccines_by_age_phu
 
 */
+
+truncate table COMPILED_COVID_19_CASE_DETAILS_CANADA_NDS
 -- SELECT --------------------------------------------------------------------------------
 SELECT * FROM PHU_CITY_NDS
 SELECT * FROM PHU_GROUP_NDS

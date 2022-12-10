@@ -1,6 +1,7 @@
-create database DDS
+create database DATH_DDS
 go
-use DDS
+use DATH_DDS
+
 IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[sp_insertNgayThangQuyNam]') AND OBJECTPROPERTY(id, N'IsProcedure') = 1)
   DROP PROCEDURE [dbo].[sp_insertNgayThangNam]
 GO
@@ -42,6 +43,7 @@ GO
 IF EXISTS (SELECT * FROM dbo.sysobjects WHERE id = OBJECT_ID(N'[FactCase]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
   DROP TABLE [dbo].[FactCase]
 GO
+/*
 CREATE TABLE [dbo].[ThangTrongNam] (
   [IDThang] int IDENTITY(1, 1) NOT NULL,
   [Thang] int NULL,
@@ -81,20 +83,24 @@ CREATE TABLE [dbo].[QuyTrongNam] (
 )
 ON [PRIMARY]
 GO
-CREATE TABLE [dbo].[Date] (
+*/
+
+drop table [dim_Date]
+CREATE TABLE [dbo].[dim_Date] (
   [IDDate] int IDENTITY(1, 1) NOT NULL,
-  [IDNgay] int NULL,
-  [IDQuy] int NULL,
-  [IDThang] int NULL,
-  [Nam] int NULL
+  FullDateTime datetime NULL,
+  Ngay int NULL,
+  Thang int NULL,
+  Quy int NULL,
+  Nam int NULL
 )
 ON [PRIMARY]
 GO
 
-
-
-CREATE TABLE PHU (
+drop table dim_PHU
+CREATE TABLE dim_PHU (
     PHU_ID bigint IDENTITY(1,1) PRIMARY KEY,
+	PHU_ID_NK bigint,
     Reporting_PHU varchar(MAX) NULL,
     Reporting_PHU_Address varchar(MAX) NULL,--Changing
     PHU_City_ID bigint,--Historical
@@ -102,66 +108,72 @@ CREATE TABLE PHU (
     Reporting_PHU_Website varchar(MAX) NULL, --Changing
     Reporting_PHU_Latitude float NULL,--Changing
     Reporting_PHU_Longitude float NULL,--Changing
-    Source int,
+	_Status int
     -- PHU_City_ID bigint FOREIGN KEY REFERENCES PHU_City(PHU_City_ID)
 )
+
 CREATE TABLE PHU_GROUP (
     PHU_GROUP_ID bigint IDENTITY(1,1) PRIMARY KEY,
     PHU_GROUP varchar(MAX) NULL,--Changing
-    Source int,
+    Create_day date,
+	Update_day date,
+	_Status int
 )
+
 CREATE TABLE PHU_City (
     PHU_City_ID bigint IDENTITY(1,1) PRIMARY KEY,
     PHU_City varchar(MAX) NULL,--Changing
     PHU_Group_ID bigint, --Historical
-    Source int,
+	_Status int
 )
-CREATE TABLE [dbo].[Geography] (
+
+CREATE TABLE [dbo].[dim_Geography] (
   [IDGeography] bigint IDENTITY(1, 1) NOT NULL,
   [PHU_ID] bigint NULL, --Historical
-  [Reporting_PHU] varchar(MAX) NULL,
+  [Reporting_PHU] varchar(300) NULL,
   [PHU_City_ID] bigint NULL, --Historical
-  [PHU_City] varchar(MAX) NULL,
-  [PHU_Group_ID] bigint NULL,--Historical
-  [PHU_GROUP] varchar(MAX) NULL 
+  _Status int
 )
 ON [PRIMARY]
 GO
 
-CREATE TABLE Gender (
+CREATE TABLE dim_Gender (
     Gender_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    Gender varchar(MAX) NULL,
+    Gender nvarchar(300) NULL,
+	SourceID int,
+	_Status int,
 )
 
 CREATE TABLE Age (
     Age_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    Age varchar(MAX) NULL,
-    Source int,
+    Age varchar(300) NULL,
+	SourceID int,
+	_Status int
 )
 
-CREATE TABLE Case_Status (
+CREATE TABLE dim_Case_Status (
     Case_Status_ID bigint IDENTITY(1,1) PRIMARY KEY,
     Case_Status varchar(MAX) NULL,
-    Source int,
+	_Status int
 )
 
-CREATE TABLE Exposure (
+CREATE TABLE dim_Exposure (
     Exposure_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    Exposure varchar(MAX) NULL,
-    Source int,
+    Exposure varchar(300) NULL,
+	_Status int
 )
 
-CREATE TABLE  [dbo].[FactCase] (
+CREATE TABLE  [dbo].[Fact_Case] (
   [IDDate] int NOT NULL,
   [PHU_ID] bigint NOT NULL,
   [Age_ID] bigint NOT NULL,
   [Gender_ID] bigint NOT NULL,
   [Case_Status_ID] bigint NOT NULL,
-  [ToTalCase] int NULL,
+  [ToTalCase] bigint NULL,
   primary key (IDDate,PHU_ID,Age_ID,Gender_ID,Case_Status_ID)
 )
 
-CREATE TABLE [dbo].[FactVacinated](
+CREATE TABLE [dbo].[Fact_Vacinated](
   [IDDate] int NOT NULL,
   [PHU_ID] bigint NOT NULL,
   [Age_ID] bigint NOT NULL,
