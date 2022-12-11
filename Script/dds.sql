@@ -298,3 +298,29 @@ end
 EXEC sp_insertdata
 select * from dim_Date
 
+--FILL dim_date data
+use DATH_DDS
+go
+create proc add_date
+--alter proc fill_date
+As
+begin
+	declare @req_start_date Datetime,
+			@req_end_date Datetime
+	SET @req_start_date='2020-01-01'
+	SET @req_end_date='2023-12-31'
+	;WITH X AS 
+    (
+        SELECT @req_start_date AS VAL
+        UNION ALL
+        SELECT DATEADD(DD,1,VAL) FROM X
+        WHERE VAL < @req_end_date
+    )
+	INSERT INTO dim_date(Ngay,Thang,Quy,Nam,FullDateTime)
+	SELECT datepart(day,VAL),datepart(month,VAL),DATEPART(quarter,val),datepart(year,VAL),VAL
+	FROM X
+	OPTION(MAXRECURSION 0)
+END
+
+use DATH_DDS
+exec fill_date
