@@ -248,3 +248,53 @@ begin
 end
 GO
 
+
+create proc [dbo].sp_insertdata
+as
+begin
+	
+	declare @ddate datetime
+	declare @ngay int
+	set @ngay=1
+	declare @thang int
+	set @thang =1
+	declare @nam int
+	set @nam= 2020
+	declare @quy int =0
+	while @nam<2023
+	begin
+		while @thang<13
+		begin
+			while @ngay<32
+			begin 	
+				if (@thang = 1|2|3)
+				begin
+					set @quy=1
+				end
+				if (@thang = 4|5|6)
+				begin
+					set @quy=2
+				end
+				if (@thang = 7|8|9)
+				begin
+					set @quy=3
+				end
+				if (@thang = 10|11|12)
+				begin
+					set @quy=4
+				end
+				SELECT @ddate= CONVERT(DATETIME,CONCAT(@ngay,'/',@thang,'/',@nam),103)
+				insert into dim_Date(FullDateTime,Ngay,Thang,Quy,Nam) values(@ddate,@ngay,@thang,@quy,@nam)
+				set @ngay=@ngay+1
+			end
+			set @ngay=1
+			set @thang=@thang + 1
+		end
+		set @thang=1
+		set @nam=@nam + 1
+	end 
+end
+
+EXEC sp_insertdata
+select * from dim_Date
+
