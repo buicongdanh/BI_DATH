@@ -31,8 +31,7 @@ DROP TABLE GENDER_NDS
 -- Column: PHU_GROUP_ID, PHU_GROUP
 CREATE TABLE PHU_GROUP_NDS (
     PHU_GROUP_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    PHU_GROUP nvarchar(300) NULL,
-	PHU_City_ID bigint,
+    PHU_GROUP nvarchar(255) NULL,
 	Create_day date,
 	Update_day date,
 )
@@ -41,23 +40,23 @@ CREATE TABLE PHU_GROUP_NDS (
 -- Column: PHU_City_ID, PHU_City, PHU_Group_ID
 CREATE TABLE PHU_City_NDS (
     PHU_City_ID		bigint IDENTITY(1,1) PRIMARY KEY,
-    PHU_City		nvarchar(300) NULL,
-	PHU_Region		nvarchar(300) NULL,	
+    PHU_City		nvarchar(255) NULL,
+	PHU_Group_ID	bigint,
 	Create_day		date,
 	Update_day		date,
     -- PHU_Group_ID bigint FOREIGN KEY REFERENCES PHU_GROUP(PHU_GROUP_ID)
 )
-
+TRUNCATE TABLE PHU_NDS
 -- Table: PHU_NDS
 -- Column: PHU_ID, Reporting_PHU, Reporting_PHU_Address, PHU_City_ID, Reporting_PHU_Postal_Code, Reporting_PHU_Website, Reporting_PHU_Latitude, Reporting_PHU_Longitude
 CREATE TABLE PHU_NDS (
     PHU_ID			bigint IDENTITY(1,1) PRIMARY KEY,
 	PHU_ID_NK		bigint NULL,
-    Reporting_PHU	nvarchar(300) NULL,
-    Reporting_PHU_Address nvarchar(300) NULL,
-    PHU_Group_ID		bigint,
-    Reporting_PHU_Postal_Code nvarchar(300) NULL,
-    Reporting_PHU_Website nvarchar(300) NULL,
+    Reporting_PHU	nvarchar(255) NULL,
+    Reporting_PHU_Address nvarchar(255) NULL,
+    PHU_City_ID		bigint,
+    Reporting_PHU_Postal_Code nvarchar(255) NULL,
+    Reporting_PHU_Website nvarchar(255) NULL,
     Reporting_PHU_Latitude float NULL,
     Reporting_PHU_Longitude float NULL,
 	Create_day		date,
@@ -88,7 +87,7 @@ CREATE TABLE Vaccines_by_age_PHU_NDS (
 -- Column: Outbreaks_Group_ID, Outbreaks_Group
 CREATE TABLE Outbreaks_Group_NDS (
     Outbreaks_Group_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    Outbreaks_Group nvarchar(300) NULL,
+    Outbreaks_Group nvarchar(255) NULL,
 	Create_day		date,
 	Update_day		date,
 )
@@ -112,7 +111,7 @@ CREATE TABLE Ongoing_Outbreaks_PHU_NDS (
 -- Column: Case_Acquisition_Info_ID, Case_Acquisition_Info
 CREATE TABLE Case_Acquisition_Info_NDS (
     Case_Acquisition_Info_ID bigint IDENTITY(1,1) PRIMARY KEY,
-    Case_Acquisition_Info nvarchar(300) NULL,
+    Case_Acquisition_Info nvarchar(255) NULL,
 	SourceID		bigint,
 	Create_day		date,
 	Update_day		date
@@ -131,7 +130,7 @@ CREATE TABLE Cases_Report_NDS (
     Test_Reported_Date date,
     Case_Acquisition_Info_ID bigint,
     Accurate_Episode_Date date,
-    Outbreak_Related nvarchar(300),
+    Outbreak_Related nvarchar(255),
 	Create_day		date,
 	Update_day		date,
 	_Status			int
@@ -140,8 +139,8 @@ CREATE TABLE Cases_Report_NDS (
 )
 CREATE TABLE Outcome_NDS (
     Outcome_ID		bigint IDENTITY(1,1) PRIMARY KEY,
-    Outcome			nvarchar(300) NULL,
-	SourceID		bigint,
+    Outcome			nvarchar(255) NULL,
+	SourceID		int,
 	Create_day		date,
 	Update_day		date
 )
@@ -151,8 +150,8 @@ CREATE TABLE Outcome_NDS (
 -- Column: Exposure_ID, Exposure
 CREATE TABLE Exposure_NDS (
     Exposure_ID		bigint IDENTITY(1,1) PRIMARY KEY,
-    Exposure		nvarchar(300) NULL,
-	SourceID		bigint,
+    Exposure		nvarchar(255) NULL,
+	SourceID		int,
 	Create_day		date,
 	Update_day		date
 )
@@ -161,8 +160,8 @@ CREATE TABLE Exposure_NDS (
 -- Column: Case_Status_ID, Case_Status
 CREATE TABLE Case_Status_NDS (
     Case_Status_ID	bigint IDENTITY(1,1) PRIMARY KEY,
-    Case_Status		nvarchar(300) NULL,
-	SourceID		bigint,
+    Case_Status		nvarchar(255) NULL,
+	SourceID		int,
 	Create_day		date,
 	Update_day		date
 )
@@ -171,8 +170,8 @@ CREATE TABLE Case_Status_NDS (
 -- Column: Age_Group_ID, Age_Group, Source
 CREATE TABLE Age_Group_NDS (
     Age_Group_ID	bigint IDENTITY(1,1) PRIMARY KEY,
-    Age_Group		nvarchar(300) NULL,
-	SourceID		bigint,
+    Age_Group		nvarchar(255) NULL,
+	SourceID		int,
 	Create_day		date,
 	Update_day		date
 )
@@ -181,15 +180,15 @@ CREATE TABLE Age_Group_NDS (
 -- Column: Gender_ID, Gender, Source
 CREATE TABLE Gender_NDS (
     Gender_ID		bigint IDENTITY(1,1) PRIMARY KEY,
-    Gender			nvarchar(300) NULL,
-	SourceID		bigint,
+    Gender			nvarchar(255) NULL,
+	SourceID		int,
 	Create_day		date,
 	Update_day		date,
 )
 
 CREATE TABLE Province_NDS (
 	Province_ID		bigint IDENTITY(1,1) PRIMARY KEY,
-	Province_Name	nvarchar(300),
+	Province_Name	nvarchar(255),
 	Create_day		date,
 	Update_day		date,
 	_Status			int
@@ -214,8 +213,8 @@ CREATE TABLE Compiled_COVID_19_Case_Details_Canada_NDS (
 )
 
 CREATE TABLE DataSource(
-	SourceID		bigint IDENTITY(1,1) PRIMARY KEY,
-	SourceName		nvarchar(300)
+	SourceID		INT IDENTITY(1,1) PRIMARY KEY,
+	SourceName		nvarchar(255)
 )
 /*
 1 - Case_Report
@@ -223,7 +222,7 @@ CREATE TABLE DataSource(
 3 - vaccines_by_age_phu
 */
 
-drop table COMPILED_COVID_19_CASE_DETAILS_CANADA_NDS
+drop table PHU_NDS
 -- SELECT --------------------------------------------------------------------------------
 SELECT * FROM PHU_CITY_NDS
 SELECT * FROM PHU_GROUP_NDS
@@ -240,8 +239,6 @@ SELECT * FROM AGE_GROUP_NDS
 SELECT * FROM GENDER_NDS
 SELECT * FROM COMPILED_COVID_19_CASE_DETAILS_CANADA_NDS
 
-select
-from phu_nds phu join PHU_CITY_NDS phuc on (phu.phu_city_id = phuc.
 -- ADD FOREIGN KEY --------------------------------------------------------------------------------
 --Chua chinh khoa ngoai
 -- PHU_City_NDS(PHU_Group_ID) REFERENCES PHU_Group_NDS(PHU_Group_ID)

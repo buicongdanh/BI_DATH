@@ -17,13 +17,13 @@ CREATE TABLE dim_PHU (
     PHU_ID				bigint IDENTITY(1,1) PRIMARY KEY,
 	PHU_ID_NK			bigint,
 	PHU_City_ID			bigint,--Historical
-	PHU_City			nvarchar(300),
+	PHU_City			nvarchar(255),
 	PHU_Group_ID		bigint,
-	PHU_GROUP			nvarchar(300),
-    Reporting_PHU		nvarchar(300) NULL,
-    Reporting_PHU_Address nvarchar(300) NULL,--Changing
-    Reporting_PHU_Postal_Code nvarchar(300) NULL, --Changing
-    Reporting_PHU_Website nvarchar(300) NULL, --Changing
+	PHU_GROUP			nvarchar(255),
+    Reporting_PHU		nvarchar(255) NULL,
+    Reporting_PHU_Address nvarchar(255) NULL,--Changing
+    Reporting_PHU_Postal_Code nvarchar(255) NULL, --Changing
+    Reporting_PHU_Website nvarchar(255) NULL, --Changing
     Reporting_PHU_Latitude float NULL,--Changing
     Reporting_PHU_Longitude float NULL,--Changing
 	Create_day		date,
@@ -31,12 +31,11 @@ CREATE TABLE dim_PHU (
 	_Status				int
     -- PHU_City_ID bigint FOREIGN KEY REFERENCES PHU_City(PHU_City_ID)
 )
-
 CREATE TABLE dim_Gender (
     Gender_ID		bigint IDENTITY(1,1) PRIMARY KEY,
 	Gender_NK		bigint,
-    Gender_Name		nvarchar(300) NULL,
-	SourceID		bigint,
+    Gender_Name		nvarchar(255) NULL,
+	SourceID		int,
 	Create_day		date,
 	Update_day		date,
 	_Status			int,
@@ -45,8 +44,8 @@ CREATE TABLE dim_Gender (
 CREATE TABLE dim_Age (
     Age_ID			bigint IDENTITY(1,1) PRIMARY KEY,
 	Age_NK			bigint,
-    Age_Name		nvarchar(300) NULL,
-	SourceID		bigint,
+    Age_Name		nvarchar(255) NULL,
+	SourceID		int,
 	Create_day		date,
 	Update_day		date,
 	_Status			int
@@ -55,8 +54,8 @@ CREATE TABLE dim_Age (
 CREATE TABLE dim_Case_Status (
     Case_Status_ID	bigint IDENTITY(1,1) PRIMARY KEY,
 	Case_Status_NK	bigint,
-    Case_Status_Name	nvarchar(300) NULL,
-	Source_ID		bigint,
+    Case_Status_Name	nvarchar(255) NULL,
+	Source_ID		int,
 	Create_day		date,
 	Update_day		date,
 	_Status			int
@@ -65,8 +64,8 @@ CREATE TABLE dim_Case_Status (
 CREATE TABLE dim_Outcome (
     Outcome_ID	bigint IDENTITY(1,1) PRIMARY KEY,
 	Outcome_NK	bigint,
-    Outcome_Name	nvarchar(300) NULL,
-	Source_ID		bigint,
+    Outcome_Name	nvarchar(255) NULL,
+	Source_ID		int,
 	Create_day		date,
 	Update_day		date,
 	_Status			int
@@ -80,12 +79,12 @@ CREATE TABLE  [dbo].[Fact_Case] (
 	[Gender_ID]		bigint NOT NULL,
 	[Outcome_ID]	bigint NOT NULL,
 	[Case_Status_ID] bigint NOT NULL,
-	[SourceID]		bigint NOT NULL,
+	[SourceID]		int NOT NULL,
   --Measure
 	[ToTalCase] bigint NULL,
 	primary key (IDDate, PHU_ID, Age_ID, Gender_ID, Case_Status_ID, Outcome_ID)
 )
-
+select * from [Fact_Case]
 CREATE TABLE [dbo].[Fact_Vacinated](
   --Dim
 	[IDDate]		bigint NOT NULL,
@@ -98,10 +97,9 @@ CREATE TABLE [dbo].[Fact_Vacinated](
 	ThirdDoseCumulative	bigint null,
 	primary key (IDDate, PHU_ID, Age_ID)
 )
-
 Create table SourceID (
-	Source_ID	bigint PRIMARY KEY,
-	SourceName	nvarchar(300)
+	Source_ID	int IDENTITY(1,1) PRIMARY KEY,
+	SourceName	nvarchar(255)
 )
 /*
 1 - Case_Report
@@ -109,8 +107,8 @@ Create table SourceID (
 3 - vaccines_by_age_phu
 */
 Create table _Status (
-	Status_ID		int PRIMARY KEY,
-	Status_Name		nvarchar(300)
+	Status_ID		int IDENTITY(1,1) PRIMARY KEY,
+	Status_Name		nvarchar(255)
 )
 
 --Them khoa ngoai neu can
@@ -123,8 +121,7 @@ truncate table dim_Date
 use DATH_DDS
 go
 create proc add_date
-
-alter proc add_date
+--alter proc add_date
 As
 begin
 	declare @req_start_date Datetime,
