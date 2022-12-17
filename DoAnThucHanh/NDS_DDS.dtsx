@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="47"
-  DTS:VersionGUID="{36DD7735-083A-4036-A617-7E8750610D5B}">
+  DTS:VersionBuild="50"
+  DTS:VersionGUID="{82C2F2CF-89C8-4260-8AB1-E18DECFECE41}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -6696,7 +6696,7 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                      name="ParameterMap">#{Package\Sequence Container 2\Fact_Case\531:invalid};#{Package\Sequence Container 2\Fact_Case\532:invalid};#{Package\Sequence Container 2\Fact_Case\533:invalid};#{Package\Sequence Container 2\Fact_Case\534:invalid};#{Package\Sequence Container 2\Fact_Case\535:invalid};#{Package\Sequence Container 2\Fact_Case\536:invalid};#{Package\Sequence Container 2\Fact_Case\76:invalid};</property>
+                      name="ParameterMap">#{Package\Sequence Container 2\Fact_Case\490:invalid};#{Package\Sequence Container 2\Fact_Case\491:invalid};#{Package\Sequence Container 2\Fact_Case\492:invalid};#{Package\Sequence Container 2\Fact_Case\493:invalid};#{Package\Sequence Container 2\Fact_Case\494:invalid};#{Package\Sequence Container 2\Fact_Case\495:invalid};#{Package\Sequence Container 2\Fact_Case\496:invalid};</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -6870,7 +6870,7 @@ where [refTable].[Outcome_NK] = ? and [refTable].[Source_ID] = ?</property>
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                      name="ParameterMap">#{Package\Sequence Container 2\Fact_Case\Union All.Outputs[Union All Output 1].Columns[Case_Status_ID]};#{Package\Sequence Container 2\Fact_Case\86:invalid};</property>
+                      name="ParameterMap">#{Package\Sequence Container 2\Fact_Case\Union All.Outputs[Union All Output 1].Columns[Case_Status_ID]};#{Package\Sequence Container 2\Fact_Case\497:invalid};</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -7028,7 +7028,7 @@ where [refTable].[Case_Status_NK] = ? and [refTable].[Source_ID] = ?</property>
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                      name="ParameterMap">#{Package\Sequence Container 2\Fact_Case\Union All.Outputs[Union All Output 1].Columns[Exposure_ID]};#{Package\Sequence Container 2\Fact_Case\86:invalid};</property>
+                      name="ParameterMap">#{Package\Sequence Container 2\Fact_Case\Union All.Outputs[Union All Output 1].Columns[Exposure_ID]};#{Package\Sequence Container 2\Fact_Case\497:invalid};</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -11095,34 +11095,34 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
         <NodeLayout
           Size="119.2,41.6"
           Id="Package\Sequence Container 1\dim_Age"
-          TopLeft="40.7666557846802,240.599997414549" />
+          TopLeft="40.7666557846802,204.19999766767" />
         <NodeLayout
           Size="160.8,41.6"
           Id="Package\Sequence Container 1\dim_Case_Status"
-          TopLeft="45.2999938532716,41.2666645995115" />
+          TopLeft="162.799987433355,25.666664707992" />
         <NodeLayout
           Size="136,41.6"
           Id="Package\Sequence Container 1\dim_Gender"
-          TopLeft="38.9666604288753,143.399997956951" />
+          TopLeft="29.7999942630533,113.066664834552" />
         <NodeLayout
           Size="120.8,41.6"
           Id="Package\Sequence Container 1\Outcome"
-          TopLeft="191.599980876844,211.333331223991" />
+          TopLeft="199.933313754864,128.999998463193" />
         <NodeLayout
           Size="100,41.6"
           Id="Package\Sequence Container 1\PHU"
-          TopLeft="70.6333253653517,329.799996727506" />
+          TopLeft="196.466651823454,247.466663966708" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="351.2,457.6"
-          Size="351.2,500.8"
+          PanelSize="345.6,328"
+          Size="345.6,371.2"
           Id="Package\Sequence Container 1"
           TopLeft="158.333324682382,142.133332344956" />
         <NodeLayout
           Size="128.8,41.6"
           Id="Package\Sequence Container 2\Fact_Case"
-          TopLeft="61.8333089740754,38.5999986801545" />
+          TopLeft="61.8333089740755,47.2666652865542" />
         <NodeLayout
           Size="156,41.6"
           Id="Package\Sequence Container 2\Fact_Vaccinated"
@@ -11133,33 +11133,33 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
           PanelSize="255.2,224"
           Size="255.2,267.2"
           Id="Package\Sequence Container 2"
-          TopLeft="542.499970359108,240.066668034726" />
+          TopLeft="586.666634612615,184.600001753768" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="509.533324682382,392.533332344956">
+          TopLeft="503.933324682382,327.733332344956">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="32.966645676726,-18.86666431023"
+              EndConnector="82.7333099302326,-9.53333059118847"
               Start="0,0"
-              End="25.466645676726,-18.86666431023">
+              End="75.2333099302326,-9.53333059118847">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="12.483322838363,0" />
+                    End="37.3666549651163,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="12.483322838363,0"
-                    Point2="16.483322838363,0"
-                    Point3="16.483322838363,-4" />
+                    Point1="37.3666549651163,0"
+                    Point2="41.3666549651163,0"
+                    Point3="41.3666549651163,-4" />
                   <mssgle:LineSegment
-                    End="16.483322838363,-14.86666431023" />
+                    End="41.3666549651163,-5.53333059118847" />
                   <mssgle:CubicBezierSegment
-                    Point1="16.483322838363,-14.86666431023"
-                    Point2="16.483322838363,-18.86666431023"
-                    Point3="20.483322838363,-18.86666431023" />
+                    Point1="41.3666549651163,-5.53333059118847"
+                    Point2="41.3666549651163,-9.53333059118847"
+                    Point3="45.3666549651163,-9.53333059118847" />
                   <mssgle:LineSegment
-                    End="25.466645676726,-18.86666431023" />
+                    End="75.2333099302326,-9.53333059118847" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -11344,19 +11344,6 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container 1\dim_Age\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Sequence Container 1\dim_Age\Slowly Changing Dimension">
     <Properties>
       <Property>
@@ -11426,6 +11413,19 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Sequence Container 1\dim_Age\Insert Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container 1\dim_Age\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -11699,6 +11699,19 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container 1\dim_Case_Status\Insert Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Sequence Container 1\dim_Case_Status\Slowly Changing Dimension">
     <Properties>
       <Property>
@@ -11768,19 +11781,6 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Sequence Container 1\dim_Case_Status\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container 1\dim_Case_Status\Insert Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -12320,19 +12320,6 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container 1\Outcome\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Sequence Container 1\Outcome\OLE DB Source 1">
     <Properties>
       <Property>
@@ -12410,6 +12397,19 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
   &lt;DateVariable /&gt;
   &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
 &lt;/SCDWizardMetadata&gt;</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container 1\Outcome\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -12708,7 +12708,7 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
         <NodeLayout
           Size="120.8,41.6"
           Id="Package\Sequence Container 2\Fact_Case\Lookup 1"
-          TopLeft="115.499993989865,314.878721957849" />
+          TopLeft="120.499993915359,279.87872247939" />
         <NodeLayout
           Size="161.6,41.6"
           Id="Package\Sequence Container 2\Fact_Case\Derived Column 1"
@@ -12716,11 +12716,11 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
         <NodeLayout
           Size="120,41.6"
           Id="Package\Sequence Container 2\Fact_Case\Union All"
-          TopLeft="306.999995624025,253.333329076237" />
+          TopLeft="305.999995638926,280.333328673906" />
         <NodeLayout
           Size="106.4,41.6"
           Id="Package\Sequence Container 2\Fact_Case\Sort 1"
-          TopLeft="705.99998947978,244.999996349216" />
+          TopLeft="705.99998947978,190.999997153879" />
         <NodeLayout
           Size="153.6,41.6"
           Id="Package\Sequence Container 2\Fact_Case\Conditional Split"
@@ -12740,15 +12740,15 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
         <NodeLayout
           Size="160.8,41.6"
           Id="Package\Sequence Container 2\Fact_Case\OLE DB Source 2"
-          TopLeft="693.999989658594,149.999997764826" />
+          TopLeft="691.999989688396,105.999998420477" />
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\Sequence Container 2\Fact_Case\Merge Join"
           TopLeft="542.499970359108,399.199998625914" />
         <NodeLayout
-          Size="171.2,41.6"
+          Size="171.2,42.4"
           Id="Package\Sequence Container 2\Fact_Case\OLE DB Destination"
-          TopLeft="713.999989360571,635.199991774559" />
+          TopLeft="593.99999114871,657.199991446733" />
         <NodeLayout
           Size="160.8,41.6"
           Id="Package\Sequence Container 2\Fact_Case\OLE DB Source 1"
@@ -12756,68 +12756,56 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
         <NodeLayout
           Size="152,41.6"
           Id="Package\Sequence Container 2\Fact_Case\OLE DB Source"
-          TopLeft="142.999997869134,97.9999985396862" />
+          TopLeft="141.999997884035,98.999998524785" />
         <NodeLayout
           Size="126.4,41.6"
           Id="Package\Sequence Container 2\Fact_Case\Aggregate"
           TopLeft="352.99999473989,532.999994799496" />
         <EdgeLayout
           Id="Package\Sequence Container 2\Fact_Case.Paths[Lookup Match Output]"
-          TopLeft="179.39999364838,356.478721957849">
+          TopLeft="181.899993611127,321.47872247939">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,42.854609483103"
+              EndConnector="0,77.8546089615623"
               Start="0,0"
-              End="0,35.354609483103">
+              End="0,70.3546089615623">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.354609483103" />
+                    End="0,70.3546089615623" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,11.8726172415515,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,29.3726169807812,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container 2\Fact_Case.Paths[Lookup Error Output]"
-          TopLeft="678.399990731478,579.599991983176">
+          TopLeft="678.999990940094,579.599991983176">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="121.199998629093,55.5999997913834"
+              EndConnector="0,77.5999994635579"
               Start="0,0"
-              End="121.199998629093,48.0999997913834">
+              End="0,70.0999994635579">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,23.7999998956917" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,23.7999998956917"
-                    Point2="0,27.7999998956917"
-                    Point3="4,27.7999998956917" />
-                  <mssgle:LineSegment
-                    End="117.199998629093,27.7999998956917" />
-                  <mssgle:CubicBezierSegment
-                    Point1="117.199998629093,27.7999998956917"
-                    Point2="121.199998629093,27.7999998956917"
-                    Point3="121.199998629093,31.7999998956917" />
-                  <mssgle:LineSegment
-                    End="121.199998629093,48.0999997913834" />
+                    End="0,70.0999994635579" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="14.7336125957966,32.7999998956917,91.7327734375,11.609375"
+              BoundingBox="-45.86638671875,29.2453122317789,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -12827,26 +12815,26 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-132.133331197501,27.7333318180511"
+              EndConnector="-133.1333311826,54.7333314157198"
               Start="0,0"
-              End="-132.133331197501,20.2333318180511">
+              End="-133.1333311826,47.2333314157198">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,12.4210517343724" />
+                    End="0,28.407893601413" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,12.4210517343724"
-                    Point2="0,16.4210517343724"
-                    Point3="-4,16.4210517343724" />
+                    Point1="0,28.407893601413"
+                    Point2="0,32.407893601413"
+                    Point3="-4,32.407893601413" />
                   <mssgle:LineSegment
-                    End="-128.133331197501,16.4210517343724" />
+                    End="-129.1333311826,32.407893601413" />
                   <mssgle:CubicBezierSegment
-                    Point1="-128.133331197501,16.4210517343724"
-                    Point2="-132.133331197501,16.4210517343724"
-                    Point3="-132.133331197501,20.4210517343724" />
+                    Point1="-129.1333311826,32.407893601413"
+                    Point2="-133.1333311826,32.407893601413"
+                    Point3="-133.1333311826,36.407893601413" />
                   <mssgle:LineSegment
-                    End="-132.133331197501,20.2333318180511" />
+                    End="-133.1333311826,47.2333314157198" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12861,26 +12849,26 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="134.933330998818,28.7333318031502"
+              EndConnector="133.933331013719,55.7333314008188"
               Start="0,0"
-              End="134.933330998818,21.2333318031502">
+              End="133.933331013719,48.2333314008188">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,13.0131569887073" />
+                    End="0,28.999998855748" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,13.0131569887073"
-                    Point2="0,17.0131569887073"
-                    Point3="4,17.0131569887073" />
+                    Point1="0,28.999998855748"
+                    Point2="0,32.999998855748"
+                    Point3="4,32.999998855748" />
                   <mssgle:LineSegment
-                    End="130.933330998818,17.0131569887073" />
+                    End="129.933331013719,32.999998855748" />
                   <mssgle:CubicBezierSegment
-                    Point1="130.933330998818,17.0131569887073"
-                    Point2="134.933330998818,17.0131569887073"
-                    Point3="134.933330998818,21.0131569887073" />
+                    Point1="129.933331013719,32.999998855748"
+                    Point2="133.933331013719,32.999998855748"
+                    Point3="133.933331013719,36.999998855748" />
                   <mssgle:LineSegment
-                    End="134.933330998818,21.2333318031502" />
+                    End="133.933331013719,48.2333314008188" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12937,30 +12925,30 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container 2\Fact_Case.Paths[Sort Output1]"
-          TopLeft="759.19998947978,286.599996349216">
+          TopLeft="759.19998947978,232.599997153879">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-151.900019120672,112.600002276698"
+              EndConnector="-151.900019120672,166.600001472035"
               Start="0,0"
-              End="-151.900019120672,105.100002276698">
+              End="-151.900019120672,159.100001472035">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.3000011383491" />
+                    End="0,79.3000007360177" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,52.3000011383491"
-                    Point2="0,56.3000011383491"
-                    Point3="-4,56.3000011383491" />
+                    Point1="0,79.3000007360177"
+                    Point2="0,83.3000007360177"
+                    Point3="-4,83.3000007360177" />
                   <mssgle:LineSegment
-                    End="-147.900019120672,56.3000011383491" />
+                    End="-147.900019120672,83.3000007360177" />
                   <mssgle:CubicBezierSegment
-                    Point1="-147.900019120672,56.3000011383491"
-                    Point2="-151.900019120672,56.3000011383491"
-                    Point3="-151.900019120672,60.3000011383491" />
+                    Point1="-147.900019120672,83.3000007360177"
+                    Point2="-151.900019120672,83.3000007360177"
+                    Point3="-151.900019120672,87.3000007360177" />
                   <mssgle:LineSegment
-                    End="-151.900019120672,105.100002276698" />
+                    End="-151.900019120672,159.100001472035" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -12993,30 +12981,30 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container 2\Fact_Case.Paths[OLE DB Source Output2]"
-          TopLeft="774.399989658594,191.599997764826">
+          TopLeft="772.399989688396,147.599998420477">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-15.200000178814,53.3999985843897"
+              EndConnector="-13.2000002086162,43.3999987334016"
               Start="0,0"
-              End="-15.200000178814,45.8999985843897">
+              End="-13.2000002086162,35.8999987334016">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,22.6999992921948" />
+                    End="0,17.6999993667008" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,22.6999992921948"
-                    Point2="0,26.6999992921948"
-                    Point3="-4,26.6999992921948" />
+                    Point1="0,17.6999993667008"
+                    Point2="0,21.6999993667008"
+                    Point3="-4,21.6999993667008" />
                   <mssgle:LineSegment
-                    End="-11.200000178814,26.6999992921948" />
+                    End="-9.20000020861619,21.6999993667008" />
                   <mssgle:CubicBezierSegment
-                    Point1="-11.200000178814,26.6999992921948"
-                    Point2="-15.200000178814,26.6999992921948"
-                    Point3="-15.200000178814,30.6999992921948" />
+                    Point1="-9.20000020861619,21.6999993667008"
+                    Point2="-13.2000002086162,21.6999993667008"
+                    Point3="-13.2000002086162,25.6999993667008" />
                   <mssgle:LineSegment
-                    End="-15.200000178814,45.8999985843897" />
+                    End="-13.2000002086162,35.8999987334016" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13049,18 +13037,18 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container 2\Fact_Case.Paths[OLE DB Source Output]"
-          TopLeft="216.199997913837,139.599998539686">
+          TopLeft="215.699997921288,140.599998524785">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,43.3999987334013"
+              EndConnector="0,42.399998748302"
               Start="0,0"
-              End="0,35.8999987334013">
+              End="0,34.899998748302">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,35.8999987334013" />
+                    End="0,34.899998748302" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13095,30 +13083,18 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Sequence Container 2\Fact_Case.Paths[Union All Output 1]"
-          TopLeft="306.999995624025,274.133329076237">
+          TopLeft="305.999995638926,300.906025576648">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-70.7000016341602,61.5453928816119"
+              EndConnector="-64.7000017235673,0"
               Start="0,0"
-              End="-63.2000016341602,61.5453928816119">
+              End="-57.2000017235673,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-31.3500008170801,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-31.3500008170801,0"
-                    Point2="-35.3500008170801,0"
-                    Point3="-35.3500008170801,4" />
-                  <mssgle:LineSegment
-                    End="-35.3500008170801,57.5453928816119" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-35.3500008170801,57.5453928816119"
-                    Point2="-35.3500008170801,61.5453928816119"
-                    Point3="-39.3500008170801,61.5453928816119" />
-                  <mssgle:LineSegment
-                    End="-63.2000016341602,61.5453928816119" />
+                    End="-57.2000017235673,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13165,52 +13141,6 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container 2\Fact_Case\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Fact_Case]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Sequence Container 2\Fact_Case\Lookup 1">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[dim_Outcome]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Sequence Container 2\Fact_Case\Lookup 2">
     <Properties>
       <Property>
@@ -13243,6 +13173,29 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container 2\Fact_Case\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Fact_Case]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -13282,6 +13235,29 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Sequence Container 2\Fact_Case\Lookup 1">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[dim_Outcome]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -13414,7 +13390,7 @@ where [refTable].[IDDate] = ? and [refTable].[PHU_ID] = ? and [refTable].[Age_ID
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="33.5669456153781,26.1333326086074,91.7327734375,11.609375"
+              BoundingBox="33.566945615378,26.1333326086074,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

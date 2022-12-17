@@ -2,16 +2,14 @@ create database DATH_DDS
 go
 use DATH_DDS
 GO
-
 CREATE TABLE [dbo].[dim_Date] (
-	[IDDate]		bigint IDENTITY(1, 1) NOT NULL,
+	[IDDate]		bigint IDENTITY(1, 1) PRIMARY KEY,
 	FullDateTime	date NULL,
 	Ngay			int NULL,
 	Thang			int NULL,
 	Quy				int NULL,
 	Nam				int NULL
 )
-
 
 CREATE TABLE dim_PHU (
     PHU_ID				bigint IDENTITY(1,1) PRIMARY KEY,
@@ -29,8 +27,11 @@ CREATE TABLE dim_PHU (
 	Create_day		date,
 	Update_day		date,
 	_Status				int
-    -- PHU_City_ID bigint FOREIGN KEY REFERENCES PHU_City(PHU_City_ID)
 )
+
+ALTER TABLE dim_PHU ADD CONSTRAINT FK_Phu_Status
+FOREIGN KEY (_Status) REFERENCES _Status(Status_ID)
+
 CREATE TABLE dim_Gender (
     Gender_ID		bigint IDENTITY(1,1) PRIMARY KEY,
 	Gender_NK		bigint,
@@ -40,6 +41,9 @@ CREATE TABLE dim_Gender (
 	Update_day		date,
 	_Status			int,
 )
+
+ALTER TABLE dim_Gender ADD CONSTRAINT FK_Gender_Status
+FOREIGN KEY (_Status) REFERENCES _Status(Status_ID)
 
 CREATE TABLE dim_Age (
     Age_ID			bigint IDENTITY(1,1) PRIMARY KEY,
@@ -51,6 +55,9 @@ CREATE TABLE dim_Age (
 	_Status			int
 )
 
+ALTER TABLE dim_Age ADD CONSTRAINT FK_Age_Status
+FOREIGN KEY (_Status) REFERENCES _Status(Status_ID)
+
 CREATE TABLE dim_Case_Status (
     Case_Status_ID	bigint IDENTITY(1,1) PRIMARY KEY,
 	Case_Status_NK	bigint,
@@ -61,6 +68,11 @@ CREATE TABLE dim_Case_Status (
 	_Status			int
 )
 
+ALTER TABLE dim_Case_Status ADD CONSTRAINT FK_Case_Status_Status
+FOREIGN KEY (_Status) REFERENCES _Status(Status_ID)
+ALTER TABLE dim_Case_Status ADD CONSTRAINT FK_Case_Status_Source
+FOREIGN KEY (Source_ID) REFERENCES SourceID(Source_ID)
+
 CREATE TABLE dim_Outcome (
     Outcome_ID	bigint IDENTITY(1,1) PRIMARY KEY,
 	Outcome_NK	bigint,
@@ -70,6 +82,10 @@ CREATE TABLE dim_Outcome (
 	Update_day		date,
 	_Status			int
 )
+ALTER TABLE dim_Outcome ADD CONSTRAINT FK_Outcome_Status
+FOREIGN KEY (_Status) REFERENCES _Status(Status_ID)
+ALTER TABLE dim_Outcome ADD CONSTRAINT FK_Outcome_Source
+FOREIGN KEY (Source_ID) REFERENCES SourceID(Source_ID)
 
 CREATE TABLE  [dbo].[Fact_Case] (	
   --Dim
@@ -84,7 +100,28 @@ CREATE TABLE  [dbo].[Fact_Case] (
 	[ToTalCase] bigint NULL,
 	primary key (IDDate, PHU_ID, Age_ID, Gender_ID, Case_Status_ID, Outcome_ID)
 )
-select * from [Fact_Case]
+
+ALTER TABLE [Fact_Case] ADD CONSTRAINT FK_Case_Date
+FOREIGN KEY (IDDate) REFERENCES dim_Date(IDDate)
+
+ALTER TABLE [Fact_Case] ADD CONSTRAINT FK_Case_Phu
+FOREIGN KEY (PHU_ID) REFERENCES dim_Phu(Phu_ID)
+
+ALTER TABLE [Fact_Case] ADD CONSTRAINT FK_Case_Age
+FOREIGN KEY (Age_ID) REFERENCES dim_Age(Age_ID)
+
+ALTER TABLE [Fact_Case] ADD CONSTRAINT FK_Case_Gender
+FOREIGN KEY (Gender_ID) REFERENCES dim_Gender(Gender_ID)
+
+ALTER TABLE [Fact_Case] ADD CONSTRAINT FK_Case_CaseStatus
+FOREIGN KEY (Case_Status_ID) REFERENCES dim_Case_Status(Case_Status_ID)
+
+ALTER TABLE [Fact_Case] ADD CONSTRAINT FK_Case_Outcome
+FOREIGN KEY (Outcome_ID) REFERENCES dim_Outcome(Outcome_ID)
+
+ALTER TABLE [Fact_Case] ADD CONSTRAINT FK_Case_Source
+FOREIGN KEY (SourceID) REFERENCES SourceID(Source_ID)
+
 CREATE TABLE [dbo].[Fact_Vacinated](
   --Dim
 	[IDDate]		bigint NOT NULL,
@@ -97,6 +134,20 @@ CREATE TABLE [dbo].[Fact_Vacinated](
 	ThirdDoseCumulative	bigint null,
 	primary key (IDDate, PHU_ID, Age_ID)
 )
+
+ALTER TABLE [Fact_Vacinated] ADD CONSTRAINT FK_Vacinated_Date
+FOREIGN KEY (IDDate) REFERENCES dim_Date(IDDate)
+
+ALTER TABLE [Fact_Vacinated] ADD CONSTRAINT FK_Vacinated_Phu
+FOREIGN KEY (PHU_ID) REFERENCES dim_PHU(PHU_ID)
+
+ALTER TABLE [Fact_Vacinated] ADD CONSTRAINT FK_Vacinated_Age
+FOREIGN KEY (Age_ID) REFERENCES dim_Age(Age_ID)
+
+select phu_id from [Fact_Vacinated]
+WHERE phu_id NOT IN
+(SELECT phu_id from dim_phu)
+
 Create table SourceID (
 	Source_ID	int IDENTITY(1,1) PRIMARY KEY,
 	SourceName	nvarchar(255)
@@ -143,5 +194,3 @@ END
 
 use DATH_DDS
 exec add_date
-
-select * from dim_date
