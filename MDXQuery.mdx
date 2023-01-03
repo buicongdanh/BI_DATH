@@ -1,0 +1,83 @@
+﻿//1. Thống kê Số ca nhiễm, số ca tử vong, số ca phục hồi của dịch Covid-19 theo từng PHU trong từng năm. 
+
+WITH 
+MEMBER [Measures].Active AS SUM ([Dim Outcome].[Outcome Name].&[Active] , [Measures].[To Tal Case]) -- Nhiễm
+MEMBER [Measures].Deceased AS SUM ([Dim Outcome].[Outcome Name].&[Deceased] , [Measures].[To Tal Case]) -- Tử vong
+MEMBER [Measures].Recovered AS SUM ([Dim Outcome].[Outcome Name].&[Recovered] , [Measures].[To Tal Case]) -- Phục hồi
+
+SELECT 
+{ [Measures].Active , [Measures].Deceased , [Measures].Recovered } ON COLUMNS,
+NON EMPTY CROSSJOIN ([Dim PHU].[PHUIDHierarchy].[PHU ID] , [Dim Date].[Calendar].[Nam]) ON ROWS
+FROM [DATH DDS];
+
+//2. Thống kê Mức Độ Nghiêm Trọng (tiêu chí nghiêm trọng sinh viên tự định nghĩa) của dịch Covid-19 theo PHU và theo các Quý trong từng năm. 
+
+
+
+//3. Thống kê tổng số người tử vong theo Giới Tính và Nhóm Tuổi theo các năm. 
+
+WITH 
+MEMBER [Measures].Deceased AS SUM ([Dim Outcome].[Outcome Name].&[Deceased] , [Measures].[To Tal Case]) -- Tử vong
+
+SELECT 
+[Measures].Deceased ON COLUMNS,
+NON EMPTY CROSSJOIN ([Dim Gender].[Gender Name].[Gender Name] , [Dim Age].[Age Name].[Age Name]) ON ROWS 
+FROM [DATH DDS];
+
+//4. Thống kê số ca nhiễm, tử vong theo Mức Độ Nghiêm Trọng theo Ngày Trong Tháng của các năm. 
+
+
+
+//5. Thống kê số ca nhiễm, tử vong theo Mức Độ Nghiêm Trọng, khu vực (PHU_Group, City), và số người đã được tiêm vaccin trong các năm. 
+
+
+
+//6. Thống kê số ca nhiễm theo Mức Độ Nghiêm Trọng, nhóm bùng phát của từng khu vực trong các năm 
+
+
+
+// Visual map: Dùng regional map để biểu diễn trực quan (bằng màu sắc) số lượng ca nhiễm, số ca tử vong ở các vùng trong năm. 
+
+WITH 
+MEMBER [Measures].Active AS SUM ([Dim Outcome].[Outcome Name].&[Active] , [Measures].[To Tal Case]) -- Nhiễm
+MEMBER [Measures].Deceased AS SUM ([Dim Outcome].[Outcome Name].&[Deceased] , [Measures].[To Tal Case]) -- Tử vong
+
+SELECT 
+{ [Measures].Active , [Measures].Deceased } ON COLUMNS,
+NON EMPTY CROSSJOIN ([Dim PHU].[Reporting PHU].[Reporting PHU] , [Dim PHU].[Reporting PHU Address].[Reporting PHU Address] , [Dim PHU].[Reporting PHU Latitude].[Reporting PHU Latitude] , [Dim PHU].[Reporting PHU Longitude].[Reporting PHU Longitude] , [Dim Date].[Calendar].[Nam]) ON ROWS
+FROM [DATH DDS]
+
+//7.1. Thống kê số ca nhiễm theo Case_Status theo PHU_Group, Phu_City, PHU theo thời gian
+
+SELECT 
+[Dim Case Status].[Case Status Name].[Case Status Name] ON COLUMNS,
+CROSSJOIN ( [Dim PHU].[PHU GROUP].[PHU GROUP] , [Dim PHU].[PHU City].[PHU City] , [Dim PHU].[Reporting PHU].[Reporting PHU] ) ON ROWS
+FROM [DATH DDS];
+
+//7.2. Thống kê số ca tử vong dựa trên các bệnh nhân được tiêm ít nhất 1 mũi và các bệnh nhân được tiêm đầy đủ theo tháng (xem độ hiệu quả của số mũi vaccine)
+
+WITH 
+MEMBER [Measures].Deceased AS SUM ([Dim Outcome].[Outcome Name].&[Deceased] , [Measures].[To Tal Case]) -- Tử vong
+MEMBER [Measures].Recovered AS SUM ([Dim Outcome].[Outcome Name].&[Recovered] , [Measures].[To Tal Case]) -- Phục hồi
+
+SELECT 
+{ [Measures].Deceased , [Measures].Recovered , [Measures].[One Dose Cumulative] , [Measures].[Fully Vaccinated] } ON COLUMNS,
+//{ [Measures].Deceased , [Measures].Recovered} ON COLUMNS,
+//{ [Measures].[One Dose Cumulative] , [Measures].[Fully Vaccinated] } ON COLUMNS,
+NON EMPTY CROSSJOIN ( [Dim Date].[Calendar].[Nam] , [Dim Date].[Thang].[Thang] ) ON ROWS
+FROM [DATH DDS];
+
+//7.3. Thống kê số ca nhiễm có case_status ko xác định theo PHU
+
+WITH 
+MEMBER [Measures].Temp AS SUM ( [Dim Case Status].[Case Status Name].&[NO KNOWN EPI LINK] , [Measures].[To Tal Case] )
+
+SELECT 
+[Measures].Temp ON COLUMNS,
+NON EMPTY CROSSJOIN ( [Dim Date].[Calendar].[Nam] , { [Dim PHU].[Reporting PHU].[Reporting PHU] , [Dim PHU].[Reporting PHU] } ) ON ROWS
+FROM [DATH DDS];
+
+-- CC: dương tính xác định được nguồn lây (closed contact)
+-- No known Epi-link: dương tính không rõ nguồn lây
+-- OB: bùng phát (Outbreak)
+-- Travel

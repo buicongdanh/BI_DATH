@@ -8,34 +8,24 @@
   </Database>
   <Cubes>
     <ProjectItem>
-      <Name>DATH DDS_FactCase.cube</Name>
-      <FullPath>DATH DDS_FactCase.cube</FullPath>
+      <Name>DATH_Cube.cube</Name>
+      <FullPath>DATH_Cube.cube</FullPath>
       <Dependencies>
         <ProjectItem>
-          <Name>DATH DDS_FactCase.partitions</Name>
-          <FullPath>DATH DDS_FactCase.partitions</FullPath>
-        </ProjectItem>
-      </Dependencies>
-    </ProjectItem>
-    <ProjectItem>
-      <Name>DATH DDS_FactVaccinated.cube</Name>
-      <FullPath>DATH DDS_FactVaccinated.cube</FullPath>
-      <Dependencies>
-        <ProjectItem>
-          <Name>DATH DDS_FactVaccinated.partitions</Name>
-          <FullPath>DATH DDS_FactVaccinated.partitions</FullPath>
+          <Name>DATH_Cube.partitions</Name>
+          <FullPath>DATH_Cube.partitions</FullPath>
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
   </Cubes>
   <Dimensions>
     <ProjectItem>
-      <Name>Dim Case Status.dim</Name>
-      <FullPath>Dim Case Status.dim</FullPath>
+      <Name>Dim PHU.dim</Name>
+      <FullPath>Dim PHU.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Date.dim</Name>
-      <FullPath>Dim Date.dim</FullPath>
+      <Name>Dim Age.dim</Name>
+      <FullPath>Dim Age.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Dim Gender.dim</Name>
@@ -46,12 +36,12 @@
       <FullPath>Dim Outcome.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim Age.dim</Name>
-      <FullPath>Dim Age.dim</FullPath>
+      <Name>Dim Date.dim</Name>
+      <FullPath>Dim Date.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Dim PHU.dim</Name>
-      <FullPath>Dim PHU.dim</FullPath>
+      <Name>Dim Case Status.dim</Name>
+      <FullPath>Dim Case Status.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>

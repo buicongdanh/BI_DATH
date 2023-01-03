@@ -1,4 +1,4 @@
-﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="04619a40-0de4-45f3-96f7-c8b49b29f5df" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="0358a4c0-f18f-4c0d-b6de-12b4dd7cf1c2" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>Dim PHU</ID>
   <Name>Dim PHU</Name>
   <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
@@ -8,7 +8,7 @@
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
       <Value>
         <dds xmlns="">
-          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="190" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="78" x="3916" y="11409" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2192" scrolltop="-2383" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9462" y="13102" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
             <font>
               <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
             </font>
@@ -19,7 +19,7 @@
           <layoutmanager>
             <ddsxmlobj />
           </layoutmanager>
-          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_PHU" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5038" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="dim_PHU" left="-128" top="-21" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="5038" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
             <control>
               <ddsxmlobjectstreaminitwrapper binary="000e0000ae13000088130000" />
             </control>
@@ -47,87 +47,99 @@
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-      <Value>190</Value>
+      <Value>-2192</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-      <Value>-5000</Value>
+      <Value>-2383</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-      <Value>20</Value>
+      <Value>-128</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
-      <Value>0</Value>
+      <Value>-21</Value>
     </Annotation>
     <Annotation>
       <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
-      <Value>78</Value>
+      <Value>100</Value>
     </Annotation>
   </Annotations>
   <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
   <State>Unprocessed</State>
-  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="e94a4700-45de-4544-b01b-17110f0f0412">
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="0b8ca804-98f9-4c05-a624-74daea7377a1">
     <DataSourceViewID>DATH DDS</DataSourceViewID>
   </Source>
-  <ErrorConfiguration dwd:design-time-name="3c4a35c7-7efc-41e8-aea7-69db8d54464d">
+  <ErrorConfiguration dwd:design-time-name="c1fd4849-c841-4a02-babe-5717307fb92a">
     <KeyNotFound>ReportAndStop</KeyNotFound>
     <KeyDuplicate>ReportAndStop</KeyDuplicate>
     <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
   </ErrorConfiguration>
   <CurrentStorageMode>Molap</CurrentStorageMode>
   <Attributes>
-    <Attribute dwd:design-time-name="98d98ed6-b87f-476d-9900-9217da1729ad">
+    <Attribute dwd:design-time-name="373ec569-24a4-4cdc-8e19-2cbb76c3bbdd">
       <ID>PHU ID</ID>
       <Name>PHU ID</Name>
       <Usage>Key</Usage>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="6f65c50b-1eac-465f-8207-2e0eac098819">
+        <KeyColumn dwd:design-time-name="9085a9c4-9d0f-4d5d-ae56-9c18937c549e">
           <DataType>BigInt</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="3e97827c-02d5-4c41-b58f-d176fc5d9070">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="46aadc1f-d4e8-49e2-ae81-1ae89696194b">
             <TableID>dbo_dim_PHU</TableID>
             <ColumnID>PHU_ID</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
       <AttributeRelationships>
-        <AttributeRelationship dwd:design-time-name="2526a543-2371-43fb-a6a4-c1cc7ea1c60f">
+        <AttributeRelationship dwd:design-time-name="efa38cd1-2749-4358-8ef5-55ea610a411c">
           <AttributeID>PHU City ID</AttributeID>
           <Name>PHU City ID</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="bdd10eee-7a03-4644-bf26-6b26e0e1cf6f">
-          <AttributeID>PHU City</AttributeID>
-          <Name>PHU City</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="9f8ff9a7-8284-4ef5-8979-d019b8c3e78e">
+        <AttributeRelationship dwd:design-time-name="c21c418f-edad-4c74-9857-340c974ab0e0">
           <AttributeID>PHU Group ID</AttributeID>
           <Name>PHU Group ID</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="2a7cb6c8-9548-47b4-a823-3cdc64b82534">
-          <AttributeID>PHU GROUP</AttributeID>
-          <Name>PHU GROUP</Name>
-        </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="cfefdb32-4bea-4f9f-b39b-63e308283929">
+        <AttributeRelationship dwd:design-time-name="8b4f4a9f-cec9-40f8-881c-6da8c9b6e91d">
           <AttributeID>Reporting PHU</AttributeID>
           <Name>Reporting PHU</Name>
         </AttributeRelationship>
-        <AttributeRelationship dwd:design-time-name="9e922758-6ee6-4727-ab0f-34ac7bc8127f">
-          <AttributeID>PHU ID NK</AttributeID>
-          <Name>PHU ID NK</Name>
+        <AttributeRelationship dwd:design-time-name="ebb435e7-00f2-44ce-b94e-64df64ed07f8">
+          <AttributeID>PHU City</AttributeID>
+          <Name>PHU City</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4ab03506-8b8c-46a6-833a-3a6e9b398c82">
+          <AttributeID>PHU GROUP</AttributeID>
+          <Name>PHU GROUP</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="941abb84-869c-4072-a0eb-5f200b3847de">
+          <AttributeID>Reporting PHU Address</AttributeID>
+          <Name>Reporting PHU Address</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="2b90a867-bfb8-4c86-ae5c-526c3bf69046">
+          <AttributeID>Reporting PHU Postal Code</AttributeID>
+          <Name>Reporting PHU Postal Code</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="13ce912d-e88e-4d18-bb12-0a2c1792a5fd">
+          <AttributeID>Reporting PHU Latitude</AttributeID>
+          <Name>Reporting PHU Latitude</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="753edb51-9e29-4dae-97d6-2912b073874a">
+          <AttributeID>Reporting PHU Longitude</AttributeID>
+          <Name>Reporting PHU Longitude</Name>
         </AttributeRelationship>
       </AttributeRelationships>
       <OrderBy>Key</OrderBy>
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="ceb282f1-66c4-4b71-a3ef-8474b7b6d62d">
+    <Attribute dwd:design-time-name="ae7196b1-9fc9-4655-a68c-45d7a9ba9adc">
       <ID>PHU City ID</ID>
       <Name>PHU City ID</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="180a19c7-414c-4338-8e55-12f9935787db">
+        <KeyColumn dwd:design-time-name="bf77eda6-fb65-411b-91ce-5f8660a94de1">
           <DataType>BigInt</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="674c79fe-8d56-4f1a-9ac5-03d5ec890031">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3c53c69f-5895-4871-9f2c-2584d4a75495">
             <TableID>dbo_dim_PHU</TableID>
             <ColumnID>PHU_City_ID</ColumnID>
           </Source>
@@ -136,29 +148,13 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="4b242527-8b12-4ab6-9f58-9b0bd1790b35">
-      <ID>PHU City</ID>
-      <Name>PHU City</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="458678ac-32ef-4ccd-8dda-f13d59a33280">
-          <DataType>WChar</DataType>
-          <DataSize>300</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="b40d9eef-c932-4230-8f54-2333846f0d17">
-            <TableID>dbo_dim_PHU</TableID>
-            <ColumnID>PHU_City</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="4437cb9f-651e-4b7a-9a08-729926cceecc">
+    <Attribute dwd:design-time-name="831724be-96b5-434e-8d41-1c5bcb5a0b49">
       <ID>PHU Group ID</ID>
       <Name>PHU Group ID</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="9a27ded9-2c9d-4f1f-9bdc-196ddca0536d">
+        <KeyColumn dwd:design-time-name="f7eeeb13-fb30-435a-86b0-6b99573c6089">
           <DataType>BigInt</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="521eebb5-c60b-4abf-84b0-3ce0e77126dd">
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e576db7a-134d-43a8-9325-b9c32582b2c2">
             <TableID>dbo_dim_PHU</TableID>
             <ColumnID>PHU_Group_ID</ColumnID>
           </Source>
@@ -167,30 +163,14 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="4afe6d7e-5ed7-48d1-b3a0-297d8f8a8106">
-      <ID>PHU GROUP</ID>
-      <Name>PHU GROUP</Name>
-      <KeyColumns>
-        <KeyColumn dwd:design-time-name="daa47178-32f3-4c54-b2fa-5a415c832185">
-          <DataType>WChar</DataType>
-          <DataSize>300</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="8959c4d7-8503-4373-89a5-396c0cac999c">
-            <TableID>dbo_dim_PHU</TableID>
-            <ColumnID>PHU_GROUP</ColumnID>
-          </Source>
-        </KeyColumn>
-      </KeyColumns>
-      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-    </Attribute>
-    <Attribute dwd:design-time-name="654f01c3-9ce3-4a1f-be84-b67734586016">
+    <Attribute dwd:design-time-name="491acc92-57f7-4d0b-b9ef-c6f14aa29401">
       <ID>Reporting PHU</ID>
       <Name>Reporting PHU</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="c06c4751-f7d9-42be-a398-701b7ab70231">
+        <KeyColumn dwd:design-time-name="e214314e-0934-452f-a984-aba0562aff1c">
           <DataType>WChar</DataType>
-          <DataSize>300</DataSize>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="4f49113b-3abe-4347-9df9-d523995c0644">
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="00607af6-8739-45c4-86bb-f92cec3f97be">
             <TableID>dbo_dim_PHU</TableID>
             <ColumnID>Reporting_PHU</ColumnID>
           </Source>
@@ -199,15 +179,94 @@
       <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
       <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
     </Attribute>
-    <Attribute dwd:design-time-name="e29b9140-192b-409a-8034-ea9aafed5ec6">
-      <ID>PHU ID NK</ID>
-      <Name>PHU ID NK</Name>
+    <Attribute dwd:design-time-name="9f55cae0-b0d0-42d1-800d-3bc67d8cec18">
+      <ID>PHU City</ID>
+      <Name>PHU City</Name>
       <KeyColumns>
-        <KeyColumn dwd:design-time-name="7a9c4e9a-3012-4507-9c51-da8a4b38793e">
-          <DataType>BigInt</DataType>
-          <Source xsi:type="ColumnBinding" dwd:design-time-name="c8bc0cb3-cbb9-45d5-acdd-b95b8709496f">
+        <KeyColumn dwd:design-time-name="70dfd1de-68b5-4b7f-8174-d7f63ca859a0">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8fc38dda-a7d2-44b3-b9d3-95ac1afbc6cc">
             <TableID>dbo_dim_PHU</TableID>
-            <ColumnID>PHU_ID_NK</ColumnID>
+            <ColumnID>PHU_City</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2a93cb2b-8ff6-4d08-8ca0-7af50108cb9b">
+      <ID>PHU GROUP</ID>
+      <Name>PHU GROUP</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e1d37e20-ab87-4865-8c10-d07b599efb0c">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c017fcc3-d78a-467a-ac69-1a92532aec74">
+            <TableID>dbo_dim_PHU</TableID>
+            <ColumnID>PHU_GROUP</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9e62b401-bbd7-4396-a6aa-460c0eab18b9">
+      <ID>Reporting PHU Address</ID>
+      <Name>Reporting PHU Address</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4c34b968-7987-4b73-8552-d131ab7eb0d4">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="729f7fad-448c-4e56-b442-8211e065a33f">
+            <TableID>dbo_dim_PHU</TableID>
+            <ColumnID>Reporting_PHU_Address</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="10c6c13a-2927-46ed-9848-d99827ac0c55">
+      <ID>Reporting PHU Postal Code</ID>
+      <Name>Reporting PHU Postal Code</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0cf8674b-c317-4485-8189-d9ac16206897">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3064bf70-aaf3-4f24-95a6-d394c165c08b">
+            <TableID>dbo_dim_PHU</TableID>
+            <ColumnID>Reporting_PHU_Postal_Code</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="31e21798-4360-4a65-aff6-58770e2a790b">
+      <ID>Reporting PHU Latitude</ID>
+      <Name>Reporting PHU Latitude</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="15674104-2564-496a-a5ee-92b1f111ecda">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b413b743-0022-4e61-8e63-c791e5ae249b">
+            <TableID>dbo_dim_PHU</TableID>
+            <ColumnID>Reporting_PHU_Latitude</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="149578b2-35c5-41a4-8acb-caf7fe96e884">
+      <ID>Reporting PHU Longitude</ID>
+      <Name>Reporting PHU Longitude</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5c270156-67f7-4525-9024-931731c95ced">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4a16c89e-1d7a-4c16-b72a-e4bdcea26242">
+            <TableID>dbo_dim_PHU</TableID>
+            <ColumnID>Reporting_PHU_Longitude</ColumnID>
           </Source>
         </KeyColumn>
       </KeyColumns>
@@ -216,45 +275,24 @@
     </Attribute>
   </Attributes>
   <Hierarchies>
-    <Hierarchy dwd:design-time-name="434a7eec-208d-418c-a74c-9eea45cfdd00">
+    <Hierarchy dwd:design-time-name="be58fbc9-dd24-4805-a06e-11e197968a9b">
       <ID>Hierarchy</ID>
       <Name>PHUIDHierarchy</Name>
       <Levels>
-        <Level dwd:design-time-name="960e7611-e391-4b3c-978d-a478d5a5282b">
+        <Level dwd:design-time-name="27245d27-3fed-4656-8a11-4abbc9f9374f">
           <ID>PHU Group ID</ID>
           <Name>PHU Group ID</Name>
           <SourceAttributeID>PHU Group ID</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="8d1b5abf-0dd5-4da1-b252-8d6163f931f0">
+        <Level dwd:design-time-name="b537c2e8-e0ad-4108-9c88-ba85b7e2da0a">
           <ID>PHU City ID</ID>
           <Name>PHU City ID</Name>
           <SourceAttributeID>PHU City ID</SourceAttributeID>
         </Level>
-        <Level dwd:design-time-name="161bd6a3-333f-4850-801c-522ae9071b9a">
+        <Level dwd:design-time-name="0068ccdb-e970-4da3-a435-cd710c956506">
           <ID>PHU ID</ID>
           <Name>PHU ID</Name>
           <SourceAttributeID>PHU ID</SourceAttributeID>
-        </Level>
-      </Levels>
-    </Hierarchy>
-    <Hierarchy dwd:design-time-name="4fde1424-7e4d-4f54-8931-866b189f5bc1">
-      <ID>Hierarchy 1</ID>
-      <Name>PHUNameHierarchy</Name>
-      <Levels>
-        <Level dwd:design-time-name="414bdf6d-1bb8-423b-981d-98d5cca61f31">
-          <ID>PHU GROUP</ID>
-          <Name>PHU GROUP</Name>
-          <SourceAttributeID>PHU GROUP</SourceAttributeID>
-        </Level>
-        <Level dwd:design-time-name="a73c6796-b7fa-4787-9fe9-ad9c77be3779">
-          <ID>PHU City</ID>
-          <Name>PHU City</Name>
-          <SourceAttributeID>PHU City</SourceAttributeID>
-        </Level>
-        <Level dwd:design-time-name="27343574-2428-4490-be6a-6d64f4c6c539">
-          <ID>Reporting PHU</ID>
-          <Name>Reporting PHU</Name>
-          <SourceAttributeID>Reporting PHU</SourceAttributeID>
         </Level>
       </Levels>
     </Hierarchy>
