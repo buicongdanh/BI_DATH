@@ -1,0 +1,262 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9733cc70-cd44-4e33-b3aa-f28674452009" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Mining Case Detail</ID>
+  <Name>Mining Case Detail</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_Mining_CaseDetail</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="d51af14e-7c86-4c96-92f3-73f7f9b35395">
+    <DataSourceViewID>DATH DDS Mining</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="fbf2935c-277f-42d1-aab1-812df3ef15df">
+      <ID>Age Name</ID>
+      <Name>Age Name</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1d40c130-c824-4515-8589-8e5e02c5d925">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e08c0015-7044-445a-93b7-69a6b6e9e030">
+            <TableID>dbo_Mining_CaseDetail</TableID>
+            <ColumnID>Age_Name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="130fcd57-f8bb-41cb-b21e-a51ad92bd62c">
+      <ID>Case Status Name</ID>
+      <Name>Case Status Name</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="32cb3e62-6283-4de9-b7c5-31b697f96d80">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="16e30411-2f29-4804-9526-359c6d59d4bb">
+            <TableID>dbo_Mining_CaseDetail</TableID>
+            <ColumnID>Case_Status_Name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="4058b1d8-b0a1-4730-8e59-4f07b07663c0">
+      <ID>Gender Name</ID>
+      <Name>Gender Name</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5724bc78-d1c1-4724-80e6-0fa0b45d33ec">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e71b3df1-4c5a-4ba1-a7d9-d6f5db8924db">
+            <TableID>dbo_Mining_CaseDetail</TableID>
+            <ColumnID>Gender_Name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e72b7090-8c9b-4ace-8813-71540219e95a">
+      <ID>ID</ID>
+      <Name>ID</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="df9a6388-30b6-4f9b-835f-f579244cdee1">
+          <DataType>BigInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="39c0cd04-b145-41bd-8bef-e5e1cbed4ba2">
+            <TableID>dbo_Mining_CaseDetail</TableID>
+            <ColumnID>ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="07fbdd79-edb7-4e2e-b151-568bac347d3c">
+      <ID>Outcome Name</ID>
+      <Name>Outcome Name</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a5d402cb-8529-4647-886e-5d332cdbf19d">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="d2028c47-5e81-4596-9fb7-d5640d362014">
+            <TableID>dbo_Mining_CaseDetail</TableID>
+            <ColumnID>Outcome_Name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="27b57ffd-ea55-44e7-a955-b2e6d1c44f3d">
+      <ID>PHU GROUP</ID>
+      <Name>PHU GROUP</Name>
+      <Type>Text</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c027cb84-3d67-47ea-b27b-0808e3eaeee9">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="b88b72d7-0a1e-419e-8271-9ca58894a05f">
+            <TableID>dbo_Mining_CaseDetail</TableID>
+            <ColumnID>PHU_GROUP</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="d7dd5fb2-9728-4796-9a5a-d61081d3a6b4">
+      <ID>Quy</ID>
+      <Name>Quy</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2178cad8-e725-432e-82cb-edbf5f0c5b25">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="75c07332-7641-4548-b587-a991f57b571b">
+            <TableID>dbo_Mining_CaseDetail</TableID>
+            <ColumnID>Quy</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="15338a7c-4851-4ec1-8638-3c246c5a3538">
+      <ID>Thang</ID>
+      <Name>Thang</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="7981563a-d8ac-4d0f-bde3-dadfaf96fb0d">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9344cec5-f112-4bab-aaa5-d215c54f02b2">
+            <TableID>dbo_Mining_CaseDetail</TableID>
+            <ColumnID>Thang</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e54d485e-69ff-4557-9b5a-42e90cee0e66">
+      <ID>To Tal Case</ID>
+      <Name>To Tal Case</Name>
+      <Type>Long</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="8c251bc1-c91a-4738-a8b8-267f4c15d38a">
+          <DataType>BigInt</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="08610dde-afc8-4ddf-8b94-5fc0f982d79f">
+            <TableID>dbo_Mining_CaseDetail</TableID>
+            <ColumnID>ToTalCase</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="f902c410-b8df-4574-b0d4-eca221cb75bd">
+      <ID>Mining Case Detail</ID>
+      <Name>Mining Case Detail</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Decision_Trees</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="63409fe4-deea-4283-9608-0a32d7757cd2">
+          <ID>Age Name</ID>
+          <Name>Age Name</Name>
+          <SourceColumnID>Age Name</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="dc290a41-2c2a-454f-b90e-f1287c610477">
+          <ID>Case Status Name</ID>
+          <Name>Case Status Name</Name>
+          <SourceColumnID>Case Status Name</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="d9e76a8a-0d35-49f4-9a07-bf523249225c">
+          <ID>Gender Name</ID>
+          <Name>Gender Name</Name>
+          <SourceColumnID>Gender Name</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="c2720210-7366-4380-8650-e71879fae850">
+          <ID>ID</ID>
+          <Name>ID</Name>
+          <SourceColumnID>ID</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="4ea76fd2-80cf-4df0-aba3-f59eb8b7bb51">
+          <ID>Outcome Name</ID>
+          <Name>Outcome Name</Name>
+          <SourceColumnID>Outcome Name</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="b16743f1-dfe0-4b9c-8927-8dc41e61908a">
+          <ID>PHU GROUP</ID>
+          <Name>PHU GROUP</Name>
+          <SourceColumnID>PHU GROUP</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="44d0907d-8478-4557-b057-1325ea7971d7">
+          <ID>Quy</ID>
+          <Name>Quy</Name>
+          <SourceColumnID>Quy</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="d0f70ecb-fc71-4ea5-864b-63fa7a828cee">
+          <ID>To Tal Case</ID>
+          <Name>To Tal Case</Name>
+          <SourceColumnID>To Tal Case</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+</MiningStructure>

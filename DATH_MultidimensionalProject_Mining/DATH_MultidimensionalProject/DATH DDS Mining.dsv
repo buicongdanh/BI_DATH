@@ -1,0 +1,158 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="cadb6bee-a0e3-4440-9442-2f7b79113f2b" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DATH DDS Mining</ID>
+  <Name>DATH DDS Mining</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>DATH DDS</DataSourceID>
+  <Schema>
+    <xs:schema id="DATH_x0020_DDS_x0020_Mining" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="DATH_x0020_DDS_x0020_Mining" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="0dd572fc-192b-494b-bb8e-a1f9c30a5db4">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_Mining_CaseDetail" msprop:design-time-name="12af979f-748b-4965-b8fa-2c23c5ffb4da" msprop:DbTableName="Mining_CaseDetail" msprop:FriendlyName="Mining_CaseDetail" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID" msprop:design-time-name="60230c5e-0a67-4bb7-ac47-242e4fe77d4c" msprop:DbColumnName="ID" msprop:FriendlyName="ID" type="xs:long" minOccurs="0" />
+                  <xs:element name="Reporting_PHU" msprop:design-time-name="a57e23ac-c3e6-48d3-a900-e0c0ac2aac3e" msprop:DbColumnName="Reporting_PHU" msprop:FriendlyName="Reporting_PHU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PHU_City" msprop:design-time-name="409382f5-6dd2-4c43-8cdf-9e7bde3907ee" msprop:DbColumnName="PHU_City" msprop:FriendlyName="PHU_City" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PHU_GROUP" msprop:design-time-name="a581095f-2306-4f20-a681-30a83dad3226" msprop:DbColumnName="PHU_GROUP" msprop:FriendlyName="PHU_GROUP" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FullDateTime" msprop:design-time-name="e7093fc0-ecb9-4229-bc74-3f76d22b2514" msprop:DbColumnName="FullDateTime" msprop:FriendlyName="FullDateTime" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Thang" msprop:design-time-name="71f6653f-65ec-4285-8a61-fad0647ef797" msprop:DbColumnName="Thang" msprop:FriendlyName="Thang" type="xs:int" minOccurs="0" />
+                  <xs:element name="Quy" msprop:design-time-name="33f845e4-f0b4-4c39-a514-5045a03cb49d" msprop:DbColumnName="Quy" msprop:FriendlyName="Quy" type="xs:int" minOccurs="0" />
+                  <xs:element name="Nam" msprop:design-time-name="019eeb83-e477-4b51-a3b7-9d21205a5f2a" msprop:DbColumnName="Nam" msprop:FriendlyName="Nam" type="xs:int" minOccurs="0" />
+                  <xs:element name="Gender_Name" msprop:design-time-name="2f751bb7-c51c-4b80-bd71-055229c836c0" msprop:DbColumnName="Gender_Name" msprop:FriendlyName="Gender_Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Outcome_Name" msprop:design-time-name="5f6c78a2-2ab1-4945-85e5-56658b129967" msprop:DbColumnName="Outcome_Name" msprop:FriendlyName="Outcome_Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Age_Name" msprop:design-time-name="5d8f1b79-1fe2-4fdf-a808-c35740f466c6" msprop:DbColumnName="Age_Name" msprop:FriendlyName="Age_Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="Case_Status_Name" msprop:design-time-name="b6927b06-5836-4b28-b486-475737ac72a5" msprop:DbColumnName="Case_Status_Name" msprop:FriendlyName="Case_Status_Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="ToTalCase" msprop:design-time-name="06f67c25-0e1a-4d5c-ace1-1be909b5d70e" msprop:DbColumnName="ToTalCase" msprop:FriendlyName="ToTalCase" type="xs:long" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_Mining_Vacinated" msprop:design-time-name="925b1f8a-6f20-406c-bf44-87b3df09a3fc" msprop:DbTableName="Mining_Vacinated" msprop:FriendlyName="Mining_Vacinated" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="ID" msprop:design-time-name="08d3910f-ca7c-4ac8-ba72-3e0489061c67" msprop:DbColumnName="ID" msprop:FriendlyName="ID" type="xs:long" minOccurs="0" />
+                  <xs:element name="Reporting_PHU" msprop:design-time-name="9b0e93a2-839c-40fc-a94a-669b45f7e6aa" msprop:DbColumnName="Reporting_PHU" msprop:FriendlyName="Reporting_PHU" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PHU_City" msprop:design-time-name="b507f343-7e42-40de-a9d2-7db216bc6f1c" msprop:DbColumnName="PHU_City" msprop:FriendlyName="PHU_City" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="PHU_GROUP" msprop:design-time-name="03341746-00a9-47ab-9a06-519b7371d2e2" msprop:DbColumnName="PHU_GROUP" msprop:FriendlyName="PHU_GROUP" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="FullDateTime" msprop:design-time-name="c077a9f1-86b9-4f54-987e-0bb882f358ea" msprop:DbColumnName="FullDateTime" msprop:FriendlyName="FullDateTime" type="xs:dateTime" minOccurs="0" />
+                  <xs:element name="Thang" msprop:design-time-name="d0b0dd08-c5c9-4781-b02e-510c7ad06950" msprop:DbColumnName="Thang" msprop:FriendlyName="Thang" type="xs:int" minOccurs="0" />
+                  <xs:element name="Quy" msprop:design-time-name="e549c924-807a-49a6-a4ce-f696f5c076bb" msprop:DbColumnName="Quy" msprop:FriendlyName="Quy" type="xs:int" minOccurs="0" />
+                  <xs:element name="Nam" msprop:design-time-name="b29eedec-bd5a-4171-8a9e-badff76fab1e" msprop:DbColumnName="Nam" msprop:FriendlyName="Nam" type="xs:int" minOccurs="0" />
+                  <xs:element name="Age_Name" msprop:design-time-name="8906cae2-5a9d-48e2-9b75-5e161c146bee" msprop:DbColumnName="Age_Name" msprop:FriendlyName="Age_Name" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="255" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="OneDoseCumulative" msprop:design-time-name="c8133c44-e7d0-4e47-bf40-ec0fc12da201" msprop:DbColumnName="OneDoseCumulative" msprop:FriendlyName="OneDoseCumulative" type="xs:long" minOccurs="0" />
+                  <xs:element name="SecondDoseCumulative" msprop:design-time-name="11ef9bb5-073f-4410-96a7-c50f500693a3" msprop:DbColumnName="SecondDoseCumulative" msprop:FriendlyName="SecondDoseCumulative" type="xs:long" minOccurs="0" />
+                  <xs:element name="FullyVaccinated" msprop:design-time-name="683a378b-c37c-4767-a165-d8e5f0ca5628" msprop:DbColumnName="FullyVaccinated" msprop:FriendlyName="FullyVaccinated" type="xs:long" minOccurs="0" />
+                  <xs:element name="ThirdDoseCumulative" msprop:design-time-name="09506412-52e1-452e-a7ba-e8c831a9635f" msprop:DbColumnName="ThirdDoseCumulative" msprop:FriendlyName="ThirdDoseCumulative" type="xs:long" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <DATH_x0020_DDS_x0020_Mining xmlns="" />
+  </Schema>
+</DataSourceView>
